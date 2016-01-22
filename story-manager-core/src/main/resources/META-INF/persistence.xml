@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="eventsPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <properties>
+      <property name="hibernate.connection.username" value="venus"/>
+      <property name="hibernate.connection.password" value="venus"/>
+      <property name="hibernate.connection.autocommit" value="false"/>
+      <property name="hibernate.generate_statistics" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.connection.provider_class" value="org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider"/>
+      <property name="hibernate.c3p0.max_size" value="10"/>
+      <property name="hibernate.c3p0.min_size" value="1"/>
+      <property name="hibernate.c3p0.acquire_increment" value="1"/>
+      <property name="hibernate.c3p0.idle_test_period" value="300"/>
+      <!-- 5 min -->
+      <property name="hibernate.c3p0.timeout" value="1800"/>
+      <!-- 30 min -->
+      <property name="hibernate.show_sql" value="true"/>
+      <!-- 30 min -->
+    </properties>
+  </persistence-unit>
+</persistence>
