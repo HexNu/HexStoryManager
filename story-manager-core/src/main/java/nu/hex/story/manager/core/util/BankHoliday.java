@@ -39,7 +39,7 @@ public class BankHoliday {
     public List<LocalDate> get() {
         List<LocalDate> result = new ArrayList<>();
         FIXED_DATES.stream().forEach((date) -> {
-            result.add(LocalDate.parse(year + "-" + date, DateConstants.STANDARD_FORMATTER));
+            result.add(LocalDate.parse(year + "-" + date, DateUtils.STANDARD_FORMATTER));
         });
         FIRST_SATURDAY_DATES.stream().map((monthDay) -> createDayFromMontDay(monthDay)).forEach((date) -> {
             LocalDate firstSaturday = getFirstSaturday(date);
