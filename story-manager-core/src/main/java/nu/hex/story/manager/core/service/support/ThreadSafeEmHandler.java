@@ -25,10 +25,10 @@ public class ThreadSafeEmHandler implements EmHandler {
     };
 
     public ThreadSafeEmHandler() {
-        String databaseName = "events";
+        String databaseName = "story_manager";
         ConnectorFactory.getCONNECTOR().create(databaseName);
         Map properties = setupProperties(databaseName);
-        entityManagerFactory = Persistence.createEntityManagerFactory("eventsPU", properties);
+        entityManagerFactory = Persistence.createEntityManagerFactory("story-managerPU", properties);
     }
 
     protected Map getSpecialisedProperties() {

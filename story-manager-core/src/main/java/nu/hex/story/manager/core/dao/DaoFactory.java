@@ -14,9 +14,9 @@ public class DaoFactory {
     public DaoFactory(EntityManager em) {
         this.em = em;
     }
-//
-//    public EventDao getEventDao() {
-//        return new EventDao(em);
-//    }
+
+    public PersonDao getPersonDao() {
+        return new PersonDao(em);
+    }
     
 }

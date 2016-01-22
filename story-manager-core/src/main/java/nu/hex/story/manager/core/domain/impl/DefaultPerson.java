@@ -3,20 +3,23 @@ package nu.hex.story.manager.core.domain.impl;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.UniqueConstraint;
 import nu.hex.story.manager.core.domain.Person;
 import nu.hex.story.manager.core.util.DateUtils;
 import org.hibernate.annotations.Type;
@@ -26,8 +29,12 @@ import org.hibernate.annotations.Type;
  * @author hl
  */
 @Entity
-@Table(name = "Character")
-public class Character implements Person {
+@Table(name = "Person", uniqueConstraints = @UniqueConstraint(columnNames = {"givenName", "familyName", "dateOfBirth"}))
+@NamedQueries({
+    @NamedQuery(name = "Person.findPerson",
+            query = "SELECT p FROM DefaultPerson p WHERE p.givenName = :givenName AND p.familyName = :familyName AND p.dateOfBirth = :dateOfBirth")
+})
+public class DefaultPerson implements Person, Comparable<Person> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -41,12 +48,12 @@ public class Character implements Person {
     @Temporal(TemporalType.DATE)
     @Type(type = "nu.hex.story.manager.core.jpa.LocalDateUserType")
     private LocalDate dateOfBirth;
-    @ManyToOne(targetEntity = Character.class)
+    @ManyToOne(targetEntity = DefaultPerson.class)
     private Person mother;
-    @ManyToOne(targetEntity = Character.class)
+    @ManyToOne(targetEntity = DefaultPerson.class)
     private Person father;
-    @ManyToMany(targetEntity = Character.class, mappedBy = "mother")
-    private Set<Person> children = new TreeSet<>();
+    @OneToMany(targetEntity = DefaultPerson.class, mappedBy = "mother", cascade = {CascadeType.MERGE, CascadeType.PERSIST}, fetch = FetchType.EAGER)
+    private List<Person> children = new ArrayList<>();
 
     @Override
     public Long getId() {
@@ -146,12 +153,23 @@ public class Character implements Person {
 
     @Override
     public List<Person> getSiblings() {
-        return getMother().getChildren();
+        List<Person> siblings = new ArrayList<>();
+        for (Person p : getMother().getChildren()) {
+            if (!p.equals(this)) {
+                siblings.add(p);
+            }
+        }
+        return siblings;
     }
 
     @Override
     public Integer getAgeForDate(LocalDate date) {
         return new DateUtils(dateOfBirth).getAgeAtDate(date);
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.getName().compareTo(o.getName());
     }
 
 }
