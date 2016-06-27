@@ -16,8 +16,6 @@ public interface Person extends DomainObject<Long> {
     String getGivenName();
 
     void setGivenName(String givenName);
-    
-    String getName();
 
     Sex getSex();
 
@@ -28,6 +26,24 @@ public interface Person extends DomainObject<Long> {
     void setDateOfBirth(LocalDate dateOfBirth);
 
     void setDateOfBirth(String dateOfBirth);
+
+    String getPlaceOfBirth();
+
+    void setPlaceOfBirth(String placeOfBirth);
+
+    LocalDate getDateOfDeath();
+
+    void setDateOfDeath(LocalDate dateOfDeath);
+
+    void setDateOfDeath(String dateOfDeath);
+
+    String getPlaceOfDeath();
+
+    void setPlaceOfDeath(String placeOfDeath);
+    
+    String getCauseOfDeath();
+    
+    void setCauseOfDeath(String causeOfDeath);
 
     Person getMother();
 
@@ -46,6 +62,14 @@ public interface Person extends DomainObject<Long> {
     List<Person> getSiblings();
 
     Integer getAgeForDate(LocalDate date);
+    
+    String getResidence();
+    
+    void setResidence(String residence);
+    
+    List<PersonalEvent> getEvents();
+    
+    void addEvent(PersonalEvent event);
 
     public enum Sex {
         FEMALE, MALE, OTHER;

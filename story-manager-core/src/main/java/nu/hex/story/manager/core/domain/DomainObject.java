@@ -12,4 +12,6 @@ public interface DomainObject<T> extends Serializable {
     T getId();
 
     void setId(T id);
+    
+    String getName();
 }
