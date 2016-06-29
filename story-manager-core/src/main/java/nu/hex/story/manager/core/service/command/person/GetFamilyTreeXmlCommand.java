@@ -1,9 +1,11 @@
 package nu.hex.story.manager.core.service.command.person;
 
 import java.time.format.DateTimeFormatter;
+import java.util.Base64;
 import java.util.List;
 import nu.hex.story.manager.core.domain.Person;
 import nu.hex.story.manager.core.domain.PersonalEvent;
+import nu.hex.story.manager.core.domain.Portrait;
 import nu.hex.story.manager.core.service.command.AbstractServiceCommand;
 import se.digitman.lightxml.NodeFactory;
 import se.digitman.lightxml.XmlDocument;
@@ -37,7 +39,8 @@ public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument>
     private XmlNode createChildNode(Person p) {
         XmlNode result = NodeFactory.createNode(p.getSex().name().toLowerCase());
         result.addAttribute("id", p.getId().toString());
-        result.addAttribute("name", p.getName());
+        result.addAttribute("family-name", p.getFamilyName());
+        result.addAttribute("given-name", p.getGivenName());
         if (p.getFather() != null) {
             result.addAttribute("father", p.getFather().getName());
         }
@@ -54,14 +57,18 @@ public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument>
         if (p.getCauseOfDeath() != null) {
             result.addAttribute("cause-of-death", p.getCauseOfDeath());
         }
+        if (!p.getPortraits().isEmpty()) {
+            XmlNode portraits = NodeFactory.createNode("portaits");
+            p.getPortraits().stream().forEach((portrait) -> {
+                portraits.addChild(createPortaitNode(portrait));
+            });
+            result.addChild(portraits);
+        }
         if (!p.getEvents().isEmpty()) {
             XmlNode events = NodeFactory.createNode("personal-events");
-            for (PersonalEvent e : p.getEvents()) {
-                XmlNode event = NodeFactory.createNode("event");
-                event.addAttribute("date", e.getDate().format(DateTimeFormatter.ISO_DATE));
-                event.addText(e.getDescription());
-                events.addChild(event);
-            }
+            p.getEvents().stream().forEach((e) -> {
+                events.addChild(createEventNode(e));
+            });
             result.addChild(events);
         }
         if (p.getSex().equals(Person.Sex.FEMALE)) {
@@ -75,4 +82,21 @@ public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument>
         return result;
     }
 
+    private XmlNode createEventNode(PersonalEvent e) {
+        XmlNode result = NodeFactory.createNode("event");
+        result.addAttribute("id", e.getId().toString());
+        result.addAttribute("date", e.getDate().format(DateTimeFormatter.ISO_DATE));
+        result.addText(e.getDescription());
+        return result;
+    }
+
+    private XmlNode createPortaitNode(Portrait p) {
+        XmlNode result = NodeFactory.createNode("portrait");
+        result.addAttribute("id", p.getId().toString());
+        result.addAttribute("label", p.getLabel());
+        result.addAttribute("media-type", p.getMediaType());
+        result.addAttribute("date", p.getDate().format(DateTimeFormatter.ISO_DATE));
+        result.addText(Base64.getEncoder().encodeToString(p.getImageAsByteArray()));
+        return result;
+    }
 }

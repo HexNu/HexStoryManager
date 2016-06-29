@@ -70,12 +70,24 @@ public interface Person extends DomainObject<Long> {
     List<PersonalEvent> getEvents();
     
     void addEvent(PersonalEvent event);
+    
+    List<Portrait> getPortraits();
+    
+    void addPortrait(Portrait portrait);
 
     public enum Sex {
         FEMALE, MALE, OTHER;
 
         public String getLabel() {
             return name().substring(0, 1) + name().toLowerCase().substring(1);
+        }
+        
+        public static Sex getByString(String string) {
+            try {
+                return Sex.valueOf(string.toUpperCase());
+            } catch (IllegalArgumentException e) {
+                return Sex.FEMALE;
+            }
         }
     }
 }

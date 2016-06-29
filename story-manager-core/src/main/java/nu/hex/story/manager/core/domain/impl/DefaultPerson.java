@@ -25,6 +25,7 @@ import javax.persistence.TemporalType;
 import javax.persistence.UniqueConstraint;
 import nu.hex.story.manager.core.domain.Person;
 import nu.hex.story.manager.core.domain.PersonalEvent;
+import nu.hex.story.manager.core.domain.Portrait;
 import nu.hex.story.manager.core.util.DateUtils;
 import org.hibernate.annotations.Type;
 
@@ -75,6 +76,8 @@ public class DefaultPerson implements Person, Comparable<Person> {
     private String residence;
     @OneToMany(targetEntity = DefaultPersonalEvent.class, mappedBy = "owner", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private final Set<PersonalEvent> events = new HashSet<>();
+    @OneToMany(targetEntity = DefaultPortrait.class, mappedBy = "owner", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private final Set<Portrait> portraits = new HashSet<>();
 
     @Override
     public Long getId() {
@@ -253,6 +256,19 @@ public class DefaultPerson implements Person, Comparable<Person> {
         if (!events.contains(event)) {
             events.add(event);
             event.setOwner(this);
+        }
+    }
+
+    @Override
+    public List<Portrait> getPortraits() {
+        return new ArrayList<>(portraits);
+    }
+
+    @Override
+    public void addPortrait(Portrait portrait) {
+        if (!portraits.contains(portrait)) {
+            portraits.add(portrait);
+            portrait.setOwner(this);
         }
     }
 

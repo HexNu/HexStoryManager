@@ -11,9 +11,7 @@ import nu.hex.story.manager.core.service.command.AbstractServiceCommand;
 public class FindPersonCommand extends AbstractServiceCommand<Person> {
 
     private final String givenName;
-
     private final String familyName;
-
     private final LocalDate dateOfBirth;
 
     public FindPersonCommand(String givenName, String familyName, LocalDate dateOfBirth) {
