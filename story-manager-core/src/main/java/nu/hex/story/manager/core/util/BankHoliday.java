@@ -3,6 +3,7 @@ package nu.hex.story.manager.core.util;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -39,7 +40,7 @@ public class BankHoliday {
     public List<LocalDate> get() {
         List<LocalDate> result = new ArrayList<>();
         FIXED_DATES.stream().forEach((date) -> {
-            result.add(LocalDate.parse(year + "-" + date, DateUtils.STANDARD_FORMATTER));
+            result.add(LocalDate.parse(year + "-" + date, DateTimeFormatter.ISO_DATE));
         });
         FIRST_SATURDAY_DATES.stream().map((monthDay) -> createDayFromMontDay(monthDay)).forEach((date) -> {
             LocalDate firstSaturday = getFirstSaturday(date);
@@ -80,8 +81,7 @@ public class BankHoliday {
         if (date.getDayOfWeek().equals(DayOfWeek.SATURDAY)) {
             return date;
         } else {
-            LocalDate nextDate = date.plusDays(1l);
-            return getFirstSaturday(nextDate);
+            return getFirstSaturday(date.plusDays(1l));
         }
     }
 }

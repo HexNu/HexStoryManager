@@ -9,7 +9,6 @@ import java.time.format.DateTimeFormatter;
  */
 public class DateUtils {
 
-    public static final DateTimeFormatter STANDARD_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
     private final LocalDate date;
 
     public DateUtils(LocalDate date) {
@@ -29,16 +28,16 @@ public class DateUtils {
     }
 
     public static void main(String[] args) {
-        LocalDate dateOfBirth = LocalDate.parse("2000-06-11", STANDARD_FORMATTER);
+        LocalDate dateOfBirth = LocalDate.parse("2000-06-11", DateTimeFormatter.ISO_DATE);
         LocalDate currentDate;
-        currentDate = LocalDate.parse("2015-03-17", STANDARD_FORMATTER);
+        currentDate = LocalDate.parse("2015-03-17", DateTimeFormatter.ISO_DATE);
         System.out.println(currentDate.plusDays(45));
         System.out.println(new DateUtils(dateOfBirth).getAgeAtDate(currentDate));
-        currentDate = LocalDate.parse("2015-05-01", STANDARD_FORMATTER);
+        currentDate = LocalDate.parse("2015-05-01", DateTimeFormatter.ISO_DATE);
         System.out.println(new DateUtils(dateOfBirth).getAgeAtDate(currentDate));
-        currentDate = LocalDate.parse("2015-06-11", STANDARD_FORMATTER);
+        currentDate = LocalDate.parse("2015-06-11", DateTimeFormatter.ISO_DATE);
         System.out.println(new DateUtils(dateOfBirth).getAgeAtDate(currentDate));
-        currentDate = LocalDate.parse("2015-07-11", STANDARD_FORMATTER);
+        currentDate = LocalDate.parse("2015-07-11", DateTimeFormatter.ISO_DATE);
         System.out.println(new DateUtils(dateOfBirth).getAgeAtDate(currentDate));
     }
 

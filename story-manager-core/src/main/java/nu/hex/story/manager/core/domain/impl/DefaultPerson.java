@@ -136,7 +136,7 @@ public class DefaultPerson implements Person, Comparable<Person> {
 
     @Override
     public void setDateOfBirth(String dateOfBirth) {
-        this.dateOfBirth = LocalDate.parse(dateOfBirth, DateUtils.STANDARD_FORMATTER);
+        this.dateOfBirth = LocalDate.parse(dateOfBirth, DateTimeFormatter.ISO_DATE);
     }
 
     @Override
