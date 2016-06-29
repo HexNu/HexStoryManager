@@ -36,11 +36,4 @@ class GaussEasterCalculator {
         }
         return result;
     }
-
-    public static void main(String[] args) {
-        for (int i = 1750; i <= 1890; i++) {
-            LocalDate gregorian = new GaussEasterCalculator(i).getEasterSunday();
-            System.out.println(gregorian.format(DateTimeFormatter.ISO_DATE));
-        }
-    }
 }
