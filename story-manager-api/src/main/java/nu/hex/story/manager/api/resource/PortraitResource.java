@@ -26,4 +26,13 @@ public class PortraitResource extends AbstractResource {
         GetPortraitDTO result = DTOFactory().createGetPortraitDTO(portrait);
         return Response.ok(result).build();
     }
+
+    @GET
+    @Path("{id}/image")
+    public Response getPortraitImage(@PathParam("id") Long id) {
+        Portrait portrait = commandExecutor().execute(new GetPortraitCommand(id));
+        GetPortraitDTO result = DTOFactory().createGetPortraitDTO(portrait);
+        return Response.ok(result.getImage(), result.getMediaType()).build();
+    }
+
 }
