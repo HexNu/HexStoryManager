@@ -276,4 +276,9 @@ public class DefaultPerson implements Person, Comparable<Person> {
     public int compareTo(Person o) {
         return this.getName().compareTo(o.getName());
     }
+
+    @Override
+    public String toString() {
+        return getName() + " " + getDateOfDeath().format(DateTimeFormatter.ISO_DATE);
+    }
 }
