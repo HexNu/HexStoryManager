@@ -1,6 +1,5 @@
 package nu.hex.story.manager.core.domain.impl;
 
-import static com.sun.org.apache.xerces.internal.util.PropertyState.is;
 import java.awt.Image;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

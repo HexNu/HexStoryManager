@@ -19,4 +19,7 @@ public class DaoFactory {
         return new PersonDao(em);
     }
     
+    public PortraitDao getPortraitDao() {
+        return new PortraitDao(em);
+    }
 }
