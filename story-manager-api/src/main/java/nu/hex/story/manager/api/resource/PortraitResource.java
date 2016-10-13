@@ -6,7 +6,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import nu.hex.story.manager.core.domain.Portrait;
+import nu.hex.story.manager.core.domain.person.Portrait;
 import nu.hex.story.manager.core.service.command.portrait.GetPortraitCommand;
 import nu.hex.story.manager.dto.out.GetPortraitDTO;
 
@@ -32,7 +32,7 @@ public class PortraitResource extends AbstractResource {
     public Response getPortraitImage(@PathParam("id") Long id) {
         Portrait portrait = commandExecutor().execute(new GetPortraitCommand(id));
         GetPortraitDTO result = DTOFactory().createGetPortraitDTO(portrait);
-        return Response.ok(result.getImage(), result.getMediaType()).build();
+        return Response.ok(result.getImage().getData(), result.getImage().getMediaType()).build();
     }
 
 }

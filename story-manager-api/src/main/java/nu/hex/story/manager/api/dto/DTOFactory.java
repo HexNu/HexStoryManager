@@ -1,15 +1,18 @@
 package nu.hex.story.manager.api.dto;
 
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import nu.hex.story.manager.core.domain.Person;
-import nu.hex.story.manager.core.domain.PersonalEvent;
-import nu.hex.story.manager.core.domain.Portrait;
-import nu.hex.story.manager.core.domain.impl.DefaultPerson;
+import nu.hex.story.manager.core.domain.image.Image;
+import nu.hex.story.manager.core.domain.person.Person;
+import nu.hex.story.manager.core.domain.person.PersonalEvent;
+import nu.hex.story.manager.core.domain.person.Portrait;
+import nu.hex.story.manager.core.domain.person.impl.DefaultPerson;
 import nu.hex.story.manager.dto.out.GetEventDTO;
 import nu.hex.story.manager.dto.out.GetFamilyTreeDTO;
 import nu.hex.story.manager.dto.out.GetFamilyTreeMemberDTO;
+import nu.hex.story.manager.dto.out.GetImageDTO;
 import nu.hex.story.manager.dto.out.GetParentDTO;
 import nu.hex.story.manager.dto.out.GetPersonDTO;
 import nu.hex.story.manager.dto.out.GetPortraitDTO;
@@ -56,11 +59,15 @@ public class DTOFactory {
             events.add(createGetEventDTO(pe));
         });
         result.setEvents(events);
-        List<GetPortraitDTO> portraits = new ArrayList<>();
-        p.getPortraits().stream().forEach((portrait) -> {
-            portraits.add(createGetPortraitDTO(portrait));
+        result.setPortraits(createGetPortraitsDTO(p.getPortraits()));
+        return result;
+    }
+
+    public List<GetPortraitDTO> createGetPortraitsDTO(List<Portrait> portaits) {
+        List<GetPortraitDTO> result = new ArrayList<>();
+        portaits.stream().forEach((portrait) -> {
+            result.add(createGetPortraitDTO(portrait));
         });
-        result.setPortraits(portraits);
         return result;
     }
 
@@ -84,11 +91,21 @@ public class DTOFactory {
     public GetPortraitDTO createGetPortraitDTO(Portrait p) {
         GetPortraitDTO result = new GetPortraitDTO();
         result.setId(p.getId());
-        result.setImage(p.getImageAsByteArray());
-        result.setMediaType(p.getMediaType());
+        result.setImage(createImageDTO(p.getImage()));
         result.setDate(p.getDate() != null ? p.getDate().format(DateTimeFormatter.ISO_DATE) : null);
         result.setLabel(p.getLabel());
         result.setDescription(p.getDescription());
+        return result;
+    }
+    
+    public GetImageDTO createImageDTO(Image i) {
+        GetImageDTO result = new GetImageDTO();
+        result.setId(i.getId());
+        result.setName(i.getName());
+        result.setHeight(i.getHeight());
+        result.setWidth(i.getWidth());
+        result.setMediaType(i.getMediaType());
+        result.setData(i.getImageAsByteArray());
         return result;
     }
 
@@ -105,6 +122,7 @@ public class DTOFactory {
     private GetFamilyTreeMemberDTO createFamilyTreeNode(XmlNode node) {
         GetFamilyTreeMemberDTO result = new GetFamilyTreeMemberDTO();
         if (node != null) {
+            result.setId(attributeAsLong(node, "id"));
             result.setGivenName(attribute(node, "given-name"));
             result.setDateOfBirth(attribute(node, "date-of-birth"));
             result.setPlaceOfBirth(attribute(node, "place-of-birth"));
@@ -119,8 +137,8 @@ public class DTOFactory {
             if (node.hasChildNamed("personal-events")) {
                 node.getChild("personal-events").getChildren("event").stream().forEach((e) -> {
                     GetEventDTO eventDTO = new GetEventDTO();
-                    eventDTO.setId(Long.valueOf(e.getAttribute("id")));
-                    eventDTO.setDate(e.getAttribute("date"));
+                    eventDTO.setId(attributeAsLong(e, "id"));
+                    eventDTO.setDate(attribute(e, "date"));
                     eventDTO.setDescription(e.getText());
                     result.getEvents().add(eventDTO);
                 });
@@ -136,5 +154,17 @@ public class DTOFactory {
 
     private String attribute(XmlNode node, String attributeName) {
         return node.getAttribute(attributeName);
+    }
+
+    private Long attributeAsLong(XmlNode node, String attributeName) {
+        return Long.valueOf(attribute(node, attributeName));
+    }
+
+    private Integer attributeAsInteger(XmlNode node, String attributeName) {
+        return Integer.valueOf(attribute(node, attributeName));
+    }
+
+    private LocalDate attributeAsDate(XmlNode node, String attributeName) {
+        return LocalDate.parse(attribute(node, attributeName), DateTimeFormatter.ISO_DATE);
     }
 }

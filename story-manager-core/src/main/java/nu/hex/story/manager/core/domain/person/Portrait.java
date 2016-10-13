@@ -1,8 +1,8 @@
-package nu.hex.story.manager.core.domain;
+package nu.hex.story.manager.core.domain.person;
 
-import java.awt.Image;
-import java.io.InputStream;
 import java.time.LocalDate;
+import nu.hex.story.manager.core.domain.DomainObject;
+import nu.hex.story.manager.core.domain.image.Image;
 
 /**
  * Created 2016-jun-27
@@ -17,15 +17,7 @@ public interface Portrait extends DomainObject<Long>, Comparable<Portrait> {
 
     Image getImage();
 
-    byte[] getImageAsByteArray();
-    
-    void setImageFromByteArray(byte[] image);
-    
-    void setImageFromInputStream(InputStream stream);
-    
-    String getMediaType();
-    
-    void setMediaType(String mediaType);
+    void setImage(Image image);
 
     Person getOwner();
 

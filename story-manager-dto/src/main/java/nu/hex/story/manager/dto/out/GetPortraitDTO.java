@@ -1,7 +1,6 @@
 package nu.hex.story.manager.dto.out;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import java.time.LocalDate;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -14,11 +13,10 @@ public class GetPortraitDTO {
 
     @NotNull
     private Long id;
-    private byte[] image;
-    private String mediaType;
     private String date;
     private String label;
     private String description;
+    private GetImageDTO image;
 
     public Long getId() {
         return id;
@@ -26,22 +24,6 @@ public class GetPortraitDTO {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public byte[] getImage() {
-        return image;
-    }
-
-    public void setImage(byte[] image) {
-        this.image = image;
-    }
-
-    public String getMediaType() {
-        return mediaType;
-    }
-
-    public void setMediaType(String mediaType) {
-        this.mediaType = mediaType;
     }
 
     public String getDate() {
@@ -68,4 +50,11 @@ public class GetPortraitDTO {
         this.description = description;
     }
 
+    public GetImageDTO getImage() {
+        return image;
+    }
+
+    public void setImage(GetImageDTO image) {
+        this.image = image;
+    }
 }

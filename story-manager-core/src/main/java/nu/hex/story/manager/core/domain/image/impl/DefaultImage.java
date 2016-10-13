@@ -1,12 +1,9 @@
-package nu.hex.story.manager.core.domain.impl;
+package nu.hex.story.manager.core.domain.image.impl;
 
-import java.awt.Image;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import javax.imageio.ImageIO;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,40 +11,33 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import nu.hex.story.manager.core.domain.Person;
-import nu.hex.story.manager.core.domain.Portrait;
-import org.hibernate.annotations.Type;
+import nu.hex.story.manager.core.domain.image.Image;
 
 /**
- * Created 2016-jun-27
+ * Created 2016-okt-13
  *
  * @author hl
  */
 @Entity
-@Table(name = "Portrait")
-public class DefaultPortrait implements Portrait {
+@Table(name = "Image")
+public class DefaultImage implements Image {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @ManyToOne(targetEntity = DefaultPerson.class)
-    private Person owner;
-    @Temporal(TemporalType.DATE)
-    @Type(type = "nu.hex.story.manager.core.jpa.LocalDateUserType")
-    private LocalDate portraitDate;
+    @Column
+    private String name;
     @Lob
     @Column(length = 1024 * 2024 * 32)
     private byte[] image;
     @Column
     private String mediaType;
     @Column
-    private String label;
-    @Column(length = 1024 * 128)
-    private String description;
+    private Integer width;
+    @Column
+    private Integer height;
 
     @Override
     public Long getId() {
@@ -60,22 +50,17 @@ public class DefaultPortrait implements Portrait {
     }
 
     @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
     public String getName() {
-        return getLabel();
+        return name;
     }
 
     @Override
-    public String getLabel() {
-        return label;
-    }
-
-    @Override
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
-    @Override
-    public Image getImage() {
+    public java.awt.Image getImage() {
         if (image != null) {
             InputStream inputStream = new ByteArrayInputStream(image);
             try {
@@ -124,46 +109,22 @@ public class DefaultPortrait implements Portrait {
     }
 
     @Override
-    public Person getOwner() {
-        return owner;
+    public Integer getWidth() {
+        return width;
     }
 
     @Override
-    public void setOwner(Person owner) {
-        this.owner = owner;
+    public void setWidth(Integer width) {
+        this.width = width;
     }
 
     @Override
-    public LocalDate getDate() {
-        return portraitDate;
+    public Integer getHeight() {
+        return height;
     }
 
     @Override
-    public void setDate(LocalDate date) {
-        this.portraitDate = date;
-    }
-
-    @Override
-    public void setDate(String date) {
-        this.portraitDate = LocalDate.parse(date, DateTimeFormatter.ISO_DATE);
-    }
-
-    @Override
-    public String getDescription() {
-        return description;
-    }
-
-    @Override
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @Override
-    public int compareTo(Portrait o) {
-        int result = this.getDate().compareTo(o.getDate());
-        if (result == 0) {
-            result = this.getLabel().compareTo(o.getLabel());
-        }
-        return result;
+    public void setHeight(Integer height) {
+        this.height = height;
     }
 }

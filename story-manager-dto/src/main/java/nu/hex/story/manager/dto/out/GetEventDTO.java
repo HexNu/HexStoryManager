@@ -1,7 +1,6 @@
 package nu.hex.story.manager.dto.out;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import java.time.LocalDate;
 import javax.validation.constraints.NotNull;
 
 /**

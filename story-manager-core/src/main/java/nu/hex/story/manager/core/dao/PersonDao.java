@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Optional;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
-import nu.hex.story.manager.core.domain.Person;
-import nu.hex.story.manager.core.domain.PersonalEvent;
-import nu.hex.story.manager.core.domain.impl.DefaultPerson;
+import nu.hex.story.manager.core.domain.person.Person;
+import nu.hex.story.manager.core.domain.person.PersonalEvent;
+import nu.hex.story.manager.core.domain.person.impl.DefaultPerson;
 
 /**
  *

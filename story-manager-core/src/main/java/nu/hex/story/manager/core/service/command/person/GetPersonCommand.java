@@ -1,6 +1,6 @@
 package nu.hex.story.manager.core.service.command.person;
 
-import nu.hex.story.manager.core.domain.Person;
+import nu.hex.story.manager.core.domain.person.Person;
 import nu.hex.story.manager.core.service.command.AbstractServiceCommand;
 
 /**

@@ -1,4 +1,4 @@
-package nu.hex.story.manager.core.domain.impl;
+package nu.hex.story.manager.core.domain.person.impl;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -11,8 +11,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import nu.hex.story.manager.core.domain.Person;
-import nu.hex.story.manager.core.domain.PersonalEvent;
+import nu.hex.story.manager.core.domain.person.Person;
+import nu.hex.story.manager.core.domain.person.PersonalEvent;
 import org.hibernate.annotations.Type;
 
 /**

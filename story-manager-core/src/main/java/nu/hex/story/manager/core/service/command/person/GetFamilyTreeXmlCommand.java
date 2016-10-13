@@ -3,9 +3,10 @@ package nu.hex.story.manager.core.service.command.person;
 import java.time.format.DateTimeFormatter;
 import java.util.Base64;
 import java.util.List;
-import nu.hex.story.manager.core.domain.Person;
-import nu.hex.story.manager.core.domain.PersonalEvent;
-import nu.hex.story.manager.core.domain.Portrait;
+import nu.hex.story.manager.core.domain.image.Image;
+import nu.hex.story.manager.core.domain.person.Person;
+import nu.hex.story.manager.core.domain.person.PersonalEvent;
+import nu.hex.story.manager.core.domain.person.Portrait;
 import nu.hex.story.manager.core.service.command.AbstractServiceCommand;
 import se.digitman.lightxml.NodeFactory;
 import se.digitman.lightxml.XmlDocument;
@@ -94,9 +95,21 @@ public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument>
         XmlNode result = NodeFactory.createNode("portrait");
         result.addAttribute("id", p.getId().toString());
         result.addAttribute("label", p.getLabel());
-        result.addAttribute("media-type", p.getMediaType());
+//        result.addAttribute("media-type", p.getMediaType());
         result.addAttribute("date", p.getDate().format(DateTimeFormatter.ISO_DATE));
-        result.addText(Base64.getEncoder().encodeToString(p.getImageAsByteArray()));
+//        result.addText(Base64.getEncoder().encodeToString(p.getImageAsByteArray()));
+        result.addChild(createImageNode(p.getImage()));
         return result;
+    }
+    
+    private XmlNode createImageNode(Image i) {
+        XmlNode result = NodeFactory.createNode("image");
+        result.addAttribute("id", i.getId().toString());
+        result.addAttribute("width", i.getWidth());
+        result.addAttribute("height", i.getHeight());
+        result.addAttribute("media-type", i.getMediaType());
+        result.addText(Base64.getEncoder().encodeToString(i.getImageAsByteArray()));
+        return result;
+        
     }
 }

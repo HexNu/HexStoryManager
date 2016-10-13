@@ -2,9 +2,12 @@
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
   <persistence-unit name="story-managerPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-    <class>nu.hex.story.manager.core.domain.impl.DefaultPerson</class>
-    <class>nu.hex.story.manager.core.domain.impl.DefaultPersonalEvent</class>
-    <class>nu.hex.story.manager.core.domain.impl.DefaultPortrait</class>
+    <class>nu.hex.story.manager.core.domain.image.impl.DefaultImage</class>
+    <class>nu.hex.story.manager.core.domain.person.impl.DefaultPersonalEvent</class>
+    <class>nu.hex.story.manager.core.domain.person.impl.DefaultPerson</class>
+    <class>nu.hex.story.manager.core.domain.person.impl.DefaultPortrait</class>
+    <class>nu.hex.story.manager.core.domain.story.impl.DefaultChapter</class>
+    <class>nu.hex.story.manager.core.domain.story.impl.DefaultStory</class>
     <properties>
       <property name="hibernate.connection.username" value="venus"/>
       <property name="hibernate.connection.password" value="venus"/>

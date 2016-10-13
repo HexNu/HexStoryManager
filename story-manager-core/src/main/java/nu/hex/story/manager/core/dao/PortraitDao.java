@@ -1,8 +1,8 @@
 package nu.hex.story.manager.core.dao;
 
 import javax.persistence.EntityManager;
-import nu.hex.story.manager.core.domain.Portrait;
-import nu.hex.story.manager.core.domain.impl.DefaultPortrait;
+import nu.hex.story.manager.core.domain.person.Portrait;
+import nu.hex.story.manager.core.domain.person.impl.DefaultPortrait;
 
 /**
  * Created 2016-jun-29

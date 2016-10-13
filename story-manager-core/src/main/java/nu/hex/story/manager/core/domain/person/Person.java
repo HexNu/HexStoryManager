@@ -1,7 +1,8 @@
-package nu.hex.story.manager.core.domain;
+package nu.hex.story.manager.core.domain.person;
 
 import java.time.LocalDate;
 import java.util.List;
+import nu.hex.story.manager.core.domain.DomainObject;
 
 /**
  *
