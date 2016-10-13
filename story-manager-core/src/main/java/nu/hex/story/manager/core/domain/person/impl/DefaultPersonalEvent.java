@@ -11,6 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import nu.hex.story.manager.core.domain.event.Event;
 import nu.hex.story.manager.core.domain.person.Person;
 import nu.hex.story.manager.core.domain.person.PersonalEvent;
 import org.hibernate.annotations.Type;
@@ -27,6 +28,8 @@ public class DefaultPersonalEvent implements PersonalEvent {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column
+    private String label;
     @ManyToOne(targetEntity = DefaultPerson.class)
     private Person owner;
     @Temporal(TemporalType.DATE)
@@ -43,6 +46,16 @@ public class DefaultPersonalEvent implements PersonalEvent {
     @Override
     public void setId(Long id) {
         this.id = id;
+    }
+
+    @Override
+    public String getLabel() {
+        return label;
+    }
+
+    @Override
+    public void setLabel(String label) {
+        this.label = label;
     }
 
     @Override
@@ -86,7 +99,7 @@ public class DefaultPersonalEvent implements PersonalEvent {
     }
 
     @Override
-    public int compareTo(PersonalEvent o) {
+    public int compareTo(Event o) {
         return this.getDate().compareTo(o.getDate());
     }
 }

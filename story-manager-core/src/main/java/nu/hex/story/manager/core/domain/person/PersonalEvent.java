@@ -1,27 +1,15 @@
 package nu.hex.story.manager.core.domain.person;
 
-import java.time.LocalDate;
-import nu.hex.story.manager.core.domain.DomainObject;
+import nu.hex.story.manager.core.domain.event.Event;
 
 /**
  * Created 2016-jun-27
  *
  * @author hl
  */
-public interface PersonalEvent extends DomainObject<Long>, Comparable<PersonalEvent> {
+public interface PersonalEvent extends Event {
 
     Person getOwner();
 
     void setOwner(Person owner);
-
-    LocalDate getDate();
-
-    void setDate(LocalDate date);
-
-    void setDate(String date);
-
-    String getDescription();
-
-    void setDescription(String description);
-
 }

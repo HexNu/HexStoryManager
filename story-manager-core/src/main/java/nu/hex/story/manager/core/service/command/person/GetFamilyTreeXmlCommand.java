@@ -86,6 +86,7 @@ public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument>
     private XmlNode createEventNode(PersonalEvent e) {
         XmlNode result = NodeFactory.createNode("event");
         result.addAttribute("id", e.getId().toString());
+        result.addAttribute("label", e.getLabel());
         result.addAttribute("date", e.getDate().format(DateTimeFormatter.ISO_DATE));
         result.addText(e.getDescription());
         return result;
@@ -95,7 +96,6 @@ public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument>
         XmlNode result = NodeFactory.createNode("portrait");
         result.addAttribute("id", p.getId().toString());
         result.addAttribute("label", p.getLabel());
-//        result.addAttribute("media-type", p.getMediaType());
         result.addAttribute("date", p.getDate().format(DateTimeFormatter.ISO_DATE));
 //        result.addText(Base64.getEncoder().encodeToString(p.getImageAsByteArray()));
         result.addChild(createImageNode(p.getImage()));

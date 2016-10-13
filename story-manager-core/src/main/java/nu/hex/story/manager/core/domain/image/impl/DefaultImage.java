@@ -11,7 +11,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import nu.hex.story.manager.core.domain.image.Image;
 
@@ -30,7 +29,7 @@ public class DefaultImage implements Image {
     @Column
     private String name;
     @Lob
-    @Column(length = 1024 * 2024 * 32)
+    @Column(length = 1024 * 1024 * 62)
     private byte[] image;
     @Column
     private String mediaType;

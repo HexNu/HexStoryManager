@@ -83,6 +83,7 @@ public class DTOFactory {
     public GetEventDTO createGetEventDTO(PersonalEvent e) {
         GetEventDTO result = new GetEventDTO();
         result.setId(e.getId());
+        result.setLabel(e.getLabel());
         result.setDate(e.getDate() != null ? e.getDate().format(DateTimeFormatter.ISO_DATE) : null);
         result.setDescription(e.getDescription());
         return result;
@@ -138,6 +139,7 @@ public class DTOFactory {
                 node.getChild("personal-events").getChildren("event").stream().forEach((e) -> {
                     GetEventDTO eventDTO = new GetEventDTO();
                     eventDTO.setId(attributeAsLong(e, "id"));
+                    eventDTO.setLabel(attribute(e, "label"));
                     eventDTO.setDate(attribute(e, "date"));
                     eventDTO.setDescription(e.getText());
                     result.getEvents().add(eventDTO);

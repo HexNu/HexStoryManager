@@ -13,6 +13,7 @@ public class GetEventDTO {
 
     @NotNull
     private Long id;
+    private String label;
     private String date;
     private String description;
 
@@ -22,6 +23,14 @@ public class GetEventDTO {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
     }
 
     public String getDate() {
