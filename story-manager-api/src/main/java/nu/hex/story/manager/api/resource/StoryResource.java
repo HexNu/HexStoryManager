@@ -12,7 +12,7 @@ import javax.ws.rs.core.Response;
  *
  * @author hl
  */
-@Path("story")
+@Path("stories")
 public class StoryResource extends AbstractResource {
 
     @GET

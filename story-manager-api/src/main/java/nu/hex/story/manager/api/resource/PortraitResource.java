@@ -15,7 +15,7 @@ import nu.hex.story.manager.dto.out.GetPortraitDTO;
  *
  * @author hl
  */
-@Path("portrait")
+@Path("portraits")
 public class PortraitResource extends AbstractResource {
 
     @GET
