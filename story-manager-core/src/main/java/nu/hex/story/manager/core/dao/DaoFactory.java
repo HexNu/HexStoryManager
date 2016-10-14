@@ -15,10 +15,18 @@ public class DaoFactory {
         this.em = em;
     }
 
+    public AtlasDao getAtlasDao() {
+        return new AtlasDao(em);
+    }
+
+    public MapDao getMapDao() {
+        return new MapDao(em);
+    }
+
     public PersonDao getPersonDao() {
         return new PersonDao(em);
     }
-    
+
     public PortraitDao getPortraitDao() {
         return new PortraitDao(em);
     }
