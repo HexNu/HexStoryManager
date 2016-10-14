@@ -13,6 +13,7 @@ import nu.hex.story.manager.dto.out.GetEventDTO;
 import nu.hex.story.manager.dto.out.GetFamilyTreeDTO;
 import nu.hex.story.manager.dto.out.GetFamilyTreeMemberDTO;
 import nu.hex.story.manager.dto.out.GetImageDTO;
+import nu.hex.story.manager.dto.out.GetListedPersonDTO;
 import nu.hex.story.manager.dto.out.GetParentDTO;
 import nu.hex.story.manager.dto.out.GetPersonDTO;
 import nu.hex.story.manager.dto.out.GetPortraitDTO;
@@ -63,6 +64,27 @@ public class DTOFactory {
         return result;
     }
 
+    public List<GetListedPersonDTO> createGetPersonDTOList(XmlDocument doc) {
+        List<GetListedPersonDTO> result = new ArrayList<>();
+        for (XmlNode p : doc.getRoot().getChildren()) {
+            GetListedPersonDTO person = new GetListedPersonDTO();
+            person.setId(Long.valueOf(p.getAttribute("id")));
+            person.setFamilyName(p.getAttribute("family-name"));
+            person.setGivenName(p.getAttribute("given-name"));
+            person.setDateOfBirth(p.hasAttribute("date-of-birth") ? p.getAttribute("date-of-birth") : null);
+            person.setPlaceOfBirth(p.hasAttribute("place-of-birth") ? p.getAttribute("place-of-birth") : null);
+            person.setDateOfDeath(p.hasAttribute("date-of-death") ? p.getAttribute("date-of-death") : null);
+            person.setPlaceOfDeath(p.hasAttribute("place-of-death") ? p.getAttribute("place-of-death") : null);
+            person.setSex(p.getName());
+            person.setMother(p.hasAttribute("mother") ? p.getAttribute("mother") : null);
+            person.setFather(p.hasAttribute("father") ? p.getAttribute("father") : null);
+            person.setResidence(p.getAttribute("residence"));
+            result.add(person);
+        }
+        return result;
+
+    }
+
     public List<GetPortraitDTO> createGetPortraitsDTO(List<Portrait> portaits) {
         List<GetPortraitDTO> result = new ArrayList<>();
         portaits.stream().forEach((portrait) -> {
@@ -98,7 +120,7 @@ public class DTOFactory {
         result.setDescription(p.getDescription());
         return result;
     }
-    
+
     public GetImageDTO createImageDTO(Image i) {
         GetImageDTO result = new GetImageDTO();
         result.setId(i.getId());
