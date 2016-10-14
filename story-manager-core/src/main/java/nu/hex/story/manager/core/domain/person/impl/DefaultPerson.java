@@ -43,7 +43,7 @@ import org.hibernate.annotations.Type;
     @NamedQuery(name = "Person.getChildrenOfFather",
             query = "SELECT p FROM DefaultPerson p WHERE p.father = :father")
 })
-public class DefaultPerson implements Person, Comparable<Person> {
+public class DefaultPerson implements Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

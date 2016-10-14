@@ -8,7 +8,7 @@ import nu.hex.story.manager.core.domain.DomainObject;
  *
  * @author hl
  */
-public interface Person extends DomainObject<Long> {
+public interface Person extends DomainObject<Long>, Comparable<Person> {
 
     String getFamilyName();
 

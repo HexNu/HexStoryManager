@@ -13,37 +13,44 @@ import se.digitman.lightxml.XmlDocument;
 import se.digitman.lightxml.XmlNode;
 
 /**
- * Created 2016-jun-27
+ * Created 2016-okt-14
  *
  * @author hl
  */
-public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument> {
+public class GetFamilyTreeForPersonCommand extends AbstractServiceCommand<XmlDocument> {
 
-    private final Person mother;
-    private final Person father;
+    private final Person person;
 
-    public GetFamilyTreeXmlCommand(Person mother, Person father) {
-        this.mother = mother;
-        this.father = father;
+    public GetFamilyTreeForPersonCommand(Person person) {
+        this.person = person;
     }
 
     @Override
     public XmlDocument execute() {
-        XmlDocument result = new XmlDocument(NodeFactory.createNode("family-tree"));
-        result.getRoot().addAttribute("family", "The " + father.getFamilyName() + " Family");
-        result.getRoot().addAttribute("residence", father.getResidence());
-        result.getRoot().addChild(createChildNode(father));
-        result.getRoot().addChild(createChildNode(mother));
-        return result;
+        XmlNode familyTree = NodeFactory.createNode("family-tree");
+        familyTree.addAttribute("for", person.getGivenName() + " " + person.getFamilyName());
+        familyTree.addAttribute("residence", person.getResidence());
+        XmlNode personNode = createPersonNode(person);
+        familyTree.addChild(personNode);
+        return new XmlDocument(familyTree);
     }
 
-    private XmlNode createChildNode(Person p) {
-        XmlNode result = NodeFactory.createNode(p.getSex().name().toLowerCase());
+    private XmlNode createPersonNode(Person p) {
+        XmlNode result;
+        if (p.getId().equals(person.getId())) {
+            result = NodeFactory.createNode(p.getSex().name().toLowerCase());
+        } else {
+            result = NodeFactory.createNode(p.getSex().equals(Person.Sex.FEMALE) ? "mother" : "father");
+        }
         result.addAttribute("id", p.getId().toString());
         result.addAttribute("family-name", p.getFamilyName());
         result.addAttribute("given-name", p.getGivenName());
+        if (p.getMother() != null) {
+            result.addChild(createPersonNode(p.getMother()));
+        }
         if (p.getFather() != null) {
-            result.addAttribute("father", p.getFather().getName());
+            result.addChild(createPersonNode(p.getFather()));
+//            result.addAttribute("father", p.getFather().getName());
         }
         result.addAttribute("date-of-birth", p.getDateOfBirth().format(DateTimeFormatter.ISO_DATE));
         if (p.getPlaceOfBirth() != null) {
@@ -58,13 +65,13 @@ public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument>
         if (p.getCauseOfDeath() != null) {
             result.addAttribute("cause-of-death", p.getCauseOfDeath());
         }
-        if (!p.getPortraits().isEmpty()) {
-            XmlNode portraits = NodeFactory.createNode("portaits");
-            p.getPortraits().stream().forEach((portrait) -> {
-                portraits.addChild(createPortaitNode(portrait));
-            });
-            result.addChild(portraits);
-        }
+//        if (!p.getPortraits().isEmpty()) {
+//            XmlNode portraits = NodeFactory.createNode("portaits");
+//            p.getPortraits().stream().forEach((portrait) -> {
+//                portraits.addChild(createPortaitNode(portrait));
+//            });
+//            result.addChild(portraits);
+//        }
         if (!p.getEvents().isEmpty()) {
             XmlNode events = NodeFactory.createNode("personal-events");
             p.getEvents().stream().forEach((e) -> {
@@ -72,14 +79,14 @@ public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument>
             });
             result.addChild(events);
         }
-        if (p.getSex().equals(Person.Sex.FEMALE)) {
-            List<Person> children = getDaoFactory().getPersonDao().getChildren(p);
-            if (!children.isEmpty()) {
-                children.stream().forEach((child) -> {
-                    result.addChild(createChildNode(child));
-                });
-            }
-        }
+//        if (p.getSex().equals(Person.Sex.FEMALE)) {
+//            List<Person> children = getDaoFactory().getPersonDao().getChildren(p);
+//            if (!children.isEmpty()) {
+//                children.stream().forEach((child) -> {
+//                    result.addChild(createPersonNode(child));
+//                });
+//            }
+//        }
         return result;
     }
 
@@ -100,7 +107,7 @@ public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument>
         result.addChild(createImageNode(p.getImage()));
         return result;
     }
-    
+
     private XmlNode createImageNode(Image i) {
         XmlNode result = NodeFactory.createNode("image");
         result.addAttribute("id", i.getId().toString());
@@ -109,6 +116,7 @@ public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument>
         result.addAttribute("media-type", i.getMediaType());
         result.addText(Base64.getEncoder().encodeToString(i.getImageAsByteArray()));
         return result;
-        
+
     }
+
 }
