@@ -4,16 +4,20 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import nu.hex.story.manager.core.domain.atlas.Atlas;
+import nu.hex.story.manager.core.domain.atlas.AtlasMap;
 import nu.hex.story.manager.core.domain.image.Image;
 import nu.hex.story.manager.core.domain.person.Person;
 import nu.hex.story.manager.core.domain.person.PersonalEvent;
 import nu.hex.story.manager.core.domain.person.Portrait;
 import nu.hex.story.manager.core.domain.person.impl.DefaultPerson;
+import nu.hex.story.manager.dto.out.GetAtlasDTO;
 import nu.hex.story.manager.dto.out.GetEventDTO;
 import nu.hex.story.manager.dto.out.GetFamilyTreeDTO;
 import nu.hex.story.manager.dto.out.GetFamilyTreeMemberDTO;
 import nu.hex.story.manager.dto.out.GetImageDTO;
 import nu.hex.story.manager.dto.out.GetListedPersonDTO;
+import nu.hex.story.manager.dto.out.GetMapDTO;
 import nu.hex.story.manager.dto.out.GetParentDTO;
 import nu.hex.story.manager.dto.out.GetPersonDTO;
 import nu.hex.story.manager.dto.out.GetPortraitDTO;
@@ -176,6 +180,32 @@ public class DTOFactory {
         return result;
     }
 
+    public GetAtlasDTO createGetAtlasDTO(Atlas atlas) {
+        GetAtlasDTO result = new GetAtlasDTO();
+        result.setId(atlas.getId());
+        result.setTitle(atlas.getTitle());
+        result.setDescription(atlas.getDescription());
+        result.setMaps(createMapDTOList(atlas.getMaps()));
+        return result;
+    }
+
+    public GetMapDTO createGetMapDTO(AtlasMap map) {
+        GetMapDTO result = new GetMapDTO();
+        result.setId(map.getId());
+        result.setTitle(map.getTitle());
+        result.setDescription(map.getDescription());
+        result.setImage(createImageDTO(map.getImage()));
+        return result;
+    }
+
+    public List<GetMapDTO> createMapDTOList(List<AtlasMap> maps) {
+        List<GetMapDTO> result = new ArrayList<>();
+        maps.stream().forEach((map) -> {
+            result.add(createGetMapDTO(map));
+        });
+        return result;
+    }
+
     private String attribute(XmlNode node, String attributeName) {
         return node.getAttribute(attributeName);
     }
@@ -191,4 +221,5 @@ public class DTOFactory {
     private LocalDate attributeAsDate(XmlNode node, String attributeName) {
         return LocalDate.parse(attribute(node, attributeName), DateTimeFormatter.ISO_DATE);
     }
+
 }
