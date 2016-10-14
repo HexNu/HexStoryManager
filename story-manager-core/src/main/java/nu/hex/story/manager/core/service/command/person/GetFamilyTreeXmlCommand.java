@@ -97,7 +97,6 @@ public class GetFamilyTreeXmlCommand extends AbstractServiceCommand<XmlDocument>
         result.addAttribute("id", p.getId().toString());
         result.addAttribute("label", p.getLabel());
         result.addAttribute("date", p.getDate().format(DateTimeFormatter.ISO_DATE));
-//        result.addText(Base64.getEncoder().encodeToString(p.getImageAsByteArray()));
         result.addChild(createImageNode(p.getImage()));
         return result;
     }
