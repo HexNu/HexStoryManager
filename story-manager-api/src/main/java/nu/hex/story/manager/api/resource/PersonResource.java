@@ -8,9 +8,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import nu.hex.story.manager.core.domain.person.Person;
-import nu.hex.story.manager.core.service.command.person.GetFamilyTreeXmlCommand;
+import nu.hex.story.manager.core.service.command.person.GetAllPersonsCommand;
+import nu.hex.story.manager.core.service.command.person.GetFamilyTreeForPersonCommand;
+import nu.hex.story.manager.core.service.command.person.GetFamilyTreeFromAncestorsXmlCommand;
 import nu.hex.story.manager.core.service.command.person.GetPersonCommand;
 import nu.hex.story.manager.dto.out.GetFamilyTreeDTO;
+import nu.hex.story.manager.dto.out.GetListedPersonDTO;
 import nu.hex.story.manager.dto.out.GetPersonDTO;
 import nu.hex.story.manager.dto.out.GetPortraitDTO;
 import se.digitman.lightxml.XmlDocument;
@@ -20,7 +23,7 @@ import se.digitman.lightxml.XmlDocument;
  *
  * @author hl
  */
-@Path("person")
+@Path("persons")
 public class PersonResource extends AbstractResource {
 
     @GET
@@ -40,15 +43,68 @@ public class PersonResource extends AbstractResource {
         List<GetPortraitDTO> result = DTOFactory().createGetPortraitsDTO(person.getPortraits());
         return Response.ok(result).build();
     }
+    
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllAsJSON() {
+        XmlDocument doc = commandExecutor().execute(new GetAllPersonsCommand());
+        List<GetListedPersonDTO> result = DTOFactory().createGetPersonDTOList(doc);
+        return Response.ok(result).build();
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getAllAsXML() {
+        XmlDocument doc = commandExecutor().execute(new GetAllPersonsCommand());
+        return Response.ok(doc.toString()).build();
+    }
+
+    @GET
+    @Path("{id}/family")
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getFamilyTreeXML(@PathParam("id") Long personId) {
+        XmlDocument doc = getFamilyTreeForPersonXml(personId);
+        return Response.ok(doc.toString()).build();
+    }
+
+    @GET
+    @Path("family/{mother}/{father}")
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getFamilyTreeXML(@PathParam("mother") Long motherId, @PathParam("father") Long fatherId) {
+        XmlDocument doc = getFamilyTreeXml(motherId, fatherId);
+        return Response.ok(doc.toString()).build();
+    }
 
     @GET
     @Path("family/{mother}/{father}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getFamilyTree(@PathParam("mother") Long motherId, @PathParam("father") Long fatherId) {
-        Person mother = commandExecutor().execute(new GetPersonCommand(motherId));
-        Person father = commandExecutor().execute(new GetPersonCommand(fatherId));
-        XmlDocument doc = commandExecutor().execute(new GetFamilyTreeXmlCommand(mother, father));
+    public Response getFamilyTreeJson(@PathParam("mother") Long motherId, @PathParam("father") Long fatherId) {
+        XmlDocument doc = getFamilyTreeXml(motherId, fatherId);
         GetFamilyTreeDTO result = DTOFactory().createFamilyTreeDTO(doc);
         return Response.ok(result).build();
+    }
+
+    @GET
+    @Path("family/{mother}/{father}/file")
+    @Produces(MediaType.APPLICATION_XML)
+    public Response getFamilyTreeFile(@PathParam("mother") Long motherId, @PathParam("father") Long fatherId) {
+        XmlDocument result = getFamilyTreeXml(motherId, fatherId);
+        String fileName = result.getRoot().getAttribute("family") + ".hex";
+        return Response.ok((Object) result.toString())
+                .header("Content-Disposition", "attachment; filename=\"" + fileName + "\"")
+                .build();
+    }
+
+    private XmlDocument getFamilyTreeXml(Long motherId, Long fatherId) {
+        Person mother = commandExecutor().execute(new GetPersonCommand(motherId));
+        Person father = commandExecutor().execute(new GetPersonCommand(fatherId));
+        XmlDocument doc = commandExecutor().execute(new GetFamilyTreeFromAncestorsXmlCommand(mother, father));
+        return doc;
+    }
+
+    private XmlDocument getFamilyTreeForPersonXml(Long personId) {
+        Person person = commandExecutor().execute(new GetPersonCommand(personId));
+        XmlDocument doc = commandExecutor().execute(new GetFamilyTreeForPersonCommand(person));
+        return doc;
     }
 }
