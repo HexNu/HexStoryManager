@@ -4,12 +4,22 @@
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <class>nu.hex.story.manager.core.domain.atlas.impl.DefaultAtlas</class>
     <class>nu.hex.story.manager.core.domain.atlas.impl.DefaultMap</class>
+    <class>nu.hex.story.manager.core.domain.image.impl.DefaultCover</class>
+    <class>nu.hex.story.manager.core.domain.image.impl.DefaultIllustration</class>
     <class>nu.hex.story.manager.core.domain.image.impl.DefaultImage</class>
+    <class>nu.hex.story.manager.core.domain.image.impl.DefaultPortrait</class>
     <class>nu.hex.story.manager.core.domain.person.impl.DefaultPersonalEvent</class>
     <class>nu.hex.story.manager.core.domain.person.impl.DefaultPerson</class>
-    <class>nu.hex.story.manager.core.domain.person.impl.DefaultPortrait</class>
+    <class>nu.hex.story.manager.core.domain.rpg.character.AbstractPlayingCharacter</class>
+    <class>nu.hex.story.manager.core.domain.rpg.character.dnd.impl.DnDAbilityScore</class>
+    <class>nu.hex.story.manager.core.domain.rpg.character.dnd.impl.DnDPlayingCharacter</class>
+    <class>nu.hex.story.manager.core.domain.rpg.character.dnd.impl.DnDStats</class>
+    <class>nu.hex.story.manager.core.domain.rpg.player.impl.DefaultPlayer</class>
     <class>nu.hex.story.manager.core.domain.story.impl.DefaultChapter</class>
+    <class>nu.hex.story.manager.core.domain.story.impl.DefaultFootnote</class>
     <class>nu.hex.story.manager.core.domain.story.impl.DefaultStory</class>
+    <class>nu.hex.story.manager.core.domain.story.impl.DefaultPlot</class>
+    <class>nu.hex.story.manager.core.domain.story.impl.DefaultPlotItem</class>
     <properties>
       <property name="hibernate.connection.username" value="venus"/>
       <property name="hibernate.connection.password" value="venus"/>

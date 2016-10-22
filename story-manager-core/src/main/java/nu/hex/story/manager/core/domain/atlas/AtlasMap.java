@@ -1,14 +1,14 @@
 package nu.hex.story.manager.core.domain.atlas;
 
-import nu.hex.story.manager.core.domain.DomainObject;
 import nu.hex.story.manager.core.domain.image.Image;
+import nu.hex.story.manager.core.domain.DomainEntity;
 
 /**
  * Created 2016-okt-14
  *
  * @author hl
  */
-public interface AtlasMap extends DomainObject<Long> {
+public interface AtlasMap extends DomainEntity<Long> {
 
     Atlas getAtlas();
 

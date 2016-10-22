@@ -1,14 +1,15 @@
 package nu.hex.story.manager.core.domain.person;
 
+import nu.hex.story.manager.core.domain.image.Portrait;
 import java.time.LocalDate;
 import java.util.List;
-import nu.hex.story.manager.core.domain.DomainObject;
+import nu.hex.story.manager.core.domain.DomainEntity;
 
 /**
  *
  * @author hl
  */
-public interface Person extends DomainObject<Long>, Comparable<Person> {
+public interface Person extends DomainEntity<Long>, Comparable<Person> {
 
     String getFamilyName();
 

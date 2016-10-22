@@ -55,7 +55,10 @@ public class DefaultImage implements Image {
 
     @Override
     public String getName() {
-        return name;
+        if (getMediaType() == null || !getMediaType().contains("/")) {
+            return name;
+        }
+        return name + "." + getMediaType().substring(getMediaType().lastIndexOf("/") + 1);
     }
 
     @Override

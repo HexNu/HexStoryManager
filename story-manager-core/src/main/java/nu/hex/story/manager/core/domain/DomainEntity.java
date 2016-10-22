@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @author hl
  * @param <T>
  */
-public interface DomainObject<T> extends Serializable {
+public interface DomainEntity<T> extends Serializable {
 
     T getId();
 

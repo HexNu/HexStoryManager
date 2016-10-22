@@ -1,4 +1,4 @@
-package nu.hex.story.manager.core.util;
+package nu.hex.story.manager.core.util.date;
 
 import java.time.LocalDate;
 import java.time.Month;

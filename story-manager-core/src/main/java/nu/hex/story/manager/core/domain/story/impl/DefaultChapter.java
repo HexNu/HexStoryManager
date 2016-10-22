@@ -1,12 +1,25 @@
 package nu.hex.story.manager.core.domain.story.impl;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import nu.hex.story.manager.core.domain.image.Illustration;
+import nu.hex.story.manager.core.domain.image.Portrait;
+import nu.hex.story.manager.core.domain.image.impl.DefaultIllustration;
+import nu.hex.story.manager.core.domain.image.impl.DefaultPortrait;
+import nu.hex.story.manager.core.domain.person.Person;
+import nu.hex.story.manager.core.domain.person.impl.DefaultPerson;
 import nu.hex.story.manager.core.domain.story.Chapter;
 import nu.hex.story.manager.core.domain.story.Story;
 import nu.hex.story.manager.core.util.RomanNumerals;
@@ -28,6 +41,12 @@ public class DefaultChapter implements Chapter {
     private String text;
     @ManyToOne(targetEntity = DefaultStory.class)
     private Story story;
+    @OneToMany(targetEntity = DefaultIllustration.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private final Set<Illustration> illustrations = new HashSet<>();
+    @OneToMany(targetEntity = DefaultPortrait.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private final Set<Portrait> portraits = new HashSet<>();
+    @OneToMany(targetEntity = DefaultPerson.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private final Set<Person> persons = new HashSet<>();
 
     @Override
     public Long getId() {
@@ -102,6 +121,36 @@ public class DefaultChapter implements Chapter {
     @Override
     public void appendText(String text) {
         this.text += text;
+    }
+
+    @Override
+    public List<Illustration> getIllustrations() {
+        return new ArrayList<>(illustrations);
+    }
+
+    @Override
+    public void addIllustration(Illustration illustration) {
+        illustrations.add(illustration);
+    }
+
+    @Override
+    public List<Portrait> getPortraits() {
+        return new ArrayList<>(portraits);
+    }
+
+    @Override
+    public void addPortrait(Portrait portrait) {
+        portraits.add(portrait);
+    }
+
+    @Override
+    public List<Person> getPersons() {
+        return new ArrayList<>(persons);
+    }
+
+    @Override
+    public void addPerson(Person person) {
+        persons.add(person);
     }
 
     @Override

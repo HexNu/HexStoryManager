@@ -1,4 +1,4 @@
-package nu.hex.story.manager.core.domain.person.impl;
+package nu.hex.story.manager.core.domain.image.impl;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -16,9 +16,9 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import nu.hex.story.manager.core.domain.image.Image;
-import nu.hex.story.manager.core.domain.image.impl.DefaultImage;
 import nu.hex.story.manager.core.domain.person.Person;
-import nu.hex.story.manager.core.domain.person.Portrait;
+import nu.hex.story.manager.core.domain.image.Portrait;
+import nu.hex.story.manager.core.domain.person.impl.DefaultPerson;
 import org.hibernate.annotations.Type;
 
 /**
@@ -37,12 +37,14 @@ public class DefaultPortrait implements Portrait {
     private Person owner;
     @Temporal(TemporalType.DATE)
     @Type(type = "nu.hex.story.manager.core.jpa.LocalDateUserType")
-    private LocalDate portraitDate;
+    private LocalDate imageDate;
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true, targetEntity = DefaultImage.class)
     @JoinColumn(name = "image_id")
     private Image image;
     @Column
     private String label;
+    @Column(length = 1024 * 2)
+    private String shortDescription;
     @Column(length = 1024 * 128)
     private String description;
 
@@ -72,11 +74,11 @@ public class DefaultPortrait implements Portrait {
     }
 
     public LocalDate getPortraitDate() {
-        return portraitDate;
+        return imageDate;
     }
 
     public void setPortraitDate(LocalDate portraitDate) {
-        this.portraitDate = portraitDate;
+        this.imageDate = portraitDate;
     }
 
     @Override
@@ -101,17 +103,17 @@ public class DefaultPortrait implements Portrait {
 
     @Override
     public LocalDate getDate() {
-        return portraitDate;
+        return imageDate;
     }
 
     @Override
     public void setDate(LocalDate date) {
-        this.portraitDate = date;
+        this.imageDate = date;
     }
 
     @Override
     public void setDate(String date) {
-        this.portraitDate = LocalDate.parse(date, DateTimeFormatter.ISO_DATE);
+        this.imageDate = LocalDate.parse(date, DateTimeFormatter.ISO_DATE);
     }
 
     @Override
@@ -122,6 +124,16 @@ public class DefaultPortrait implements Portrait {
     @Override
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    @Override
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
     }
 
     @Override

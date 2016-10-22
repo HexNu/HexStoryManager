@@ -2,11 +2,10 @@ package nu.hex.story.manager.core.service.command.person;
 
 import java.time.format.DateTimeFormatter;
 import java.util.Base64;
-import java.util.List;
 import nu.hex.story.manager.core.domain.image.Image;
 import nu.hex.story.manager.core.domain.person.Person;
 import nu.hex.story.manager.core.domain.person.PersonalEvent;
-import nu.hex.story.manager.core.domain.person.Portrait;
+import nu.hex.story.manager.core.domain.image.Portrait;
 import nu.hex.story.manager.core.service.command.AbstractServiceCommand;
 import se.digitman.lightxml.NodeFactory;
 import se.digitman.lightxml.XmlDocument;

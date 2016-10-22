@@ -22,11 +22,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.persistence.UniqueConstraint;
+import nu.hex.story.manager.core.domain.image.Portrait;
+import nu.hex.story.manager.core.domain.image.impl.DefaultPortrait;
 import nu.hex.story.manager.core.domain.person.Person;
 import nu.hex.story.manager.core.domain.person.PersonalEvent;
-import nu.hex.story.manager.core.domain.person.Portrait;
-import nu.hex.story.manager.core.util.DateUtils;
+import nu.hex.story.manager.core.util.date.DateUtils;
 import org.hibernate.annotations.Type;
 
 /**
@@ -34,7 +34,7 @@ import org.hibernate.annotations.Type;
  * @author hl
  */
 @Entity
-@Table(name = "Person", uniqueConstraints = @UniqueConstraint(columnNames = {"givenName", "familyName", "dateOfBirth"}))
+@Table(name = "Person")
 @NamedQueries({
     @NamedQuery(name = "Person.findPerson",
             query = "SELECT p FROM DefaultPerson p WHERE p.givenName = :givenName AND p.familyName = :familyName AND p.dateOfBirth = :dateOfBirth"),

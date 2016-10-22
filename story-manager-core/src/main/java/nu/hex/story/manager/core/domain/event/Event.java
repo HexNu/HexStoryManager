@@ -1,14 +1,14 @@
 package nu.hex.story.manager.core.domain.event;
 
 import java.time.LocalDate;
-import nu.hex.story.manager.core.domain.DomainObject;
+import nu.hex.story.manager.core.domain.DomainEntity;
 
 /**
  * Created 2016-okt-13
  *
  * @author hl
  */
-public interface Event extends DomainObject<Long>, Comparable<Event>  {
+public interface Event extends DomainEntity<Long>, Comparable<Event>  {
     
     String getLabel();
     

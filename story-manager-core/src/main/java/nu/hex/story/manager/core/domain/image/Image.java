@@ -1,14 +1,14 @@
 package nu.hex.story.manager.core.domain.image;
 
 import java.io.InputStream;
-import nu.hex.story.manager.core.domain.DomainObject;
+import nu.hex.story.manager.core.domain.DomainEntity;
 
 /**
  * Created 2016-okt-13
  *
  * @author hl
  */
-public interface Image extends DomainObject<Long> {
+public interface Image extends DomainEntity<Long> {
 
     void setName(String name);
 

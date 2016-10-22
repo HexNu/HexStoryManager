@@ -1,15 +1,15 @@
-package nu.hex.story.manager.core.domain.person;
+package nu.hex.story.manager.core.domain.image;
 
 import java.time.LocalDate;
-import nu.hex.story.manager.core.domain.DomainObject;
-import nu.hex.story.manager.core.domain.image.Image;
+import nu.hex.story.manager.core.domain.person.Person;
+import nu.hex.story.manager.core.domain.DomainEntity;
 
 /**
  * Created 2016-jun-27
  *
  * @author hl
  */
-public interface Portrait extends DomainObject<Long>, Comparable<Portrait> {
+public interface Portrait extends DomainEntity<Long>, Comparable<Portrait> {
 
     String getLabel();
 
@@ -32,5 +32,9 @@ public interface Portrait extends DomainObject<Long>, Comparable<Portrait> {
     String getDescription();
 
     void setDescription(String description);
+
+    String getShortDescription();
+
+    void setShortDescription(String shortDescription);
 
 }

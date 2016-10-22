@@ -1,6 +1,6 @@
 package nu.hex.story.manager.core.service.command.portrait;
 
-import nu.hex.story.manager.core.domain.person.Portrait;
+import nu.hex.story.manager.core.domain.image.Portrait;
 import nu.hex.story.manager.core.service.command.AbstractServiceCommand;
 
 /**

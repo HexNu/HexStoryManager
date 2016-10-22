@@ -1,13 +1,17 @@
 package nu.hex.story.manager.core.domain.story;
 
-import nu.hex.story.manager.core.domain.DomainObject;
+import java.util.List;
+import nu.hex.story.manager.core.domain.image.Illustration;
+import nu.hex.story.manager.core.domain.image.Portrait;
+import nu.hex.story.manager.core.domain.person.Person;
+import nu.hex.story.manager.core.domain.DomainEntity;
 
 /**
  * Created 2016-jul-29
  *
  * @author hl
  */
-public interface Chapter extends DomainObject<Long>, Comparable<Chapter> {
+public interface Chapter extends DomainEntity<Long>, Comparable<Chapter> {
 
     Story getStory();
 
@@ -32,4 +36,16 @@ public interface Chapter extends DomainObject<Long>, Comparable<Chapter> {
     void setText(String text);
 
     void appendText(String text);
+
+    List<Illustration> getIllustrations();
+
+    void addIllustration(Illustration illustration);
+
+    List<Portrait> getPortraits();
+
+    void addPortrait(Portrait portrait);
+    
+    List<Person> getPersons();
+    
+    void addPerson(Person person);
 }

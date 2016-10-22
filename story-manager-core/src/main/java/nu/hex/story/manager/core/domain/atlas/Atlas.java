@@ -1,14 +1,14 @@
 package nu.hex.story.manager.core.domain.atlas;
 
 import java.util.List;
-import nu.hex.story.manager.core.domain.DomainObject;
+import nu.hex.story.manager.core.domain.DomainEntity;
 
 /**
  * Created 2016-okt-14
  *
  * @author hl
  */
-public interface Atlas extends DomainObject<Long> {
+public interface Atlas extends DomainEntity<Long> {
 
     String getTitle();
 

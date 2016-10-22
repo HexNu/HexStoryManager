@@ -30,4 +30,19 @@ public class DaoFactory {
     public PortraitDao getPortraitDao() {
         return new PortraitDao(em);
     }
+    public IllustrationDao getIllustrationDao() {
+        return new IllustrationDao(em);
+    }
+
+    public StoryDao getStoryDao() {
+        return new StoryDao(em);
+    }
+
+    public ChapterDao getChapterDao() {
+        return new ChapterDao(em);
+    }
+
+    public PlotDao getPlotDao() {
+        return new PlotDao(em);
+    }
 }

@@ -12,31 +12,43 @@ import java.util.Map;
 public class RomanNumerals {
 
     private Integer number;
-    private static final HashMap<String, Integer> ROMAN_NUMERALS = new LinkedHashMap<>();
+    private static final HashMap<String, Integer> ROMAN_NUMERALS_INTEGER = new LinkedHashMap<>();
 
     static {
-        ROMAN_NUMERALS.put("M", 1000);
-        ROMAN_NUMERALS.put("CM", 900);
-        ROMAN_NUMERALS.put("D", 500);
-        ROMAN_NUMERALS.put("CD", 400);
-        ROMAN_NUMERALS.put("C", 100);
-        ROMAN_NUMERALS.put("XC", 90);
-        ROMAN_NUMERALS.put("L", 50);
-        ROMAN_NUMERALS.put("XL", 40);
-        ROMAN_NUMERALS.put("X", 10);
-        ROMAN_NUMERALS.put("IX", 9);
-        ROMAN_NUMERALS.put("V", 5);
-        ROMAN_NUMERALS.put("IV", 4);
-        ROMAN_NUMERALS.put("I", 1);
+        ROMAN_NUMERALS_INTEGER.put("ↈ", 100000);
+        ROMAN_NUMERALS_INTEGER.put("Mↈ", 90000);
+        ROMAN_NUMERALS_INTEGER.put("ↇ", 50000);
+        ROMAN_NUMERALS_INTEGER.put("Mↇ", 40000);
+        ROMAN_NUMERALS_INTEGER.put("ↂ", 10000);
+        ROMAN_NUMERALS_INTEGER.put("Mↂ", 9000);
+        ROMAN_NUMERALS_INTEGER.put("ↁ", 5000);
+        ROMAN_NUMERALS_INTEGER.put("Mↁ", 4000);
+        ROMAN_NUMERALS_INTEGER.put("M", 1000);
+        ROMAN_NUMERALS_INTEGER.put("CM", 900);
+        ROMAN_NUMERALS_INTEGER.put("D", 500);
+        ROMAN_NUMERALS_INTEGER.put("CD", 400);
+        ROMAN_NUMERALS_INTEGER.put("C", 100);
+        ROMAN_NUMERALS_INTEGER.put("XC", 90);
+        ROMAN_NUMERALS_INTEGER.put("L", 50);
+        ROMAN_NUMERALS_INTEGER.put("XL", 40);
+        ROMAN_NUMERALS_INTEGER.put("X", 10);
+        ROMAN_NUMERALS_INTEGER.put("IX", 9);
+        ROMAN_NUMERALS_INTEGER.put("V", 5);
+        ROMAN_NUMERALS_INTEGER.put("IV", 4);
+        ROMAN_NUMERALS_INTEGER.put("I", 1);
     }
 
     public RomanNumerals(Integer number) {
         this.number = number;
     }
 
+    public RomanNumerals(Long number) {
+        this.number = number.intValue();
+    }
+
     public String getRoman() {
         String res = "";
-        for (Map.Entry<String, Integer> entry : ROMAN_NUMERALS.entrySet()) {
+        for (Map.Entry<String, Integer> entry : ROMAN_NUMERALS_INTEGER.entrySet()) {
             int matches = number / entry.getValue();
             res += repeat(entry.getKey(), matches);
             number = number % entry.getValue();
@@ -54,5 +66,4 @@ public class RomanNumerals {
         }
         return result.toString();
     }
-    
 }
