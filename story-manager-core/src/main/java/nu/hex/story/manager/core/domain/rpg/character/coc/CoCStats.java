@@ -1,4 +1,4 @@
-package nu.hex.story.manager.core.domain.rpg.character.dnd.impl;
+package nu.hex.story.manager.core.domain.rpg.character.coc;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -17,23 +17,23 @@ import nu.hex.story.manager.core.domain.rpg.character.Stats;
  * @author hl
  */
 @Entity
-@Table(name = "DnDStats")
-public class DnDStats implements Stats {
+@Table(name = "CoCStats")
+public class CoCStats implements Stats {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @OneToOne(cascade = CascadeType.ALL, targetEntity = DnDAbilityScore.class)
+    @OneToOne(cascade = CascadeType.ALL, targetEntity = CoCAbilityScore.class)
     private AbilityScore strength;
-    @OneToOne(cascade = CascadeType.ALL, targetEntity = DnDAbilityScore.class)
+    @OneToOne(cascade = CascadeType.ALL, targetEntity = CoCAbilityScore.class)
     private AbilityScore dexterity;
-    @OneToOne(cascade = CascadeType.ALL, targetEntity = DnDAbilityScore.class)
+    @OneToOne(cascade = CascadeType.ALL, targetEntity = CoCAbilityScore.class)
     private AbilityScore constitution;
-    @OneToOne(cascade = CascadeType.ALL, targetEntity = DnDAbilityScore.class)
+    @OneToOne(cascade = CascadeType.ALL, targetEntity = CoCAbilityScore.class)
     private AbilityScore intelligence;
-    @OneToOne(cascade = CascadeType.ALL, targetEntity = DnDAbilityScore.class)
+    @OneToOne(cascade = CascadeType.ALL, targetEntity = CoCAbilityScore.class)
     private AbilityScore wisdom;
-    @OneToOne(cascade = CascadeType.ALL, targetEntity = DnDAbilityScore.class)
+    @OneToOne(cascade = CascadeType.ALL, targetEntity = CoCAbilityScore.class)
     private AbilityScore charisma;
     @Column
     private Integer hitPoints;

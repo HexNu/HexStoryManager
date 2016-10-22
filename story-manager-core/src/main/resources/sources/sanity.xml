@@ -1,0 +1,1663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sanity>
+    <insanities>
+        <temporary>
+            <insanity id="1" description="Fainting or screaming fit"/>
+            <insanity id="2" description="Flees in panic"/>
+            <insanity id="3" description="Physical hysterics or emotional outburst (laughing, crying, ect."/>
+            <insanity id="4" description="Babling, incoherent, rapid speach, or logorhea (a torrent of coherent speech)"/>
+            <insanity id="5" description="Intense phobia, perhaps rooting investigator to the spot."/>
+            <insanity id="6" description="Homicidal or suicidal mania"/>
+            <insanity id="7" description="Hallucinations or delusions"/>
+            <insanity id="8" description="Echopraxia or echolalia (investigator does/says what others around him do/say)"/>
+            <insanity id="9" description="Strange or deviant eating desire (dirt, slime, cannibalism, ect.)"/>
+            <insanity id="10" description="Stupor (assumes foetal position, oblivious to events) or catatonia (can stand but has no will or interest; may be led or forced to simple actions but takes no independent action)"/>
+        </temporary>
+        <indefinite>
+            <insanity id="1" description="Amnesia (memories of intimates usually lost first; language and physical skills engaged, but intellectural skills absent) or stupor/cataonia"/>
+            <insanity id="2" description="Severe phobia (can flee, but sees object of obsession everywhere)"/>
+            <insanity id="3" description="Hallucinations"/>
+            <insanity id="4" description="Strange sexual desires (exhibitionism, nymphomania or satyriasis, teraphilia, ect.)"/>
+            <insanity id="5" description="Fetish (investigator latches onto some object, type of object, or person as a safety blankey)"/>
+            <insanity id="6" description="Uncontrollable tics, tremors, or inability to communicate via speech or writing"/>
+            <insanity id="7" description="Psychosomatic blindness, deafness, or loss of the use of a limb or limb."/>
+            <insanity id="8" description="Brief reactive pyschosis (incoherence, delusions, aberrant behavior, and/or hallucinations)"/>
+            <insanity id="9" description="Temporary paranoia"/>
+            <insanity id="10" description="Compulsive rituals (washing hands constantly, praying, walking in a particular rhythm, never stepping on cracks, checking one’s gun constantly, ect.)"/>
+        </indefinite>
+    </insanities>
+    <phobias>
+        <phobia name="Ablutophobia">
+            <description>Fear of washing or bathing</description>
+        </phobia>
+        <phobia name="Acarophobia">
+            <description>Fear of itching or of the insects that cause itching</description>
+        </phobia>
+        <phobia name="Acerophobia">
+            <description>Fear of sourness</description>
+        </phobia>
+        <phobia name="Achluophobia">
+            <description>Fear of darkness</description>
+        </phobia>
+        <phobia name="Acousticophobia">
+            <description>Fear of noise</description>
+        </phobia>
+        <phobia name="Acrophobia">
+            <description>Fear of heights</description>
+        </phobia>
+        <phobia name="Aerophobia">
+            <description>Fear of drafts, air swallowing, or airbourne noxious substances</description>
+        </phobia>
+        <phobia name="Aeroacrophobia">
+            <description>Fear of open high places</description>
+        </phobia>
+        <phobia name="Aeronausiphobia">
+            <description>Fear of vomiting secondary to airsickness</description>
+        </phobia>
+        <phobia name="Agateophobia">
+            <description>Fear of insanity</description>
+        </phobia>
+        <phobia name="Agliophobia">
+            <description>Fear of pain</description>
+        </phobia>
+        <phobia name="Agoraphobia">
+            <description>Fear of open spaces or of being in crowded, public places like markets. Fear of leaving a safe place</description>
+        </phobia>
+        <phobia name="Agraphobia">
+            <description>Fear of sexual abuse</description>
+        </phobia>
+        <phobia name="Agrizoophobia">
+            <description>Fear of wild animals</description>
+        </phobia>
+        <phobia name="Agyrophobia">
+            <description>Fear of streets or crossing the street</description>
+        </phobia>
+        <phobia name="Aichmophobia">
+            <description>Fear of needles or pointed objects</description>
+        </phobia>
+        <phobia name="Ailurophobia">
+            <description>Fear of cats</description>
+        </phobia>
+        <phobia name="Albuminurophobia">
+            <description>Fear of kidney disease</description>
+        </phobia>
+        <phobia name="Alektorophobia">
+            <description>Fear of chickens</description>
+        </phobia>
+        <phobia name="Algophobia">
+            <description>Fear of pain</description>
+        </phobia>
+        <phobia name="Alliumphobia">
+            <description>Fear of garlic</description>
+        </phobia>
+        <phobia name="Allodoxaphobia">
+            <description>Fear of opinions</description>
+        </phobia>
+        <phobia name="Altophobia">
+            <description>Fear of heights</description>
+        </phobia>
+        <phobia name="Amathophobia">
+            <description>Fear of dust</description>
+        </phobia>
+        <phobia name="Amaxophobia">
+            <description>Fear of riding in a car</description>
+        </phobia>
+        <phobia name="Ambulophobia">
+            <description>Fear of walking</description>
+        </phobia>
+        <phobia name="Amnesiphobia">
+            <description>Fear of amnesia</description>
+        </phobia>
+        <phobia name="Amychophobia">
+            <description>Fear of scratches or being scratched</description>
+        </phobia>
+        <phobia name="Anablephobia">
+            <description>Fear of looking up</description>
+        </phobia>
+        <phobia name="Anemophobia">
+            <description>Fear of wind</description>
+        </phobia>
+        <phobia name="Androphobia">
+            <description>Fear of men</description>
+        </phobia>
+        <phobia name="Ancraophobia">
+            <description>Fear of air drafts or wind</description>
+        </phobia>
+        <phobia name="Anginophobia">
+            <description>Fear of angina, choking or narrowness</description>
+        </phobia>
+        <phobia name="Anglophobia">
+            <description>Fear of England or English culture, etc</description>
+        </phobia>
+        <phobia name="Angrophobia ">
+            <description>Fear of anger or of becoming angry</description>
+        </phobia>
+        <phobia name="Ankylophobia">
+            <description>Fear of immobility of a joint</description>
+        </phobia>
+        <phobia name="Anthrophobia">
+            <alternative-name>Anthophobia</alternative-name>
+            <description>Fear of flowers</description>
+        </phobia>
+        <phobia name="Anthropophobia">
+            <description>Fear of people or society</description>
+        </phobia>
+        <phobia name="Antlophobia">
+            <description>Fear of floods</description>
+        </phobia>
+        <phobia name="Anuptaphobia">
+            <description>Fear of staying single</description>
+        </phobia>
+        <phobia name="Apeirophobia">
+            <description>Fear of infinity</description>
+        </phobia>
+        <phobia name="Haphephobia">
+            <description>Fear of being touched</description>
+        </phobia>
+        <phobia name="Apiphobia">
+            <description>Fear of bees</description>
+        </phobia>
+        <phobia name="Apotemnophobia">
+            <description>Fear of persons with amputations</description>
+        </phobia>
+        <phobia name="Arachibutyrophobia">
+            <description>Fear of peanut butter sticking to the roof of the mouth</description>
+        </phobia>
+        <phobia name="Arachnephobia">
+            <alternative-name>Arachnophobia</alternative-name>
+            <description>Fear of spiders</description>
+        </phobia>
+        <phobia name="Arithmophobia">
+            <description>Fear of numbers</description>
+        </phobia>
+        <phobia name="Arrhenphobia">
+            <description>Fear of men</description>
+        </phobia>
+        <phobia name="Arsonphobia">
+            <description>Fear of fire</description>
+        </phobia>
+        <phobia name="Asthenophobia">
+            <description>Fear of fainting or weakness</description>
+        </phobia>
+        <phobia name="Ceraunophobia">
+            <alternative-name>Astrapophobia</alternative-name>
+            <description>Fear of thunder and lightning</description>
+            <see-also>Keraunophobia</see-also>
+        </phobia>
+        <phobia name="Astrophobia">
+            <description>Fear of stars or celestial space</description>
+        </phobia>
+        <phobia name="Asymmetriphobia">
+            <description>Fear of asymmetrical things</description>
+        </phobia>
+        <phobia name="Ataxiophobia">
+            <description>Fear of ataxia, muscular incoordination</description>
+        </phobia>
+        <phobia name="Ataxophobia">
+            <description>Fear of disorder or untidiness</description>
+        </phobia>
+        <phobia name="Atelophobia">
+            <description>Fear of imperfection</description>
+        </phobia>
+        <phobia name="Atephobia">
+            <description>Fear of ruin or ruins</description>
+        </phobia>
+        <phobia name="Athazagoraphobia">
+            <description>Fear of being forgotton or ignored or forgetting</description>
+        </phobia>
+        <phobia name="Atomosophobia">
+            <description>Fear of atomic explosions</description>
+        </phobia>
+        <phobia name="Atychiphobia">
+            <description>Fear of failure</description>
+        </phobia>
+        <phobia name="Aulophobia">
+            <description>Fear of flutes</description>
+        </phobia>
+        <phobia name="Aurophobia">
+            <description>Fear of gold</description>
+        </phobia>
+        <phobia name="Auroraphobia">
+            <description>Fear of Northern lights</description>
+        </phobia>
+        <phobia name="Autodysomophobia">
+            <description>Fear of one that has a vile odor</description>
+        </phobia>
+        <phobia name="Automatonophobia">
+            <description>Fear of ventriloquists dummies, animatronic creatures, wax statues - anything that falsly represents a sentient being</description>
+        </phobia>
+        <phobia name="Automysophobia">
+            <description>Fear of being dirty</description>
+        </phobia>
+        <phobia name="Autophobia">
+            <description>Fear of being alone or of oneself</description>
+        </phobia>
+        <phobia name="Aviophobia">
+            <alternative-name>Aviatophobia</alternative-name>
+            <description>Fear of flying</description>
+        </phobia>
+        <phobia name="Bacillophobia">
+            <description>Fear of microbes</description>
+        </phobia>
+        <phobia name="Bacteriophobia">
+            <description>Fear of bacteria</description>
+        </phobia>
+        <phobia name="Ballistophobia">
+            <description>Fear of missiles or bullets</description>
+        </phobia>
+        <phobia name="Bolshephobia">
+            <description>Fear of Bolsheviks</description>
+        </phobia>
+        <phobia name="Barophobia">
+            <description>Fear of gravity</description>
+        </phobia>
+        <phobia name="Basophobia">
+            <alternative-name>Basiphobia</alternative-name>
+            <description>Inability to stand. Fear of walking or falling</description>
+        </phobia>
+        <phobia name="Bathmophobia">
+            <description>Fear of stairs or steep slopes</description>
+        </phobia>
+        <phobia name="Bathophobia">
+            <description>Fear of depth</description>
+        </phobia>
+        <phobia name="Batophobia">
+            <description>Fear of heights or being close to high buildings</description>
+        </phobia>
+        <phobia name="Batrachophobia">
+            <description>Fear of amphibians, such as frogs, newts, salamanders, etc</description>
+        </phobia>
+        <phobia name="Aichmophobia">
+            <description>Fear of pins and needles</description>
+        </phobia>
+        <phobia name="Bibliophobia">
+            <description>Fear of books</description>
+        </phobia>
+        <phobia name="Blennophobia">
+            <description>Fear of slime</description>
+        </phobia>
+        <phobia name="Bogyphobia">
+            <description>Fear of bogeys or the bogeyman</description>
+        </phobia>
+        <phobia name="Botanophobia">
+            <description>Fear of plants</description>
+        </phobia>
+        <phobia name="Bromidrosiphobia">
+            <alternative-name>Bromidrophobia</alternative-name>
+            <description>Fear of body smells</description>
+        </phobia>
+        <phobia name="Brontophobia">
+            <description>Fear of thunder and lightning</description>
+        </phobia>
+        <phobia name="Bufonophobia">
+            <description>Fear of toads</description>
+        </phobia>
+        <phobia name="Cacophobia">
+            <description>Fear of ugliness</description>
+        </phobia>
+        <phobia name="Cainophobia">
+            <alternative-name>Cainotophobia</alternative-name>
+            <description>Fear of newness, novelty</description>
+        </phobia>
+        <phobia name="Caligynephobia">
+            <description>Fear of beautiful women</description>
+        </phobia>
+        <phobia name="Cancerophobia">
+            <alternative-name>Carcinophobia</alternative-name>
+            <description>Fear of cancer</description>
+        </phobia>
+        <phobia name="Cardiophobia">
+            <description>Fear of the heart</description>
+        </phobia>
+        <phobia name="Carnophobia">
+            <description>Fear of meat</description>
+        </phobia>
+        <phobia name="Catagelophobia">
+            <description>Fear of being ridiculed</description>
+        </phobia>
+        <phobia name="Catapedaphobia">
+            <description>Fear of jumping from high and low places</description>
+        </phobia>
+        <phobia name="Cathisophobia">
+            <description>Fear of sitting</description>
+        </phobia>
+        <phobia name="Catoptrophobia">
+            <description>Fear of mirrors</description>
+        </phobia>
+        <phobia name="Cenophobia">
+            <alternative-name>Centophobia</alternative-name>
+            <description>Fear of new things or ideas</description>
+        </phobia>
+        <phobia name="Astraphobia">
+            <alternative-name>Keraunophobia</alternative-name>
+            <description>Fear of thunder and lightning</description>
+            <see-also>Astrapophobia</see-also>
+        </phobia>
+        <phobia name="Chaetophobia">
+            <description>Fear of hair</description>
+        </phobia>
+        <phobia name="Frigophobia">
+            <alternative-name>Cheimatophobia</alternative-name>
+            <description>Fear of cold</description>
+            <see-also>Psychophobia</see-also>
+        </phobia>
+        <phobia name="Chemophobia">
+            <description>Fear of chemicals or working with chemicals</description>
+        </phobia>
+        <phobia name="Cherophobia">
+            <description>Fear of gaiety</description>
+        </phobia>
+        <phobia name="Chionophobia">
+            <description>Fear of snow</description>
+        </phobia>
+        <phobia name="Chiraptophobia">
+            <description>Fear of being touched</description>
+        </phobia>
+        <phobia name="Chirophobia">
+            <description>Fear of hands</description>
+        </phobia>
+        <phobia name="Cholerophobia">
+            <description>Fear of anger or the fear of cholera</description>
+        </phobia>
+        <phobia name="Chorophobia">
+            <description>Fear of dancing</description>
+        </phobia>
+        <phobia name="Chrometophobia">
+            <alternative-name>Chrematophobia</alternative-name>
+            <description>Fear of money</description>
+        </phobia>
+        <phobia name="Chromophobia">
+            <alternative-name>Chromatophobia</alternative-name>
+            <description>Fear of colors</description>
+        </phobia>
+        <phobia name="Chronophobia">
+            <description>Fear of time</description>
+        </phobia>
+        <phobia name="Chronomentrophobia">
+            <description>Fear of clocks</description>
+        </phobia>
+        <phobia name="Sitophobia">
+            <description>Fear of food</description>
+            <see-also>Sitiophobia</see-also>
+        </phobia>
+        <phobia name="Claustrophobia">
+            <description>Fear of confined spaces</description>
+        </phobia>
+        <phobia name="Cleithrophobia">
+            <alternative-name>Cleisiophobia</alternative-name>
+            <description>Fear of being locked in an enclosed place</description>
+        </phobia>
+        <phobia name="Cleptophobia">
+            <description>Fear of stealing</description>
+        </phobia>
+        <phobia name="Climacophobia">
+            <description>Fear of stairs, climbing, or of falling downstairs</description>
+        </phobia>
+        <phobia name="Clinophobia">
+            <description>Fear of going to bed</description>
+        </phobia>
+        <phobia name="Clithrophobia">
+            <alternative-name>Cleithrophobia</alternative-name>
+            <description>Fear of being enclosed</description>
+        </phobia>
+        <phobia name="Cnidophobia">
+            <description>Fear of stings</description>
+        </phobia>
+        <phobia name="Cometophobia">
+            <description>Fear of comets</description>
+        </phobia>
+        <phobia name="Coimetrophobia">
+            <description>Fear of cemeteries</description>
+        </phobia>
+        <phobia name="Coprastasophobia">
+            <description>Fear of constipation</description>
+        </phobia>
+        <phobia name="Coprophobia">
+            <description>Fear of feces</description>
+        </phobia>
+        <phobia name="Consecotaleophobia">
+            <description>Fear of chopsticks</description>
+        </phobia>
+        <phobia name="Coulrophobia">
+            <description>Fear of clowns</description>
+        </phobia>
+        <phobia name="Counterphobia">
+            <description>The preference by a phobic for fearful situations</description>
+        </phobia>
+        <phobia name="Cremnophobia">
+            <description>Fear of precipices</description>
+        </phobia>
+        <phobia name="Cryophobia">
+            <description>Fear of extreme cold, ice or frost</description>
+        </phobia>
+        <phobia name="Crystallophobia">
+            <description>Fear of crystals or glass</description>
+        </phobia>
+        <phobia name="Cyberphobia">
+            <description>Fear of computers or working on a computer</description>
+        </phobia>
+        <phobia name="Cyclophobia">
+            <description>Fear of bicycles</description>
+        </phobia>
+        <phobia name="Cymophobia">
+            <alternative-name>Kymophobia</alternative-name>
+            <description>Fear of waves or wave like motions</description>
+        </phobia>
+        <phobia name="Cynophobia">
+            <description>Fear of dogs or rabies</description>
+        </phobia>
+        <phobia name="Cypridophobia">
+            <alternative-name>Cypriphobia</alternative-name>
+            <alternative-name>Cyprianophobia</alternative-name>
+            <alternative-name>Cyprinophobia</alternative-name>
+            <description>Fear of prostitutes or venereal disease</description>
+        </phobia>
+        <phobia name="Decidophobia">
+            <description>Fear of making decisions</description>
+        </phobia>
+        <phobia name="Defecaloesiophobia">
+            <description>Fear of painful bowels movements</description>
+        </phobia>
+        <phobia name="Deipnophobia">
+            <description>Fear of dining or dinner conversations</description>
+        </phobia>
+        <phobia name="Dementophobia">
+            <description>Fear of insanity</description>
+        </phobia>
+        <phobia name="Demonophobia">
+            <alternative-name>Daemonophobia</alternative-name>
+            <description>Fear of demons</description>
+        </phobia>
+        <phobia name="Agoraphobia">
+            <description>Fear of crowds</description>
+        </phobia>
+        <phobia name="Dendrophobia">
+            <description>Fear of trees</description>
+        </phobia>
+        <phobia name="Dentophobia">
+            <description>Fear of dentists</description>
+        </phobia>
+        <phobia name="Dermatophobia">
+            <description>Fear of skin lesions</description>
+        </phobia>
+        <phobia name="Dermatosiophobia">
+            <alternative-name>Dermatophobia</alternative-name>
+            <alternative-name>Dermatopathophobia</alternative-name>
+            <description>Fear of skin disease</description>
+        </phobia>
+        <phobia name="Dextrophobia">
+            <description>Fear of objects at the right side of the body</description>
+        </phobia>
+        <phobia name="Diabetophobia">
+            <description>Fear of diabetes</description>
+        </phobia>
+        <phobia name="Didaskaleinophobia">
+            <description>Fear of going to school</description>
+        </phobia>
+        <phobia name="Dikephobia">
+            <description>Fear of justice</description>
+        </phobia>
+        <phobia name="Dinophobia">
+            <description>Fear of dizziness or whirlpools</description>
+        </phobia>
+        <phobia name="Diplophobia">
+            <description>Fear of double vision</description>
+        </phobia>
+        <phobia name="Dipsophobia">
+            <description>Fear of drinking</description>
+        </phobia>
+        <phobia name="Dishabiliophobia">
+            <description>Fear of undressing in front of someone</description>
+        </phobia>
+        <phobia name="Eicophobia">
+            <description>Fear of houses or being in a house</description>
+            <see-also>Oikophobia</see-also>
+        </phobia>
+        <phobia name="Doraphobia">
+            <description>Fear of fur or skins of animals</description>
+        </phobia>
+        <phobia name="Doxophobia">
+            <description>Fear of expressing opinions or of receiving praise</description>
+        </phobia>
+        <phobia name="Dromophobia">
+            <description>Fear of crossing streets</description>
+        </phobia>
+        <phobia name="Dutchphobia">
+            <description>Fear of the Dutch</description>
+        </phobia>
+        <phobia name="Dysmorphophobia">
+            <description>Fear of deformity</description>
+        </phobia>
+        <phobia name="Dystychiphobia">
+            <description>Fear of accidents</description>
+        </phobia>
+        <phobia name="Ecclesiophobia">
+            <description>Fear of church</description>
+        </phobia>
+        <phobia name="Ecophobia">
+            <description>Fear of home</description>
+        </phobia>
+        <phobia name="Domatophobia">
+            <description>Fear of home surroundings</description>
+            <see-also>Oikophobia</see-also>
+        </phobia>
+        <phobia name="Eisoptrophobia">
+            <description>Fear of mirrors or of seeing oneself in a mirror</description>
+        </phobia>
+        <phobia name="Electrophobia">
+            <description>Fear of electricity</description>
+        </phobia>
+        <phobia name="Eleutherophobia">
+            <description>Fear of freedom</description>
+        </phobia>
+        <phobia name="Ailurophobia">
+            <description>Fear of cats</description>
+        </phobia>
+        <phobia name="Emetophobia">
+            <description>Fear of vomiting</description>
+        </phobia>
+        <phobia name="Enetophobia">
+            <description>Fear of pins</description>
+        </phobia>
+        <phobia name="Enochlophobia">
+            <description>Fear of crowds</description>
+        </phobia>
+        <phobia name="Enosiophobia">
+            <alternative-name>Enissophobia</alternative-name>
+            <description>Fear of having committed an unpardonable sin or of criticism</description>
+        </phobia>
+        <phobia name="Entomophobia">
+            <description>Fear of insects</description>
+        </phobia>
+        <phobia name="Eosophobia">
+            <description>Fear of dawn or daylight</description>
+        </phobia>
+        <phobia name="Ephebiphobia">
+            <description>Fear of teenagers</description>
+        </phobia>
+        <phobia name="Epistaxiophobia">
+            <description>Fear of nosebleeds</description>
+        </phobia>
+        <phobia name="Epistemophobia">
+            <description>Fear of knowledge</description>
+        </phobia>
+        <phobia name="Equinophobia">
+            <description>Fear of horses</description>
+        </phobia>
+        <phobia name="Eremophobia">
+            <description>Fear of being oneself or of lonliness</description>
+        </phobia>
+        <phobia name="Ereuthrophobia">
+            <description>Fear of blushing</description>
+        </phobia>
+        <phobia name="Ergasiophobia">
+            <description>1) Fear of work or functioning. 2) Surgeons fear of operating</description>
+        </phobia>
+        <phobia name="Ergophobia">
+            <description>Fear of work</description>
+        </phobia>
+        <phobia name="Erotophobia">
+            <description>Fear of sexual love or sexual questions</description>
+        </phobia>
+        <phobia name="Euphobia">
+            <description>Fear of hearing good news</description>
+        </phobia>
+        <phobia name="Erythrophobia">
+            <alternative-name>Erytophobia</alternative-name>
+            <alternative-name>Ereuthophobia</alternative-name>
+            <description>Fear of 1) redlights 2) blushing 3) the colour red</description>
+        </phobia>
+        <phobia name="Febriphobia">
+            <alternative-name>Fibriphobia</alternative-name>
+            <alternative-name>Fibriophobia</alternative-name>
+            <description>Fear of fever</description>
+        </phobia>
+        <phobia name="Ailurophobia">
+            <description>Fear of cats</description>
+            <see-also>Elurophobia</see-also>
+            <see-also>Galeophobia</see-also>
+            <see-also>Gatophobia</see-also>
+        </phobia>
+        <phobia name="Gallophobia">
+            <description>Fear of France or French culture</description>
+            <see-also>Galiophobia</see-also>
+        </phobia>
+        <phobia name="Cheimaphobia">
+            <description>Fear of cold or cold things</description>
+            <see-also>Cheimatophobia</see-also>
+            <see-also>Psychrophobia</see-also>
+        </phobia>
+        <phobia name="Galeophobia">
+            <alternative-name>Gatophobia</alternative-name>
+            <description>Fear of cats</description>
+        </phobia>
+        <phobia name="Francophobia">
+            <alternative-name>Galiophobia</alternative-name>
+            <description>Fear France or French culture</description>
+        </phobia>
+        <phobia name="Gamophobia">
+            <description>Fear of marriage</description>
+        </phobia>
+        <phobia name="Geliophobia">
+            <description>Fear of laughter</description>
+        </phobia>
+        <phobia name="Geniophobia">
+            <description>Fear of chins</description>
+        </phobia>
+        <phobia name="Genophobia">
+            <description>Fear of sex</description>
+        </phobia>
+        <phobia name="Genuphobia">
+            <description>Fear of knees</description>
+        </phobia>
+        <phobia name="Gephyrophobia">
+            <alternative-name>Gephydrophobia</alternative-name>
+            <alternative-name>Gephysrophobia</alternative-name>
+            <description>Fear of crossing bridges</description>
+        </phobia>
+        <phobia name="Germanophobia">
+            <description>Fear of Germany or German culture</description>
+        </phobia>
+        <phobia name="Gerascophobia">
+            <description>Fear of growing old</description>
+        </phobia>
+        <phobia name="Gerontophobia">
+            <description>Fear of old people or of growing old</description>
+        </phobia>
+        <phobia name="Geumaphobia">
+            <alternative-name>Geumophobia</alternative-name>
+            <description>Fear of taste</description>
+        </phobia>
+        <phobia name="Glossophobia">
+            <description>Fear of speaking in public or of trying to speak</description>
+        </phobia>
+        <phobia name="Gnosiophobia">
+            <description>Fear of knowledge</description>
+        </phobia>
+        <phobia name="Graphophobia">
+            <description>Fear of writing or handwriting</description>
+        </phobia>
+        <phobia name="Gymnophobia">
+            <description>Fear of nudity</description>
+        </phobia>
+        <phobia name="Gynephobia">
+            <alternative-name>Gynophobia</alternative-name>
+            <description>Fear of women</description>
+        </phobia>
+        <phobia name="Hadephobia">
+            <description>Fear of hell</description>
+        </phobia>
+        <phobia name="Hagiophobia">
+            <description>Fear of saints or holy things</description>
+        </phobia>
+        <phobia name="Hamartophobia">
+            <description>Fear of sinning</description>
+        </phobia>
+        <phobia name="Haphephobia">
+            <alternative-name>Haptephobia</alternative-name>
+            <description>Fear of being touched</description>
+        </phobia>
+        <phobia name="Harpaxophobia">
+            <description>Fear of being robbed</description>
+        </phobia>
+        <phobia name="Hedonophobia">
+            <description>Fear of feeling pleasure</description>
+        </phobia>
+        <phobia name="Heliophobia">
+            <description>Fear of the sun</description>
+        </phobia>
+        <phobia name="Hellenologophobia">
+            <description>Fear of Greek terms or complex scientific terminology</description>
+        </phobia>
+        <phobia name="Helminthophobia">
+            <description>Fear of being infested with worms</description>
+        </phobia>
+        <phobia name="Hemophobia">
+            <alternative-name>Hemaphobia</alternative-name>
+            <alternative-name>Hematophobia</alternative-name>
+            <description>Fear of blood</description>
+        </phobia>
+        <phobia name="Heresyphobia">
+            <alternative-name>Hereiophobia</alternative-name>
+            <description>Fear of challenges to official doctrine or of radical deviation</description>
+        </phobia>
+        <phobia name="Herpetophobia">
+            <description>Fear of reptiles or creepy, crawly things</description>
+        </phobia>
+        <phobia name="Sexophobia">
+            <description>Fear of the opposite sex</description>
+        </phobia>
+        <phobia name="Hexakosioihexekontahexaphobia">
+            <description>Fear of the number 666</description>
+        </phobia>
+        <phobia name="Hierophobia">
+            <description>Fear of priests or sacred things</description>
+        </phobia>
+        <phobia name="Hippophobia">
+            <description>Fear of horses</description>
+        </phobia>
+        <phobia name="Hippopotomonstrosesquippedaliophobia">
+            <description>Fear of long words</description>
+        </phobia>
+        <phobia name="Hobophobia">
+            <description>Fear of bums or beggars</description>
+        </phobia>
+        <phobia name="Hodophobia">
+            <description>Fear of road travel</description>
+        </phobia>
+        <phobia name="Hormephobia">
+            <description>Fear of shock</description>
+        </phobia>
+        <phobia name="Homichlophobia">
+            <description>Fear of fog</description>
+        </phobia>
+        <phobia name="Homilophobia">
+            <description>Fear of sermons</description>
+        </phobia>
+        <phobia name="Hominophobia">
+            <description>Fear of men</description>
+        </phobia>
+        <phobia name="Homophobia">
+            <description>Fear of sameness, monotony or of homosexuality or of becoming homosexual</description>
+        </phobia>
+        <phobia name="Hoplophobia">
+            <description>Fear of firearms</description>
+        </phobia>
+        <phobia name="Hydrargyophobia">
+            <description>Fear of mercurial medicines</description>
+        </phobia>
+        <phobia name="Hydrophobia">
+            <description>Fear of water or of rabies</description>
+        </phobia>
+        <phobia name="Hydrophobophobia">
+            <description>Fear of rabies</description>
+        </phobia>
+        <phobia name="Hyelophobia">
+            <alternative-name>Hyalophobia</alternative-name>
+            <description>Fear of glass</description>
+        </phobia>
+        <phobia name="Hygrophobia">
+            <description>Fear of liquids, dampness, or moisture</description>
+        </phobia>
+        <phobia name="Hylephobia">
+            <description>Fear of materialism or the fear of epilepsy</description>
+        </phobia>
+        <phobia name="Hylophobia">
+            <description>Fear of forests</description>
+        </phobia>
+        <phobia name="Hypengyophobia">
+            <alternative-name>Hypegiaphobia</alternative-name>
+            <description>Fear of responsibility</description>
+        </phobia>
+        <phobia name="Hypnophobia">
+            <description>Fear of sleep or of being hypnotized</description>
+        </phobia>
+        <phobia name="Hypsiphobia">
+            <description>Fear of height</description>
+        </phobia>
+        <phobia name="Iatrophobia">
+            <description>Fear of going to the doctor or of doctors</description>
+        </phobia>
+        <phobia name="Ichthyophobia">
+            <description>Fear of fish</description>
+        </phobia>
+        <phobia name="Ideophobia">
+            <description>Fear of ideas</description>
+        </phobia>
+        <phobia name="Illyngophobia">
+            <description>Fear of vertigo or feeling dizzy when looking down</description>
+        </phobia>
+        <phobia name="Iophobia">
+            <description>Fear of poison</description>
+        </phobia>
+        <phobia name="Insectophobia ">
+            <description>Fear of insects</description>
+        </phobia>
+        <phobia name="Isolophobia">
+            <description>Fear of solitude, being alone</description>
+        </phobia>
+        <phobia name="Isopterophobia">
+            <description>Fear of termites, insects that eat wood</description>
+        </phobia>
+        <phobia name="Ithyphallophobia">
+            <description>Fear of seeing, thinking about or having an erect penis</description>
+        </phobia>
+        <phobia name="Japanophobia">
+            <description>Fear of Japanese</description>
+        </phobia>
+        <phobia name="Judeophobia">
+            <description>Fear of Jews</description>
+        </phobia>
+        <phobia name="Kainolophobia">
+            <alternative-name>Kainophobia</alternative-name>
+            <description>Fear of anything new, novelty</description>
+        </phobia>
+        <phobia name="Kakorrhaphiophobia">
+            <description>Fear of failure or defeat</description>
+        </phobia>
+        <phobia name="Katagelophobia">
+            <description>Fear of ridicule</description>
+        </phobia>
+        <phobia name="Kathisophobia">
+            <description>Fear of sitting down</description>
+        </phobia>
+        <phobia name="Kenophobia">
+            <description>Fear of voids or empty spaces</description>
+        </phobia>
+        <phobia name="Astraphobia">
+            <alternative-name>Ceraunophobia</alternative-name>
+            <description>Fear of thunder and lightning</description>
+            <see-also>Astrapophobia</see-also>
+        </phobia>
+        <phobia name="Kinetophobia">
+            <alternative-name>Kinesophobia</alternative-name>
+            <description>Fear of movement or motion</description>
+        </phobia>
+        <phobia name="Kleptophobia">
+            <description>Fear of stealing</description>
+        </phobia>
+        <phobia name="Koinoniphobia">
+            <description>Fear of rooms</description>
+        </phobia>
+        <phobia name="Kopophobia">
+            <description>Fear of fatigue</description>
+        </phobia>
+        <phobia name="Amathophobia">
+            <description>Fear of dust</description>
+        </phobia>
+        <phobia name="Kosmikophobia">
+            <description>Fear of cosmic phenomenon</description>
+        </phobia>
+        <phobia name="Cymophobia">
+            <description>Fear of waves</description>
+        </phobia>
+        <phobia name="Kynophobia">
+            <description>Fear of rabies</description>
+        </phobia>
+        <phobia name="Kyphophobia">
+            <description>Fear of stooping</description>
+        </phobia>
+        <phobia name="Lachanophobia">
+            <description>Fear of vegetables</description>
+        </phobia>
+        <phobia name="Laliophobia">
+            <alternative-name>Lalophobia</alternative-name>
+            <description>Fear of speaking</description>
+        </phobia>
+        <phobia name="Leprophobia">
+            <alternative-name>Lepraphobia</alternative-name>
+            <description>Fear of leprosy</description>
+        </phobia>
+        <phobia name="Leukophobia">
+            <description>Fear of the color white</description>
+        </phobia>
+        <phobia name="Levophobia">
+            <description>Fear of things to the left side of the body</description>
+        </phobia>
+        <phobia name="Ligyrophobia">
+            <description>Fear of loud noises</description>
+        </phobia>
+        <phobia name="Lilapsophobia">
+            <description>Fear of tornadoes and hurricanes</description>
+        </phobia>
+        <phobia name="Limnophobia">
+            <description>Fear of lakes</description>
+        </phobia>
+        <phobia name="Linonophobia">
+            <description>Fear of string</description>
+        </phobia>
+        <phobia name="Liticaphobia">
+            <description>Fear of lawsuits</description>
+        </phobia>
+        <phobia name="Lockiophobia">
+            <description>Fear of childbirth</description>
+        </phobia>
+        <phobia name="Logizomechanophobia">
+            <description>Fear of computers</description>
+        </phobia>
+        <phobia name="Logophobia">
+            <description>Fear of words</description>
+        </phobia>
+        <phobia name="Luiphobia">
+            <description>Fear of lues, syphillis</description>
+        </phobia>
+        <phobia name="Lutraphobia">
+            <description>Fear of otters</description>
+        </phobia>
+        <phobia name="Lygophobia">
+            <description>Fear of darkness</description>
+        </phobia>
+        <phobia name="Lyssophobia">
+            <description>Fear of rabies or of becoming mad</description>
+        </phobia>
+        <phobia name="Macrophobia">
+            <description>Fear of long waits</description>
+        </phobia>
+        <phobia name="Mageirocophobia">
+            <description>Fear of cooking</description>
+        </phobia>
+        <phobia name="Maieusiophobia">
+            <description>Fear of childbirth</description>
+        </phobia>
+        <phobia name="Sarmassophobia">
+            <description>Fear of love play</description>
+        </phobia>
+        <phobia name="Maniaphobia">
+            <description>Fear of insanity</description>
+        </phobia>
+        <phobia name="Mastigophobia">
+            <description>Fear of punishment</description>
+        </phobia>
+        <phobia name="Mechanophobia">
+            <description>Fear of machines</description>
+        </phobia>
+        <phobia name="Megalophobia">
+            <description>Fear of large things</description>
+        </phobia>
+        <phobia name="Melissophobia">
+            <description>Fear of bees</description>
+        </phobia>
+        <phobia name="Melanophobia">
+            <description>Fear of the color black</description>
+        </phobia>
+        <phobia name="Melophobia">
+            <description>Fear or hatred of music</description>
+        </phobia>
+        <phobia name="Meningitophobia">
+            <description>Fear of brain disease</description>
+        </phobia>
+        <phobia name="Menophobia">
+            <description>Fear of menstruation</description>
+        </phobia>
+        <phobia name="Merinthophobia">
+            <description>Fear of being bound or tied up</description>
+        </phobia>
+        <phobia name="Metallophobia">
+            <description>Fear of metal</description>
+        </phobia>
+        <phobia name="Metathesiophobia">
+            <description>Fear of changes</description>
+        </phobia>
+        <phobia name="Meteorophobia">
+            <description>Fear of meteors</description>
+        </phobia>
+        <phobia name="Methyphobia">
+            <description>Fear of alcohol</description>
+        </phobia>
+        <phobia name="Metrophobia">
+            <description>Fear or hatred of poetry</description>
+        </phobia>
+        <phobia name="Bacillophobia">
+            <description>Fear of microbes</description>
+        </phobia>
+        <phobia name="Microphobia">
+            <description>Fear of small things</description>
+        </phobia>
+        <phobia name="Misophobia">
+            <alternative-name>Mysophobia</alternative-name>
+            <description>Fear of being contaminated with dirt or germs</description>
+        </phobia>
+        <phobia name="Mnemophobia">
+            <description>Fear of memories</description>
+        </phobia>
+        <phobia name="Molysmophobia">
+            <alternative-name>Molysomophobia</alternative-name>
+            <description>Fear of dirt or contamination</description>
+        </phobia>
+        <phobia name="Monophobia">
+            <description>Fear of solitude or being alone</description>
+        </phobia>
+        <phobia name="Monopathophobia">
+            <description>Fear of definite disease</description>
+        </phobia>
+        <phobia name="Motorphobia">
+            <description>Fear of automobiles</description>
+        </phobia>
+        <phobia name="Mottephobia">
+            <description>Fear of moths</description>
+        </phobia>
+        <phobia name="Musophobia">
+            <alternative-name>Muriphobia</alternative-name>
+            <description>Fear of mice</description>
+        </phobia>
+        <phobia name="Mycophobia">
+            <description>Fear or aversion to mushrooms</description>
+        </phobia>
+        <phobia name="Mycrophobia">
+            <description>Fear of small things</description>
+        </phobia>
+        <phobia name="Myctophobia">
+            <description>Fear of darkness</description>
+        </phobia>
+        <phobia name="Myrmecophobia">
+            <description>Fear of ants</description>
+        </phobia>
+        <phobia name="Mythophobia">
+            <description>Fear of myths or stories or false statements</description>
+        </phobia>
+        <phobia name="Blennophobia">
+            <description>Fear of slime</description>
+        </phobia>
+        <phobia name="Homichlophobia">
+            <description>Fear of fog</description>
+        </phobia>
+        <phobia name="Necrophobia">
+            <description>Fear of death or dead things</description>
+        </phobia>
+        <phobia name="Nelophobia">
+            <description>Fear of glass</description>
+        </phobia>
+        <phobia name="Neopharmaphobia">
+            <description>Fear of new drugs</description>
+        </phobia>
+        <phobia name="Neophobia">
+            <description>Fear of anything new</description>
+        </phobia>
+        <phobia name="Nephophobia">
+            <description>Fear of clouds</description>
+        </phobia>
+        <phobia name="Noctiphobia">
+            <description>Fear of the night</description>
+        </phobia>
+        <phobia name="Nomatophobia">
+            <description>Fear of names</description>
+        </phobia>
+        <phobia name="Nosocomephobia">
+            <description>Fear of hospitals</description>
+        </phobia>
+        <phobia name="Nosophobia">
+            <alternative-name>Nosemaphobia</alternative-name>
+            <description>Fear of becoming ill</description>
+        </phobia>
+        <phobia name="Nostophobia">
+            <description>Fear of returning home</description>
+        </phobia>
+        <phobia name="Novercaphobia">
+            <description>Fear of your step-mother</description>
+        </phobia>
+        <phobia name="Nucleomituphobia">
+            <description>Fear of nuclear weapons</description>
+        </phobia>
+        <phobia name="Nudophobia">
+            <description>Fear of nudity</description>
+        </phobia>
+        <phobia name="Numerophobia">
+            <description>Fear of numbers</description>
+        </phobia>
+        <phobia name="Nyctohylophobia">
+            <description>Fear of dark wooded areas or of forests at night</description>
+        </phobia>
+        <phobia name="Nyctophobia">
+            <description>Fear of the dark or of night</description>
+        </phobia>
+        <phobia name="Pocrescophobia">
+            <description>Fear of gaining weight</description>
+        </phobia>
+        <phobia name="Ochlophobia">
+            <description>Fear of crowds or mobs</description>
+        </phobia>
+        <phobia name="Ochophobia">
+            <description>Fear of vehicles</description>
+        </phobia>
+        <phobia name="Octophobia ">
+            <description>Fear of the figure 8</description>
+        </phobia>
+        <phobia name="Odontophobia">
+            <description>Fear of teeth or dental surgery</description>
+        </phobia>
+        <phobia name="Algophobia">
+            <alternative-name>Odynephobia</alternative-name>
+            <description>Fear of pain</description>
+        </phobia>
+        <phobia name="Oenophobia">
+            <description>Fear of wines</description>
+        </phobia>
+        <phobia name="Domatophobia">
+            <description>Fear of home surroundings, house</description>
+            <see-also>Eicophobia</see-also>
+        </phobia>
+        <phobia name="Olfactophobia">
+            <description>Fear of smells</description>
+        </phobia>
+        <phobia name="Ombrophobia">
+            <description>Fear of rain or of being rained on</description>
+        </phobia>
+        <phobia name="Ommetaphobia">
+            <alternative-name>Ommatophobia</alternative-name>
+            <description>Fear of eyes</description>
+        </phobia>
+        <phobia name="Oneirophobia">
+            <description>Fear of dreams</description>
+        </phobia>
+        <phobia name="Oneirogmophobia">
+            <description>Fear of wet dreams</description>
+        </phobia>
+        <phobia name="Onomatophobia">
+            <description>Fear of hearing a certain word or of names</description>
+        </phobia>
+        <phobia name="Ophthalmophobia">
+            <description>Fear of being stared at</description>
+        </phobia>
+        <phobia name="Optophobia">
+            <description>Fear of opening ones eyes</description>
+        </phobia>
+        <phobia name="Ornithophobia">
+            <description>Fear of birds</description>
+        </phobia>
+        <phobia name="Orthophobia">
+            <description>Fear of property</description>
+        </phobia>
+        <phobia name="Osmophobia">
+            <alternative-name>Osphresiophobia</alternative-name>
+            <description>Fear of smells or odors</description>
+        </phobia>
+        <phobia name="Ostraconophobia">
+            <description>Fear of shellfish</description>
+        </phobia>
+        <phobia name="Ouranophobia">
+            <alternative-name>Uranophobia</alternative-name>
+            <description>Fear of heaven</description>
+        </phobia>
+        <phobia name="Pagophobia">
+            <description>Fear of ice or frost</description>
+        </phobia>
+        <phobia name="Panthophobia">
+            <description>Fear of suffering and disease</description>
+        </phobia>
+        <phobia name="Panophobia">
+            <alternative-name>Pantophobia</alternative-name>
+            <description>Fear of everything</description>
+        </phobia>
+        <phobia name="Papaphobia">
+            <description>Fear of the Pope</description>
+        </phobia>
+        <phobia name="Papyrophobia">
+            <description>Fear of paper</description>
+        </phobia>
+        <phobia name="Paralipophobia">
+            <description>Fear of neglecting duty or responsibility</description>
+        </phobia>
+        <phobia name="Paraphobia">
+            <description>Fear of sexual perversion</description>
+        </phobia>
+        <phobia name="Parasitophobia">
+            <description>Fear of parasites</description>
+        </phobia>
+        <phobia name="Paraskavedekatriaphobia">
+            <description>Fear of Friday the 13th</description>
+        </phobia>
+        <phobia name="Parthenophobia">
+            <description>Fear of virgins or young girls</description>
+        </phobia>
+        <phobia name="Pathophobia">
+            <description>Fear of disease</description>
+        </phobia>
+        <phobia name="Patroiophobia">
+            <description>Fear of heredity</description>
+        </phobia>
+        <phobia name="Parturiphobia">
+            <description>Fear of childbirth</description>
+        </phobia>
+        <phobia name="Peccatophobia">
+            <description>Fear of sinning or imaginary crimes</description>
+        </phobia>
+        <phobia name="Pediculophobia">
+            <description>Fear of lice</description>
+        </phobia>
+        <phobia name="Pediophobia">
+            <description>Fear of dolls</description>
+        </phobia>
+        <phobia name="Pedophobia">
+            <description>Fear of children</description>
+        </phobia>
+        <phobia name="Peladophobia">
+            <description>Fear of bald people</description>
+        </phobia>
+        <phobia name="Pellagrophobia">
+            <description>Fear of pellagra</description>
+        </phobia>
+        <phobia name="Peniaphobia">
+            <description>Fear of poverty</description>
+        </phobia>
+        <phobia name="Novercaphobia">
+            <description>Fear of mother-in-law</description>
+        </phobia>
+        <phobia name="Phagophobia">
+            <description>Fear of swallowing or of eating or of being eaten</description>
+        </phobia>
+        <phobia name="Phalacrophobia">
+            <description>Fear of becoming bald</description>
+        </phobia>
+        <phobia name="Phallophobia">
+            <description>Fear of a penis, especially erect</description>
+        </phobia>
+        <phobia name="Pharmacophobia">
+            <description>Fear of taking medicine</description>
+        </phobia>
+        <phobia name="Phasmophobia">
+            <description>Fear of ghosts</description>
+        </phobia>
+        <phobia name="Phengophobia">
+            <description>Fear of daylight or sunshine</description>
+        </phobia>
+        <phobia name="Philemaphobia">
+            <alternative-name>Philematophobia</alternative-name>
+            <description>Fear of kissing</description>
+        </phobia>
+        <phobia name="Philophobia">
+            <description>Fear of falling in love or being in love</description>
+        </phobia>
+        <phobia name="Philosophobia">
+            <description>Fear of philosophy</description>
+        </phobia>
+        <phobia name="Phobophobia">
+            <description>Fear of phobias</description>
+        </phobia>
+        <phobia name="Photoaugliaphobia">
+            <description>Fear of glaring lights</description>
+        </phobia>
+        <phobia name="Photophobia">
+            <description>Fear of light</description>
+        </phobia>
+        <phobia name="Phonophobia">
+            <description>Fear of 1) noises or voices or ones own voice 2) of telephones</description>
+        </phobia>
+        <phobia name="Phronemophobia">
+            <description>Fear of thinking</description>
+        </phobia>
+        <phobia name="Pediculophobia">
+            <description>Fear of lice</description>
+        </phobia>
+        <phobia name="Phthisiophobia">
+            <description>Fear of tuberculosis</description>
+        </phobia>
+        <phobia name="Placophobia">
+            <description>Fear of tombstones</description>
+        </phobia>
+        <phobia name="Plutophobia">
+            <description>Fear of wealth</description>
+        </phobia>
+        <phobia name="Pluviophobia">
+            <description>Fear of rain or of being rained on</description>
+        </phobia>
+        <phobia name="Pneumatiphobia">
+            <description>Fear of spirits</description>
+        </phobia>
+        <phobia name="Pnigophobia">
+            <alternative-name>Pnigerophobia</alternative-name>
+            <description>Fear of choking of being smothered</description>
+        </phobia>
+        <phobia name="Obesophobia">
+            <description>Fear of gaining weight</description>
+        </phobia>
+        <phobia name="Pogonophobia">
+            <description>Fear of beards</description>
+        </phobia>
+        <phobia name="Poliosophobia">
+            <description>Fear of contracting poliomyelitis</description>
+        </phobia>
+        <phobia name="Politicophobia">
+            <description>Fear or abnormal dislike of politicians</description>
+        </phobia>
+        <phobia name="Polyphobia">
+            <description>Fear of many things</description>
+        </phobia>
+        <phobia name="Poinephobia">
+            <description>Fear of punishment</description>
+        </phobia>
+        <phobia name="Ponophobia">
+            <description>Fear of overworking or of pain</description>
+        </phobia>
+        <phobia name="Porphyrophobia">
+            <description>Fear of the color purple</description>
+        </phobia>
+        <phobia name="Potamophobia">
+            <description>Fear of rivers or running water</description>
+        </phobia>
+        <phobia name="Potophobia">
+            <description>Fear of alcohol</description>
+        </phobia>
+        <phobia name="Pharmacophobia">
+            <description>Fear of drugs</description>
+        </phobia>
+        <phobia name="Proctophobia">
+            <description>Fear of rectums</description>
+        </phobia>
+        <phobia name="Prosophobia">
+            <description>Fear of progress</description>
+        </phobia>
+        <phobia name="Psellismophobia">
+            <description>Fear of stuttering</description>
+        </phobia>
+        <phobia name="Psychophobia">
+            <description>Fear of mind</description>
+        </phobia>
+        <phobia name="Psychrophobia">
+            <description>Fear of cold</description>
+        </phobia>
+        <phobia name="Pteromerhanophobia">
+            <description>Fear of flying</description>
+        </phobia>
+        <phobia name="Pteronophobia">
+            <description>Fear of being tickled by feathers</description>
+        </phobia>
+        <phobia name="Pupaphobia ">
+            <description>Fear of puppets</description>
+        </phobia>
+        <phobia name="Pyrexiophobia">
+            <description>Fear of Fever</description>
+        </phobia>
+        <phobia name="Pyrophobia">
+            <description>Fear of fire</description>
+        </phobia>
+        <phobia name="Radiophobia">
+            <description>Fear of radiation, x-rays</description>
+        </phobia>
+        <phobia name="Ranidaphobia">
+            <description>Fear of frogs</description>
+        </phobia>
+        <phobia name="Rectophobia">
+            <description>Fear of rectum or rectal diseases</description>
+        </phobia>
+        <phobia name="Rhabdophobia">
+            <description>Fear of 1) being severely punished or beaten by a rod, or of being severely criticized 2) magic (wand)</description>
+        </phobia>
+        <phobia name="Rhypophobia">
+            <description>Fear of defecation</description>
+        </phobia>
+        <phobia name="Rupophobia">
+            <description>Fear of dirt</description>
+        </phobia>
+        <phobia name="Samhainophobia">
+            <description>Fear of Halloween</description>
+        </phobia>
+        <phobia name="Malaxophobia">
+            <description>Fear of love play</description>
+        </phobia>
+        <phobia name="Satanophobia">
+            <description>Fear of Satan</description>
+        </phobia>
+        <phobia name="Scabiophobia">
+            <description>Fear of scabies</description>
+        </phobia>
+        <phobia name="Scatophobia">
+            <description>Fear of fecal matter</description>
+        </phobia>
+        <phobia name="Scelerophibia">
+            <description>Fear of bad men, burglars</description>
+        </phobia>
+        <phobia name="Sciophobia Sciaphobia">
+            <description>Fear of shadows</description>
+        </phobia>
+        <phobia name="Scoleciphobia">
+            <description>Fear of worms</description>
+        </phobia>
+        <phobia name="Scolionophobia">
+            <description>Fear of school</description>
+        </phobia>
+        <phobia name="Scopophobia">
+            <alternative-name>Scoptophobia</alternative-name>
+            <description>Fear of being seen or stared at</description>
+        </phobia>
+        <phobia name="Scotomaphobia">
+            <description>Fear of blindness in visual field</description>
+        </phobia>
+        <phobia name="Achluophobia">
+            <description>Fear of darkness</description>
+        </phobia>
+        <phobia name="Scriptophobia">
+            <description>Fear of writing in public</description>
+        </phobia>
+        <phobia name="Selaphobia">
+            <description>Fear of light flashes</description>
+        </phobia>
+        <phobia name="Selenophobia">
+            <description>Fear of the moon</description>
+        </phobia>
+        <phobia name="Seplophobia">
+            <description>Fear of decaying matter</description>
+        </phobia>
+        <phobia name="Sesquipedalophobia">
+            <description>Fear of long words</description>
+        </phobia>
+        <phobia name="Heterophobia">
+            <description>Fear of the opposite sex</description>
+        </phobia>
+        <phobia name="Siderodromophobia">
+            <description>Fear of trains, railroads or train travel</description>
+        </phobia>
+        <phobia name="Siderophobia">
+            <description>Fear of stars</description>
+        </phobia>
+        <phobia name="Sinistrophobia">
+            <description>Fear of things to the left or left-handed</description>
+        </phobia>
+        <phobia name="Sinophobia">
+            <description>Fear of Chinese, Chinese culture</description>
+        </phobia>
+        <phobia name="Cibophobia">
+            <alternative-name>Sitiophobia</alternative-name>
+            <description>Fear of food or eating</description>
+        </phobia>
+        <phobia name="Ophidiophobia">
+            <description>Fear of snakes</description>
+        </phobia>
+        <phobia name="Social Phobia">
+            <description>Fear of being evaluated negatively in social situations</description>
+        </phobia>
+        <phobia name="Sociophobia">
+            <description>Fear of society or people in general</description>
+        </phobia>
+        <phobia name="Somniphobia">
+            <description>Fear of sleep</description>
+        </phobia>
+        <phobia name="Sophophobia">
+            <description>Fear of learning</description>
+        </phobia>
+        <phobia name="Soteriophobia ">
+            <description>Fear of dependence on others</description>
+        </phobia>
+        <phobia name="Spacephobia">
+            <description>Fear of outer space</description>
+        </phobia>
+        <phobia name="Spectrophobia">
+            <description>Fear of specters or ghosts</description>
+        </phobia>
+        <phobia name="Spermatophobia">
+            <alternative-name>Spermophobia</alternative-name>
+            <description>Fear of germs</description>
+        </phobia>
+        <phobia name="Spheksophobia">
+            <description>Fear of wasps</description>
+        </phobia>
+        <phobia name="Ambulophobia">
+            <alternative-name>Stasiphobia</alternative-name>
+            <description>Fear of standing or walking</description>
+        </phobia>
+        <phobia name="Staurophobia">
+            <description>Fear of crosses or the crucifix</description>
+        </phobia>
+        <phobia name="Stenophobia">
+            <description>Fear of narrow things or places</description>
+        </phobia>
+        <phobia name="Stygiophobia">
+            <alternative-name>Stigiophobia</alternative-name>
+            <description>Fear of hell</description>
+        </phobia>
+        <phobia name="Suriphobia">
+            <description>Fear of mice</description>
+        </phobia>
+        <phobia name="Symbolophobia">
+            <description>Fear of symbolism</description>
+        </phobia>
+        <phobia name="Symmetrophobia">
+            <description>Fear of symmetry</description>
+        </phobia>
+        <phobia name="Syngenesophobia">
+            <description>Fear of relatives</description>
+        </phobia>
+        <phobia name="Syphilophobia">
+            <description>Fear of syphilis</description>
+        </phobia>
+        <phobia name="Tachophobia">
+            <description>Fear of speed</description>
+        </phobia>
+        <phobia name="Taeniophobia">
+            <alternative-name>Teniophobia</alternative-name>
+            <description>Fear of tapeworms</description>
+        </phobia>
+        <phobia name="Taphephobia Taphophobia">
+            <description>Fear of being buried alive or of cemeteries</description>
+        </phobia>
+        <phobia name="Tapinophobia">
+            <description>Fear of being contagious</description>
+        </phobia>
+        <phobia name="Taurophobia">
+            <description>Fear of bulls</description>
+        </phobia>
+        <phobia name="Technophobia">
+            <description>Fear of technology</description>
+        </phobia>
+        <phobia name="Teleophobia">
+            <description>Fear of 1) definite plans 2) religious ceremony</description>
+        </phobia>
+        <phobia name="Telephonophobia">
+            <description>Fear of telephones</description>
+        </phobia>
+        <phobia name="Teratophobia">
+            <description>Fear of bearing a deformed child or fear of monsters or deformed people</description>
+        </phobia>
+        <phobia name="Tetanophobia">
+            <description>Fear of lockjaw, tetanus</description>
+        </phobia>
+        <phobia name="Teutophobia">
+            <description>Fear of German or German things</description>
+        </phobia>
+        <phobia name="Textophobia">
+            <description>Fear of certain fabrics</description>
+        </phobia>
+        <phobia name="Thaasophobia">
+            <description>Fear of sitting</description>
+        </phobia>
+        <phobia name="Thalassophobia">
+            <description>Fear of the sea</description>
+        </phobia>
+        <phobia name="Thanatophobia">
+            <alternative-name>Thantophobia</alternative-name>
+            <description>Fear of death or dying</description>
+        </phobia>
+        <phobia name="Theatrophobia">
+            <description>Fear of theatres</description>
+        </phobia>
+        <phobia name="Theologicophobia">
+            <description>Fear of theology</description>
+        </phobia>
+        <phobia name="Theophobia">
+            <description>Fear of gods or religion</description>
+        </phobia>
+        <phobia name="Thermophobia">
+            <description>Fear of heat</description>
+        </phobia>
+        <phobia name="Tocophobia">
+            <description>Fear of pregnancy or childbirth</description>
+        </phobia>
+        <phobia name="Tomophobia">
+            <description>Fear of surgical operations</description>
+        </phobia>
+        <phobia name="Tonitrophobia">
+            <description>Fear of thunder</description>
+        </phobia>
+        <phobia name="Topophobia">
+            <description>Fear of certain places or situations, such as stage fright</description>
+        </phobia>
+        <phobia name="Toxiphobia">
+            <alternative-name>Toxophobia</alternative-name>
+            <alternative-name>Toxicophobia</alternative-name>
+            <description>Fear of poison or of being accidently poisoned</description>
+        </phobia>
+        <phobia name="Traumatophobia">
+            <description>Fear of injury</description>
+        </phobia>
+        <phobia name="Tremophobia">
+            <description>Fear of trembling</description>
+        </phobia>
+        <phobia name="Chaetophobia">
+            <alternative-name>Trichophobia</alternative-name>
+            <description>Fear of hair</description>
+            <see-also>Hypertrichophobia</see-also>
+        </phobia>
+        <phobia name="Triskaidekaphobia">
+            <description>Fear of the number 13</description>
+        </phobia>
+        <phobia name="Tropophobia">
+            <description>Fear of moving or making changes</description>
+        </phobia>
+        <phobia name="Trypanophobia">
+            <description>Fear of injections</description>
+        </phobia>
+        <phobia name="Tuberculophobia">
+            <description>Fear of tuberculosis</description>
+        </phobia>
+        <phobia name="Tyrannophobia">
+            <description>Fear of tyrants</description>
+        </phobia>
+        <phobia name="Uranophobia">
+            <alternative-name>Ouranophobia</alternative-name>
+            <description>Fear of heaven</description>
+        </phobia>
+        <phobia name="Urophobia">
+            <description>Fear of urine or urinating</description>
+        </phobia>
+        <phobia name="Vaccinophobia">
+            <description>Fear of vaccination</description>
+        </phobia>
+        <phobia name="Venustraphobia">
+            <description>Fear of beautiful women</description>
+        </phobia>
+        <phobia name="Verbophobia">
+            <description>Fear of words</description>
+        </phobia>
+        <phobia name="Verminophobia">
+            <description>Fear of germs</description>
+        </phobia>
+        <phobia name="Vestiphobia">
+            <description>Fear of clothing</description>
+        </phobia>
+        <phobia name="Virginitiphobia">
+            <description>Fear of rape</description>
+        </phobia>
+        <phobia name="Wiccaphobia">
+            <description>Fear of witches and witchcraft</description>
+        </phobia>
+        <phobia name="Xanthophobia">
+            <description>Fear of the color yellow or the word yellow</description>
+        </phobia>
+        <phobia name="Xenoglossophobia">
+            <description>Fear of foreign languages</description>
+        </phobia>
+        <phobia name="Xenophobia">
+            <description>Fear of strangers or foreigners</description>
+        </phobia>
+        <phobia name="Xerophobia">
+            <description>Fear of dryness</description>
+        </phobia>
+        <phobia name="Xylophobia">
+            <description>Fear of 1) wooden objects 2) forests</description>
+        </phobia>
+        <phobia name="Xyrophobia">
+            <description>Fear of razors</description>
+        </phobia>
+        <phobia name="Zelophobia">
+            <description>Fear of jealousy</description>
+        </phobia>
+        <phobia name="Zeusophobia">
+            <description>Fear of God or gods</description>
+        </phobia>
+        <phobia name="Zemmiphobia">
+            <description>Fear of the great mole rat</description>
+        </phobia>
+        <phobia name="Zoophobia">
+            <description>Fear of animals</description>
+        </phobia>
+    </phobias>
+</sanity>
