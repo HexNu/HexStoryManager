@@ -15,6 +15,7 @@ public class GetPortraitDTO {
     private Long id;
     private String date;
     private String label;
+    private String shortDescription;
     private String description;
     private GetImageDTO image;
 
@@ -40,6 +41,14 @@ public class GetPortraitDTO {
 
     public void setLabel(String label) {
         this.label = label;
+    }
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
     }
 
     public String getDescription() {
