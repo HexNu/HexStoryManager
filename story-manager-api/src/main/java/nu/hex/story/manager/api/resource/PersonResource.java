@@ -89,7 +89,7 @@ public class PersonResource extends AbstractResource {
     @Produces(MediaType.APPLICATION_XML)
     public Response getFamilyTreeFile(@PathParam("mother") Long motherId, @PathParam("father") Long fatherId) {
         XmlDocument result = getFamilyTreeXml(motherId, fatherId);
-        String fileName = result.getRoot().getAttribute("family") + ".hex";
+        String fileName = result.getRoot().getAttribute("for") + ".hex";
         return Response.ok((Object) result.toString())
                 .header("Content-Disposition", "attachment; filename=\"" + fileName + "\"")
                 .build();

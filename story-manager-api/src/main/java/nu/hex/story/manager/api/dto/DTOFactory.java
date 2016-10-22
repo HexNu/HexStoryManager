@@ -9,7 +9,7 @@ import nu.hex.story.manager.core.domain.atlas.AtlasMap;
 import nu.hex.story.manager.core.domain.image.Image;
 import nu.hex.story.manager.core.domain.person.Person;
 import nu.hex.story.manager.core.domain.person.PersonalEvent;
-import nu.hex.story.manager.core.domain.person.Portrait;
+import nu.hex.story.manager.core.domain.image.Portrait;
 import nu.hex.story.manager.core.domain.person.impl.DefaultPerson;
 import nu.hex.story.manager.dto.out.GetAtlasDTO;
 import nu.hex.story.manager.dto.out.GetEventDTO;
@@ -121,6 +121,7 @@ public class DTOFactory {
         result.setImage(createImageDTO(p.getImage()));
         result.setDate(p.getDate() != null ? p.getDate().format(DateTimeFormatter.ISO_DATE) : null);
         result.setLabel(p.getLabel());
+        result.setShortDescription(p.getShortDescription());
         result.setDescription(p.getDescription());
         return result;
     }
