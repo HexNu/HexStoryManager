@@ -1,4 +1,4 @@
-package nu.hex.story.manager.core.domain.rpg.character.coc;
+package nu.hex.story.manager.core.domain.rpg.dnd.character;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,8 +16,8 @@ import nu.hex.story.manager.core.domain.rpg.character.AbilityScore;
  * @author hl
  */
 @Entity
-@Table(name = "CoCAbilityScore")
-public class CoCAbilityScore implements AbilityScore {
+@Table(name = "DnDAbilityScore")
+public class DnDAbilityScore implements AbilityScore {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -50,10 +50,12 @@ public class CoCAbilityScore implements AbilityScore {
         this.ability = ability;
     }
 
+    @Override
     public Integer getValue() {
         return abilityValue;
     }
 
+    @Override
     public void setValue(Integer value) {
         this.abilityValue = value;
     }
@@ -80,9 +82,9 @@ public class CoCAbilityScore implements AbilityScore {
 
     public enum Ability {
 
-        CHA("Wisdom"),
-        CON("Wisdom"),
-        DEX("Wisdom"),
+        CHA("Charisma"),
+        CON("Constitution"),
+        DEX("Dexterity"),
         INT("Intelligence"),
         STR("Strength"),
         WIS("Wisdom");

@@ -7,9 +7,10 @@ import nu.hex.story.manager.core.domain.DomainEntity;
  *
  * @author hl
  */
-public interface AbilityScore extends DomainEntity<Long> {
+public interface SkillScore extends DomainEntity<Long> {
 
     void setValue(Integer value);
 
     Integer getValue();
+
 }

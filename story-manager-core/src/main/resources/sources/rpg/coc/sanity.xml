@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sanity>
+    <insanities>
+        <temporary>
+            <insanity id="1" description="Fainting or screaming fit"/>
+            <insanity id="2" description="Flees in panic"/>
+            <insanity id="3" description="Physical hysterics or emotional outburst (laughing, crying, ect."/>
+            <insanity id="4" description="Babling, incoherent, rapid speach, or logorhea (a torrent of coherent speech)"/>
+            <insanity id="5" description="Intense phobia, perhaps rooting investigator to the spot."/>
+            <insanity id="6" description="Homicidal or suicidal mania"/>
+            <insanity id="7" description="Hallucinations or delusions"/>
+            <insanity id="8" description="Echopraxia or echolalia (investigator does/says what others around him do/say)"/>
+            <insanity id="9" description="Strange or deviant eating desire (dirt, slime, cannibalism, ect.)"/>
+            <insanity id="10" description="Stupor (assumes foetal position, oblivious to events) or catatonia (can stand but has no will or interest; may be led or forced to simple actions but takes no independent action)"/>
+        </temporary>
+        <indefinite>
+            <insanity id="1" description="Amnesia (memories of intimates usually lost first; language and physical skills engaged, but intellectural skills absent) or stupor/cataonia"/>
+            <insanity id="2" description="Severe phobia (can flee, but sees object of obsession everywhere)"/>
+            <insanity id="3" description="Hallucinations"/>
+            <insanity id="4" description="Strange sexual desires (exhibitionism, nymphomania or satyriasis, teraphilia, ect.)"/>
+            <insanity id="5" description="Fetish (investigator latches onto some object, type of object, or person as a safety blankey)"/>
+            <insanity id="6" description="Uncontrollable tics, tremors, or inability to communicate via speech or writing"/>
+            <insanity id="7" description="Psychosomatic blindness, deafness, or loss of the use of a limb or limb."/>
+            <insanity id="8" description="Brief reactive pyschosis (incoherence, delusions, aberrant behavior, and/or hallucinations)"/>
+            <insanity id="9" description="Temporary paranoia"/>
+            <insanity id="10" description="Compulsive rituals (washing hands constantly, praying, walking in a particular rhythm, never stepping on cracks, checking one’s gun constantly, ect.)"/>
+        </indefinite>
+    </insanities>
+    <phobias>
+        <phobia>
+            <name>Acrophobia</name>
+            <fear-of>heights (formerly known as vertigo)</fear-of>
+        </phobia>
+        <phobia>
+            <name>Aerophobia</name>
+            <fear-of>wind</fear-of>
+        </phobia>
+        <phobia>
+            <name>Agoraphobia</name>
+            <fear-of>open places</fear-of>
+        </phobia>
+        <phobia>
+            <name>Ailurophobia</name>
+            <fear-of>cats</fear-of>
+        </phobia>
+        <phobia>
+            <name>Androphobia</name>
+            <fear-of>men (males)</fear-of>
+        </phobia>
+        <phobia>
+            <name>Astrophobia</name>
+            <fear-of>stars</fear-of>
+        </phobia>
+        <phobia>
+            <name>Autophobia</name>
+            <fear-of>being alone</fear-of>
+        </phobia>
+        <phobia>
+            <name>Bacteriophobia</name>
+            <fear-of>bacteria ("germs")</fear-of>
+        </phobia>
+        <phobia>
+            <name>Ballistophobia</name>
+            <fear-of>bullets</fear-of>
+        </phobia>
+        <phobia>
+            <name>Bathophobia</name>
+            <fear-of>deep submerged places</fear-of>
+        </phobia>
+        <phobia>
+            <name>Bibliophobia</name>
+            <fear-of>books</fear-of>
+        </phobia>
+        <phobia>
+            <name>Blennophobia</name>
+            <fear-of>slime</fear-of>
+        </phobia>
+        <phobia>
+            <name>Brontophobia</name>
+            <fear-of>thunder</fear-of>
+        </phobia>
+        <phobia>
+            <name>Cenophobia</name>
+            <fear-of>empty rooms</fear-of>
+        </phobia>
+        <phobia>
+            <name>Chionophobia</name>
+            <fear-of>snow</fear-of>
+        </phobia>
+        <phobia>
+            <name>Claustrophobia</name>
+            <fear-of>enclosed spaces</fear-of>
+        </phobia>
+        <phobia>
+            <name>Demophobia</name>
+            <fear-of>crowds</fear-of>
+        </phobia>
+        <phobia>
+            <name>Dendrophobia</name>
+            <fear-of>trees</fear-of>
+        </phobia>
+        <phobia>
+            <name>Entomophobia</name>
+            <fear-of>insects</fear-of>
+        </phobia>
+        <phobia>
+            <name>Equinophobia</name>
+            <fear-of>horses</fear-of>
+        </phobia>
+        <phobia>
+            <name>Gephyrdrophobia</name>
+            <fear-of>crossing bridges</fear-of>
+        </phobia>
+        <phobia>
+            <name>Gynephobia</name>
+            <fear-of>women (females)</fear-of>
+        </phobia>
+        <phobia>
+            <name>Hamartophobia</name>
+            <fear-of>sinning or making an error</fear-of>
+        </phobia>
+        <phobia>
+            <name>Haphephobia</name>
+            <fear-of>being touched</fear-of>
+        </phobia>
+        <phobia>
+            <name>Heliophobia</name>
+            <fear-of>sunlight or the sun</fear-of>
+        </phobia>
+        <phobia>
+            <name>Hematophobia</name>
+            <fear-of>blood or bleeding</fear-of>
+        </phobia>
+        <phobia>
+            <name>Hydrophobia</name>
+            <fear-of>water</fear-of>
+        </phobia>
+        <phobia>
+            <name>Hypnophobia</name>
+            <fear-of>sleep</fear-of>
+        </phobia>
+        <phobia>
+            <name>Iatrophobia</name>
+            <fear-of>doctors (healers)</fear-of>
+        </phobia>
+        <phobia>
+            <name>Ichthyophobia</name>
+            <fear-of>fish</fear-of>
+        </phobia>
+        <phobia>
+            <name>Maniaphobia</name>
+            <fear-of>going insane</fear-of>
+        </phobia>
+        <phobia>
+            <name>Monophobia</name>
+            <fear-of>being alone</fear-of>
+        </phobia>
+        <phobia>
+            <name>Musophobia</name>
+            <fear-of>mice (and rats)</fear-of>
+        </phobia>
+        <phobia>
+            <name>Necrophobia</name>
+            <fear-of>dead things</fear-of>
+        </phobia>
+        <phobia>
+            <name>Nyctophobia</name>
+            <fear-of>night or nightfall</fear-of>
+        </phobia>
+        <phobia>
+            <name>Odontophobia</name>
+            <fear-of>teeth</fear-of>
+        </phobia>
+        <phobia>
+            <name>Onomatophobia</name>
+            <fear-of>a certain name, word, or phrase</fear-of>
+        </phobia>
+        <phobia>
+            <name>Ophidiophobia</name>
+            <fear-of>snakes</fear-of>
+        </phobia>
+        <phobia>
+            <name>Ornithophobia</name>
+            <fear-of>birds</fear-of>
+        </phobia>
+        <phobia>
+            <name>Pediphobia</name>
+            <fear-of>children</fear-of>
+        </phobia>
+        <phobia>
+            <name>Phagophobia</name>
+            <fear-of>eating</fear-of>
+        </phobia>
+        <phobia>
+            <name>Phonophobia</name>
+            <fear-of>noise, including one’s own voice</fear-of>
+        </phobia>
+        <phobia>
+            <name>Pyrophobia</name>
+            <fear-of>fire</fear-of>
+        </phobia>
+        <phobia>
+            <name>Scotophobia</name>
+            <fear-of>darkness</fear-of>
+        </phobia>
+        <phobia>
+            <name>Spectrophobia</name>
+            <fear-of>mirrors</fear-of>
+        </phobia>
+        <phobia>
+            <name>Taphephobia</name>
+            <fear-of>being buried alive</fear-of>
+        </phobia>
+        <phobia>
+            <name>Teratophobia</name>
+            <fear-of>monsters</fear-of>
+        </phobia>
+        <phobia>
+            <name>Thalassophobia</name>
+            <fear-of>the sea</fear-of>
+        </phobia>
+        <phobia>
+            <name>Tomophobia</name>
+            <fear-of>surgery</fear-of>
+        </phobia>
+        <phobia>
+            <name>Uranophobia</name>
+            <fear-of>the heavens ("the horrible gaping sky!")</fear-of>
+        </phobia>
+        <phobia>
+            <name>Vermiphobia</name>
+            <fear-of>worms</fear-of>
+        </phobia>
+        <phobia>
+            <name>Xenophobia</name>
+            <fear-of>foreigners or strangers</fear-of>
+        </phobia>
+        <phobia>
+            <name>Zoophobia</name>
+            <fear-of>animals</fear-of>
+        </phobia>
+        <phobia>
+            <name>Aberraphobia</name>
+            <fear-of>aberrations and creatures with tentacles</fear-of>
+        </phobia>
+        <phobia>
+            <name>Arcuophobia</name>
+            <fear-of>bows</fear-of>
+        </phobia>
+        <phobia>
+            <name>Aurophobia</name>
+            <fear-of>gold</fear-of>
+        </phobia>
+        <phobia>
+            <name>Bogyphobia</name>
+            <fear-of>demons and goblins</fear-of>
+        </phobia>
+        <phobia>
+            <name>Confodiophobia</name>
+            <fear-of>being stabbed</fear-of>
+        </phobia>
+        <phobia>
+            <name>Demonophobia</name>
+            <fear-of>demons</fear-of>
+        </phobia>
+        <phobia>
+            <name>Dracophobia</name>
+            <fear-of>dragons</fear-of>
+        </phobia>
+        <phobia>
+            <name>Faephobia</name>
+            <fear-of>fey</fear-of>
+        </phobia>
+        <phobia>
+            <name>Gigaphobia</name>
+            <fear-of>giants and Large or larger creatures</fear-of>
+        </phobia>
+        <phobia>
+            <name>Hadephobia</name>
+            <fear-of>hell</fear-of>
+        </phobia>
+        <phobia>
+            <name>Hagiophobia</name>
+            <fear-of>saints and holy relics</fear-of>
+        </phobia>
+        <phobia>
+            <name>Hierophobia</name>
+            <fear-of>priests and sacred items</fear-of>
+        </phobia>
+        <phobia>
+            <name>Incantophobia</name>
+            <fear-of>enchantment and mind control</fear-of>
+        </phobia>
+        <phobia>
+            <name>Iophobia</name>
+            <fear-of>poison</fear-of>
+        </phobia>
+        <phobia>
+            <name>Manaphobia</name>
+            <fear-of>magic</fear-of>
+        </phobia>
+        <phobia>
+            <name>Materiophobia</name>
+            <fear-of>constructs</fear-of>
+        </phobia>
+        <phobia>
+            <name>Myxophobia</name>
+            <fear-of>oozes</fear-of>
+        </phobia>
+        <phobia>
+            <name>Naturaphobia</name>
+            <fear-of>nature and druids</fear-of>
+        </phobia>
+        <phobia>
+            <name>Phantasmaphobia</name>
+            <fear-of>specters or ghosts</fear-of>
+        </phobia>
+        <phobia>
+            <name>Planarphobia</name>
+            <fear-of>outsiders and extraplanar creatures</fear-of>
+        </phobia>
+        <phobia>
+            <name>Plantaphobia</name>
+            <fear-of>plants and plant creatures</fear-of>
+        </phobia>
+        <phobia>
+            <name>Pneumatophobia</name>
+            <fear-of>incorporeal creatures</fear-of>
+        </phobia>
+        <phobia>
+            <name>Uranophobia</name>
+            <fear-of>heaven (esp. divine magic)</fear-of>
+        </phobia>
+    </phobias>
+</sanity>

@@ -1,4 +1,4 @@
-package nu.hex.story.manager.core.domain.rpg.character.coc;
+package nu.hex.story.manager.core.domain.rpg.coc.character;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,16 +14,16 @@ import nu.hex.story.manager.core.domain.DomainEntity;
  * @author hl
  */
 @Entity
-@Table(name = "CoCEducation")
-public class CoCEducation implements DomainEntity<Long> {
+@Table(name = "CoCMentalDisorder")
+public class CoCMentalDisorder implements DomainEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column
-    private String establishment;
+    private String name;
     @Column
-    private String degree;
+    private String description;
 
     @Override
     public Long getId() {
@@ -37,23 +37,19 @@ public class CoCEducation implements DomainEntity<Long> {
 
     @Override
     public String getName() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return name;
     }
 
-    public String getEstablishment() {
-        return establishment;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setEstablishment(String establishment) {
-        this.establishment = establishment;
+    public String getDescription() {
+        return description;
     }
 
-    public String getDegree() {
-        return degree;
-    }
-
-    public void setDegree(String degree) {
-        this.degree = degree;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

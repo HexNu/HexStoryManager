@@ -1,4 +1,4 @@
-package nu.hex.story.manager.core.domain.rpg.character.dnd.impl;
+package nu.hex.story.manager.core.domain.rpg.coc.character;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,8 +16,8 @@ import nu.hex.story.manager.core.domain.rpg.character.AbilityScore;
  * @author hl
  */
 @Entity
-@Table(name = "DnDAbilityScore")
-public class DnDAbilityScore implements AbilityScore {
+@Table(name = "CoCAbilityScore")
+public class CoCAbilityScore implements AbilityScore {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,6 +26,14 @@ public class DnDAbilityScore implements AbilityScore {
     private Ability ability;
     @Column
     private Integer abilityValue;
+
+    public CoCAbilityScore() {
+    }
+
+    public CoCAbilityScore(Ability ability, Integer abilityValue) {
+        this.ability = ability;
+        this.abilityValue = abilityValue;
+    }
 
     @Override
     public Long getId() {
@@ -50,10 +58,12 @@ public class DnDAbilityScore implements AbilityScore {
         this.ability = ability;
     }
 
+    @Override
     public Integer getValue() {
         return abilityValue;
     }
 
+    @Override
     public void setValue(Integer value) {
         this.abilityValue = value;
     }
@@ -71,21 +81,23 @@ public class DnDAbilityScore implements AbilityScore {
 
     @Override
     public String toString() {
-        String result = abilityValue == null ? null : getAbility().name() + ": " + getValue();
-        if (getModifier() == 0) {
-            return result;
-        }
-        return result + " (" + getModifierString() + ")";
+        return abilityValue == null ? null : getAbility().name() + ": " + getValue();
     }
 
     public enum Ability {
 
-        CHA("Wisdom"),
-        CON("Wisdom"),
-        DEX("Wisdom"),
+        APP("Appearance"),
+        CON("Constitution"),
+        DEX("Dexterity"),
         INT("Intelligence"),
         STR("Strength"),
-        WIS("Wisdom");
+        POW("Power"),
+        SIZ("Size"),
+        SAN("Sanity"),
+        EDU("Education"),
+        IDEA("Idea"),
+        LUCK("Luck"),
+        KNOW("Knowledge");
         private final String label;
 
         private Ability(String label) {

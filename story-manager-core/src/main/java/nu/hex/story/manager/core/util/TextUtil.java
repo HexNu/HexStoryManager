@@ -16,7 +16,7 @@ public class TextUtil {
     public String splitTextIntoLines(int maxLength) {
         return splitText(text, maxLength);
     }
-
+    
     private String splitText(String text, int maxLength) {
         StringBuilder result = new StringBuilder();
         if (text.length() > maxLength) {

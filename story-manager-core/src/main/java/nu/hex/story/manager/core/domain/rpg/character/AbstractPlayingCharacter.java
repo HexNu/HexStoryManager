@@ -237,5 +237,4 @@ public abstract class AbstractPlayingCharacter implements Character {
     public String toString() {
         return getPerson().toString();
     }
-
 }

@@ -1,4 +1,4 @@
-package nu.hex.story.manager.core.domain.rpg.character.dnd.impl;
+package nu.hex.story.manager.core.domain.rpg.dnd.character;
 
 /**
  * Created 2016-okt-22
