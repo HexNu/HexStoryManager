@@ -3,6 +3,7 @@ package nu.hex.story.manager.core.rpg.coc.util;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import nu.hex.story.manager.core.domain.rpg.coc.character.CoCIncomeAndSavings;
 
 /**
  * Created 2016-okt-23
@@ -58,9 +59,12 @@ public class PoundToDollarConverter {
     public static void main(String[] args) {
         Double dollar = 15000d;
         Integer year = 1794;
+        year = 1921;
+//        dollar = 75d;
         PoundToDollarConverter conv = new PoundToDollarConverter(year);
-        System.out.println(conv.getDollarToPound(dollar));
-        System.out.println(conv.getPoundToDollar(dollar));
+        CurrencyFormat currencyFormat = new CurrencyFormat(CoCIncomeAndSavings.Currency.OLD_GBP);
+        System.out.println(currencyFormat.format(conv.getDollarToPound(0.05)));
+//        System.out.println(conv.getPoundToDollar(dollar));
     }
 
     static {

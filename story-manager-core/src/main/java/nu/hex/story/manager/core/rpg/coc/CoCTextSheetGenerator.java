@@ -9,6 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+import nu.hex.story.manager.core.domain.person.Person;
 import nu.hex.story.manager.core.domain.rpg.Die;
 import nu.hex.story.manager.core.domain.rpg.coc.character.CoCSkillScore;
 
@@ -21,21 +22,32 @@ public class CoCTextSheetGenerator {
 
     private static final String PATH = "sources/rpg/coc/CoCTextSheet";
     private final String resultPath;
+    private final CoCEra era;
 
-    public CoCTextSheetGenerator(String resultPath) {
+    public CoCTextSheetGenerator(String resultPath, CoCEra era) {
         this.resultPath = resultPath;
+        this.era = era;
     }
 
-    public void generate() throws IOException {
+    public void generate(Person.Sex sex) throws IOException {
         File file = new File(resultPath);
         file.getParentFile().mkdirs();
         String[] lines = getResourceAsString().split("\n");
         List<String> rows = new ArrayList<>();
         int rowIndex = 0;
+        int san = 0;
         for (String line : lines) {
             String row = line + ": ";
-            if (line.equalsIgnoreCase("edu")) {
+            if (line.equalsIgnoreCase("sex")) {
+                row += sex.getLabel();
+            } else if (line.equalsIgnoreCase("edu")) {
                 row += (Die.D6.get(3) + 3);
+            } else if (line.equalsIgnoreCase("pow")) {
+                int pow = Die.D6.get(3);
+                san = pow * 5;
+                row += pow;
+            } else if (line.equalsIgnoreCase("san")) {
+                row += san;
             } else if (line.equalsIgnoreCase("int") || line.equalsIgnoreCase("siz")) {
                 row += (Die.D6.get(2) + 6);
             } else if (rowIndex > 7) {
@@ -52,7 +64,9 @@ public class CoCTextSheetGenerator {
     }
 
     public static void main(String[] args) throws IOException {
-        new CoCTextSheetGenerator("/home/hl/Dokument/HexNu/StoryManager/sample-files/coc.txt").generate();
+        CoCEra era = CoCEra.ERA_1890;
+        System.out.println(era.getLabel() + " - " + era.getYear() + "s");
+        new CoCTextSheetGenerator("/home/hl/Dokument/HexNu/StoryManager/sample-files/coc.txt", era).generate(Person.Sex.FEMALE);
     }
 
     private InputStream getResourceAsStream() {

@@ -8,7 +8,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.swing.plaf.TextUI;
 import nu.hex.story.manager.core.domain.rpg.character.SkillScore;
+import nu.hex.story.manager.core.util.TextUtil;
 
 /**
  * Created 2016-okt-22
@@ -69,58 +71,60 @@ public class CoCSkillScore implements SkillScore {
     }
 
     public enum Skill {
-        ACCOUNTING(10),
-        ANTHROPOLOGY(1),
-        ARCHAEOLOGY(1),
-        ART(5),
-        ASTRONOMY(1),
-        BARGAIN(5),
-        BIOLOGY(1),
-        CHEMISTRY(1),
-        CLIMB(40),
-        CONCEAL(15),
-        CRAFT(5),
-        CREDIT_RATING(15),
-        CTHULHU_MYTHOS(0),
-        DISGUISE(1),
-        DODGE(-1),
-        DRIVE_AUTO(20),
-        ELECTRICAL_REPAIR(10),
-        FAST_TALK(5),
-        FIRST_AID(30),
-        GEOLOGY(1),
-        HIDE(10),
-        HISTORY(20),
-        JUMP(25),
-        LAW(5),
-        LIBRARY_USE(25),
-        LISTEN(25),
-        LOCKSMITH(1),
-        MARTIAL_ARTS(1),
-        MECHANICAL_REPAIR(20),
-        MEDICIN(5),
-        NATURAL_HISTORY(10),
-        NAVIGATE(10),
-        OCCULT(5),
-        OPERATE_HEAVY_MACHINERY(1),
-        OTHER_LANGUAGE(1),
-        OWN_LANGUAGE(-1),
-        PERSUADE(15),
-        PHARMACY(1),
-        PHOTOGRAPHY(10),
-        PHYSICS(1),
-        PILOT(1),
-        PSYCHOANALYSIS(1),
-        PSYCHOLOGY(5),
-        RIDE(5),
-        SNEAK(10),
-        SPOT_HIDDEN(25),
-        SWIM(25),
-        THROW(25),
-        TRACK(10);
+        ACCOUNTING(10, true, true, true),
+        ANTHROPOLOGY(0, true, true, true),
+        ARCHAEOLOGY(0, true, true, true),
+        ART(5, true, true, true),
+        ASTRONOMY(0, true, true, true),
+        BARGAIN(5, true, true, true),
+        BIOLOGY(0, true, true, true),
+        CHEMISTRY(0, true, true, true),
+        CLIMB(40, true, true, true),
+        COMPUTER_USE(0, false, false, true),
+        CONCEAL(15, true, true, true),
+        CRAFT(5, true, true, true),
+        CREDIT_RATING(15, true, true, true),
+        CTHULHU_MYTHOS(0, true, true, true),
+        DISGUISE(0, true, true, true),
+        DODGE(-1, true, true, true),
+        DRIVE_AUTO(20, false, true, true),
+        DRIVE_CARRRIAGE(20, false, true, true),
+        ELECTRICAL_REPAIR(10, true, true, true),
+        FAST_TALK(5, true, true, true),
+        FIRST_AID(30, true, true, true),
+        GEOLOGY(0, true, true, true),
+        HIDE(10, true, true, true),
+        HISTORY(20, true, true, true),
+        JUMP(25, true, true, true),
+        LAW(5, true, true, true),
+        LIBRARY_USE(25, true, true, true),
+        LISTEN(25, true, true, true),
+        LOCKSMITH(0, true, true, true),
+        MARTIAL_ARTS(0, true, true, true),
+        MECHANICAL_REPAIR(20, true, true, true),
+        MEDICIN(5, true, true, true),
+        NATURAL_HISTORY(10, true, true, true),
+        NAVIGATE(10, true, true, true),
+        OCCULT(5, true, true, true),
+        OPERATE_HEAVY_MACHINERY(0, true, true, true),
+        OTHER_LANGUAGE(0, true, true, true),
+        OWN_LANGUAGE(-1, true, true, true),
+        PERSUADE(15, true, true, true),
+        PHARMACY(0, true, true, true),
+        PHOTOGRAPHY(10, true, true, true),
+        PHYSICS(0, true, true, true),
+        PILOT(0, true, true, true),
+        PSYCHOANALYSIS(0, true, true, true),
+        PSYCHOLOGY(5, true, true, true),
+        RIDE(5, true, true, true),
+        SNEAK(10, true, true, true),
+        SPOT_HIDDEN(25, true, true, true),
+        SWIM(25, true, true, true),
+        THROW(25, true, true, true),
+        TRACK(10, true, true, true);
         private final Integer initialValue;
 
-        private Skill(Integer initialValue) {
+        private Skill(Integer initialValue, boolean e1890, boolean e1920, boolean e1990) {
             this.initialValue = initialValue;
 
         }
@@ -130,11 +134,7 @@ public class CoCSkillScore implements SkillScore {
         }
 
         public String getLabel() {
-            String label = "";
-            for (String s : name().split("_")) {
-                label += s.substring(0, 1) + s.substring(1).toLowerCase() + " ";
-            }
-            return label.trim();
+            return new TextUtil(name().replaceAll("_", " ")).capitalize();
         }
 
         @Override
