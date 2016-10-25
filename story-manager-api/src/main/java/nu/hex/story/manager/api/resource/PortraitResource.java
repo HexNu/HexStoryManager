@@ -7,7 +7,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import nu.hex.story.manager.core.domain.image.Portrait;
-import nu.hex.story.manager.core.service.command.portrait.GetPortraitCommand;
+import nu.hex.story.manager.service.command.portrait.GetPortraitCommand;
 import nu.hex.story.manager.dto.out.GetPortraitDTO;
 
 /**

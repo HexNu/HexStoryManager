@@ -3,7 +3,7 @@ package nu.hex.story.manager.core.text;
 import java.util.List;
 import nu.hex.story.manager.core.domain.image.Illustration;
 import nu.hex.story.manager.core.domain.image.Portrait;
-import nu.hex.story.manager.core.util.TextUtil;
+import nu.hex.story.manager.util.TextUtil;
 
 /**
  * Created 2016-okt-19

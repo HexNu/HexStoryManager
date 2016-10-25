@@ -26,7 +26,7 @@ import nu.hex.story.manager.core.domain.image.Portrait;
 import nu.hex.story.manager.core.domain.image.impl.DefaultPortrait;
 import nu.hex.story.manager.core.domain.person.Person;
 import nu.hex.story.manager.core.domain.person.PersonalEvent;
-import nu.hex.story.manager.core.util.date.DateUtils;
+import nu.hex.story.manager.util.date.DateUtils;
 import org.hibernate.annotations.Type;
 
 /**

@@ -1,8 +1,8 @@
 package nu.hex.story.manager.api.resource;
 
 import nu.hex.story.manager.api.dto.DTOFactory;
-import nu.hex.story.manager.core.service.command.CommandExecutor;
-import nu.hex.story.manager.core.service.support.EmHandlerProvider;
+import nu.hex.story.manager.service.command.CommandExecutor;
+import nu.hex.story.manager.service.support.EmHandlerProvider;
 
 /**
  *

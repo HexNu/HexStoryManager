@@ -22,7 +22,7 @@ import nu.hex.story.manager.core.domain.person.Person;
 import nu.hex.story.manager.core.domain.person.impl.DefaultPerson;
 import nu.hex.story.manager.core.domain.story.Chapter;
 import nu.hex.story.manager.core.domain.story.Story;
-import nu.hex.story.manager.core.util.RomanNumerals;
+import nu.hex.story.manager.util.RomanNumerals;
 
 @Entity
 @Table(name = "Chapter")

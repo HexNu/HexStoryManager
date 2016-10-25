@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import nu.hex.story.manager.core.service.exception.ServiceUnavailableException;
 
 /**
  * Created 2010-mar-12
@@ -28,7 +27,7 @@ public class MySqlConnector implements DatabaseConnector {
             conn.close();
         } catch (SQLException ex) {
             Logger.getLogger(MySqlConnector.class.getName()).log(Level.SEVERE, null, ex);
-            throw new ServiceUnavailableException(ex.getMessage(), ex);
+            throw new RuntimeException(ex.getMessage(), ex);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(MySqlConnector.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.swing.plaf.TextUI;
 import nu.hex.story.manager.core.domain.rpg.character.SkillScore;
-import nu.hex.story.manager.core.util.TextUtil;
+import nu.hex.story.manager.util.TextUtil;
 
 /**
  * Created 2016-okt-22

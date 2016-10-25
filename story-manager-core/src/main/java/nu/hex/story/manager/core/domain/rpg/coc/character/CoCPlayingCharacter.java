@@ -12,9 +12,10 @@ import javax.persistence.Entity;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-import nu.hex.story.manager.core.domain.rpg.Die;
 import nu.hex.story.manager.core.domain.rpg.character.Stats;
-import nu.hex.story.manager.core.rpg.coc.util.PoundToDollarConverter;
+import nu.hex.story.manager.util.rpg.Currency;
+import nu.hex.story.manager.util.rpg.Die;
+import nu.hex.story.manager.util.rpg.PoundToDollarConverter;
 
 /**
  * Created 2016-okt-22
@@ -87,7 +88,7 @@ public class CoCPlayingCharacter extends AbstractPlayingCharacter {
     public static void main(String[] args) {
         CoCPlayingCharacter character = new CoCPlayingCharacter();
         CoCIncomeAndSavings ias = new CoCIncomeAndSavings();
-        ias.setCurrency(CoCIncomeAndSavings.Currency.GBP);
+        ias.setCurrency(Currency.GBP);
         ias.setIncome(new PoundToDollarConverter(1920).getDollarToPound(10000d).intValue());
         character.setIncomeAndSavings(ias);
         System.out.println(ias.getCurrency().getSymbol() + ias.getIncome());

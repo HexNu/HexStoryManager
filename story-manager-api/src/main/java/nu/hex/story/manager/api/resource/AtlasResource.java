@@ -8,8 +8,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import nu.hex.story.manager.core.domain.atlas.Atlas;
 import nu.hex.story.manager.core.domain.atlas.AtlasMap;
-import nu.hex.story.manager.core.service.command.atlas.GetAtlasCommand;
-import nu.hex.story.manager.core.service.command.atlas.GetMapCommand;
+import nu.hex.story.manager.service.command.atlas.GetAtlasCommand;
+import nu.hex.story.manager.service.command.atlas.GetMapCommand;
 import nu.hex.story.manager.dto.out.GetAtlasDTO;
 import nu.hex.story.manager.dto.out.GetMapDTO;
 

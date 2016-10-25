@@ -8,7 +8,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import nu.hex.story.manager.core.document.docs.StoryManagerDocument;
 import nu.hex.story.manager.core.domain.story.Story;
-import nu.hex.story.manager.core.service.command.story.GetStoryCommand;
+import nu.hex.story.manager.service.command.story.GetStoryCommand;
 import se.digitman.lightxml.XmlDocument;
 
 /**

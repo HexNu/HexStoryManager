@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import nu.hex.story.manager.core.domain.DomainEntity;
+import nu.hex.story.manager.util.rpg.Currency;
 
 /**
  * Created 2016-okt-23
@@ -100,27 +101,5 @@ public class CoCIncomeAndSavings implements DomainEntity<Long> {
 
     public void setRealEstate(Integer realEstate) {
         this.realEstate = realEstate;
-    }
-
-    public enum Currency {
-        USD("US Dollar", "$"),
-        GBP("Brittish Pound", "£"),
-        OLD_GBP("Brittish Pound", "£");
-        private final String name;
-        private final String symbol;
-
-        private Currency(String name, String symbol) {
-            this.name = name;
-            this.symbol = symbol;
-
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public String getSymbol() {
-            return symbol;
-        }
     }
 }

@@ -6,8 +6,11 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>../story-manager-core</module>
+        <module>../story-manager-util</module>
         <module>../story-manager-dto</module>
+        <module>../story-manager-core</module>
+        <module>../story-manager-rpg</module>
+        <module>../story-manager-service</module>
         <module>../story-manager-api</module>
     </modules>
     <properties>
