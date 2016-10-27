@@ -11,15 +11,22 @@
     <class>nu.hex.story.manager.core.domain.person.impl.DefaultPersonalEvent</class>
     <class>nu.hex.story.manager.core.domain.person.impl.DefaultPerson</class>
     <class>nu.hex.story.manager.core.domain.rpg.character.AbstractPlayingCharacter</class>
+    <class>nu.hex.story.manager.core.domain.rpg.dnd.character.DnDAbilityScore</class>
+    <class>nu.hex.story.manager.core.domain.rpg.dnd.character.DnDPlayingCharacter</class>
+    <class>nu.hex.story.manager.core.domain.rpg.dnd.character.DnDStats</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCAbilityScore</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCEducation</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCIncomeAndSavings</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCMentalDisorder</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCPlayingCharacter</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCSkillScore</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCStats</class>
     <class>nu.hex.story.manager.core.domain.rpg.player.impl.DefaultPlayer</class>
     <class>nu.hex.story.manager.core.domain.story.impl.DefaultChapter</class>
     <class>nu.hex.story.manager.core.domain.story.impl.DefaultFootnote</class>
     <class>nu.hex.story.manager.core.domain.story.impl.DefaultStory</class>
     <class>nu.hex.story.manager.core.domain.story.impl.DefaultPlot</class>
     <class>nu.hex.story.manager.core.domain.story.impl.DefaultPlotItem</class>
-    <class>nu.hex.story.manager.core.domain.rpg.dnd.character.DnDAbilityScore</class>
-    <class>nu.hex.story.manager.core.domain.rpg.dnd.character.DnDPlayingCharacter</class>
-    <class>nu.hex.story.manager.core.domain.rpg.dnd.character.DnDStats</class>
     <properties>
       <property name="hibernate.connection.username" value="venus"/>
       <property name="hibernate.connection.password" value="venus"/>

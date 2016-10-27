@@ -1,5 +1,6 @@
 package nu.hex.story.manager.rpg.coc;
 
+import nu.hex.story.manager.core.domain.rpg.coc.CoCEra;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -64,7 +65,7 @@ public class CoCTextSheetGenerator {
     }
 
     public static void main(String[] args) throws IOException {
-        CoCEra era = CoCEra.ERA_1890;
+        CoCEra era = CoCEra.E1890;
         System.out.println(era.getLabel() + " - " + era.getYear() + "s");
         new CoCTextSheetGenerator("/home/hl/Dokument/HexNu/StoryManager/sample-files/coc.txt", era).generate(Person.Sex.FEMALE);
     }

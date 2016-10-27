@@ -1,5 +1,6 @@
 package nu.hex.story.manager.core.domain.rpg.coc.character;
 
+import nu.hex.story.manager.core.domain.rpg.coc.CoCLocale;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -9,13 +10,14 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import nu.hex.story.manager.core.domain.rpg.character.Stats;
-import nu.hex.story.manager.util.rpg.Currency;
+import nu.hex.story.manager.core.domain.rpg.coc.CoCEra;
 import nu.hex.story.manager.util.rpg.Die;
-import nu.hex.story.manager.util.rpg.PoundToDollarConverter;
 
 /**
  * Created 2016-okt-22
@@ -38,6 +40,24 @@ public class CoCPlayingCharacter extends AbstractPlayingCharacter {
     private final Set<CoCMentalDisorder> mentalDisorders = new HashSet<>();
     @OneToMany(cascade = CascadeType.ALL, targetEntity = CoCEducation.class)
     private final Set<CoCEducation> collegesAndDegrees = new HashSet<>();
+    @Enumerated(EnumType.STRING)
+    private CoCLocale cocLocale;
+    @Enumerated(EnumType.STRING)
+    private CoCEra cocEra;
+
+    public CoCPlayingCharacter() {
+        this(CoCEra.DEFAULT_ERA);
+    }
+
+    public CoCPlayingCharacter(CoCEra cocEra) {
+        this(cocEra, CoCLocale.DEFAULT_LOCALE);
+    }
+
+    public CoCPlayingCharacter(CoCEra era, CoCLocale locale) {
+        this.cocEra = era;
+        this.cocLocale = locale;
+        this.incomeAndSavings = new CoCIncomeAndSavings(this);
+    }
 
     @Override
     public Stats getStats() {
@@ -83,16 +103,39 @@ public class CoCPlayingCharacter extends AbstractPlayingCharacter {
 
     public void setIncomeAndSavings(CoCIncomeAndSavings incomeAndSavings) {
         this.incomeAndSavings = incomeAndSavings;
+        this.incomeAndSavings.setPlayingCharacter(this);
+    }
+
+    public CoCLocale getLocale() {
+        return cocLocale;
+    }
+
+    public void setLocale(CoCLocale cocLocale) {
+        this.cocLocale = cocLocale;
+    }
+
+    public CoCEra getEra() {
+        return cocEra;
+    }
+
+    public void setEra(CoCEra cocEra) {
+        this.cocEra = cocEra;
     }
 
     public static void main(String[] args) {
-        CoCPlayingCharacter character = new CoCPlayingCharacter();
-        CoCIncomeAndSavings ias = new CoCIncomeAndSavings();
-        ias.setCurrency(Currency.GBP);
-        ias.setIncome(new PoundToDollarConverter(1920).getDollarToPound(10000d).intValue());
-        character.setIncomeAndSavings(ias);
-        System.out.println(ias.getCurrency().getSymbol() + ias.getIncome());
+        CoCPlayingCharacter character = new CoCPlayingCharacter(CoCEra.E1920, CoCLocale.GB);
+        CoCIncomeAndSavings ias = character.getIncomeAndSavings();
+        ias.setCurrency(character.getLocale());
+        ias.setIncome(10000);
+        ias.setSavings(4300);
+        ias.setCashOnHand(500);
+        ias.setPersonalProperty(800);
+        ias.setRealEstate(120000);
         System.out.println(ias.getFormatedIncome());
+        System.out.println(ias.getFormatedSavings());
+        System.out.println(ias.getFormatedCashOnHand());
+        System.out.println(ias.getFormatedPersonalProperty());
+        System.out.println(ias.getFormatedRealEstate());
         CoCStats stats = (CoCStats) character.getStats();
         stats.getAppearance().setValue(Die.D6.getBestOf(3, 5));
         System.out.println(stats.getSkillValue(CoCSkillScore.Skill.SWIM));

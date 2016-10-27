@@ -1,19 +1,20 @@
-package nu.hex.story.manager.util.rpg;
+package nu.hex.story.manager.util.currency;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 
 /**
- * Created 2016-okt-23
+ * Created 2016-okt-27
  *
  * @author hl
  */
-public class CurrencyFormat {
+public class £sdFormat {
 
-    Currency currency;
+    private final static double SHILLING = 12d, 
+            POUND = 20d * SHILLING;
 
-    public CurrencyFormat(Currency currency) {
-        this.currency = currency;
+    public Double parse(String input) {
+        return (new Pence(input).getPence() / POUND); 
     }
 
     public String format(Integer input) {
@@ -21,14 +22,6 @@ public class CurrencyFormat {
     }
 
     public String format(Double input) {
-        if (currency.equals(Currency.OLD_GBP)) {
-            return convertToPoundShillingPence(input);
-        }
-        NumberFormat format = new DecimalFormat("#,###,##0.00");
-        return currency.getSymbol() + format.format(input).replaceAll(",", ".").replace("\u00A0", ",");
-    }
-
-    private String convertToPoundShillingPence(Double input) {
         Integer pounds = new Double(Math.floor(input)).intValue();
         Integer p = new Double(Math.round((input - pounds) * 240)).intValue();
         Integer shillings = new Double(Math.floor(p / 12)).intValue();
@@ -59,18 +52,5 @@ public class CurrencyFormat {
             result.append(pence).append("d");
         }
         return result.toString();
-    }
-
-    public static void main(String[] args) {
-        Double dollar = 1000000d;
-        PoundToDollarConverter converter;
-        System.out.println("For $" + dollar.intValue() + " you got £:");
-        for (int i = 1791; i <= 2015; i++) {
-            converter = new PoundToDollarConverter(i);
-            Double pound = converter.getDollarToPound(dollar);
-            Currency currency = i < 1971 ? Currency.OLD_GBP : Currency.GBP;
-            CurrencyFormat format = new CurrencyFormat(currency);
-            System.out.println(i + " " + format.format(pound));
-        }
     }
 }
