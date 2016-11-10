@@ -49,6 +49,11 @@
             <artifactId>hibernate-c3p0</artifactId>
             <version>4.3.6.Final</version>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hex-media-type</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

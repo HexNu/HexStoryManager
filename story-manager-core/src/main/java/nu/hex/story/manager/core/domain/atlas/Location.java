@@ -19,7 +19,7 @@ public interface Location extends DomainEntity<Long> {
 
     Double getLatitude();
 
-    void setLatitude(Double longitude);
+    void setLatitude(Double latitude);
 
     String getDescription();
 

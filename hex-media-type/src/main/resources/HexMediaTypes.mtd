@@ -1,0 +1,5 @@
+MediaType;Suffix;Description...
+application/vnd.nu.hex.location-format.srb;srb;Bokdokument-format;Standardiserat text format för att beskriva böcker.
+application/vnd.nu.hex.location-format.srl;srl;Platsdokument-format;Standardiserat text format för att beskriva platser.
+text/vnd.nu.hex.location-format+html.srb;hsrb;Bokdokument i HTML-format
+text/vnd.nu.hex.location-format+html.srl;hsrl;Platsdokument i HTML-format
