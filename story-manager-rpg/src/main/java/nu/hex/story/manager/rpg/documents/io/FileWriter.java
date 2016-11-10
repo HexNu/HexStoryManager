@@ -26,12 +26,7 @@ public class FileWriter {
     }
 
     public void write() throws IOException {
-        boolean mkdirs = file.getParentFile().mkdirs();
+        file.getParentFile().mkdirs();
         Files.write(file.toPath(), content);
     }
-
-    public static void main(String[] args) throws IOException {
-        new FileWriter("Apa", "/home/hl/TEST/apa.txt").write();
-    }
-
 }

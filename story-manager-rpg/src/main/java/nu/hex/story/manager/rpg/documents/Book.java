@@ -11,7 +11,7 @@ import nu.hex.story.manager.util.RomanNumerals;
  *
  * @author hl
  */
-public class Book {
+public class Book implements Document {
 
     private Long id;
     private String title;
@@ -82,7 +82,7 @@ public class Book {
     public void addAuthor(Person author) {
         this.authors.add(author);
     }
-    
+
     public void addAuthor(String givenName, String familyName) {
         Person author = new DefaultPerson();
         if (givenName != null) {

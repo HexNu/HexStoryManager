@@ -6,19 +6,17 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import nu.hex.story.manager.core.domain.person.Person;
-import nu.hex.story.manager.core.domain.person.impl.DefaultPerson;
 import nu.hex.story.manager.rpg.documents.Book;
 
-public class BookReader implements DocumentReader<List<Book>> {
+public class BooksReader implements DocumentReader<List<Book>> {
 
     private final List<String> lines;
 
-    public BookReader(String path) throws IOException {
+    public BooksReader(String path) throws IOException {
         this.lines = Files.readAllLines(new File(path).toPath());
     }
 
-    public BookReader(List<String> lines) {
+    public BooksReader(List<String> lines) {
         this.lines = lines;
     }
 
@@ -80,7 +78,7 @@ public class BookReader implements DocumentReader<List<Book>> {
                         book.setYearOfPublication(getValueAsInteger(line));
                     }
                     break;
-                case "publishing":
+                case "published":
                     if (!line.isEmpty()) {
                         if (getValue(line).matches("\\d*")) {
                             book.setYearOfPublication(getValueAsInteger(line));
@@ -150,11 +148,8 @@ public class BookReader implements DocumentReader<List<Book>> {
     }
 
     public static void main(String[] args) throws IOException {
-        List<Book> books = new BookReader("/home/hl/Dokument/RPG/Angelina Blight/docs/Books.bhx").read();
-        List<String> bookStrings = new ArrayList<>();
-        books.stream().forEach((book) -> {
-            bookStrings.add(new BookWriter(book).write());
-        });
-        new FileWriter(bookStrings, "/home/hl/Dokument/RPG/Angelina Blight/docs/Books.bhx").write();
+        List<Book> books = new BooksReader("/home/hl/Dokument/RPG/Angelina Blight/docs/Books.srb").read();
+//        new FileWriter(new BooksWriter(books).write(), "/home/hl/Dokument/RPG/Angelina Blight/docs/Books.srb").write();
+        new FileWriter(new BooksHtmlWriter(books).write(), "/home/hl/Dokument/RPG/Angelina Blight/docs/Books.hsrb").write();
     }
 }
