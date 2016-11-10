@@ -44,13 +44,14 @@ public class CoCIncomeAndSavings implements DomainEntity<Long> {
     private Double realEstate = 0d;
     @Transient
     private CurrencyFormat currencyFormat;
-
+    
     public CoCIncomeAndSavings() {
     }
 
     public CoCIncomeAndSavings(CoCPlayingCharacter playingCharacter) {
         this.playingCharacter = playingCharacter;
-        this.currencyFormat = new CurrencyFormat(playingCharacter.getLocale().getCurrency(), playingCharacter.getEra().getYear());
+        Integer year = playingCharacter.getDateOfBirth().getYear() + ((CoCStats) playingCharacter.getStats()).getStartingAge();
+        this.currencyFormat = new CurrencyFormat(playingCharacter.getLocale().getCurrency(), year);
     }
 
     @Override
@@ -185,7 +186,7 @@ public class CoCIncomeAndSavings implements DomainEntity<Long> {
         if (getCurrency().equals(Currency.USD)) {
             return dollar;
         }
-        Integer year = getPlayingCharacter().getEra().getYear();
+        Integer year = playingCharacter.getDateOfBirth().getYear() + ((CoCStats) playingCharacter.getStats()).getStartingAge();
         return new DollarConverterFactory(year).getConverter(getCurrency()).getDollarToCurrency(dollar);
     }
 }

@@ -1,7 +1,5 @@
 package nu.hex.story.manager.util.currency;
 
-import java.text.NumberFormat;
-
 /**
  * Created 2016-okt-23
  *
@@ -12,6 +10,7 @@ public class CurrencyFormat {
     public static final int DEFAULT_YEAR = 1920;
     private final Currency currency;
     private final Integer year;
+    private final CurrencyFormatFactory formatFactory = new CurrencyFormatFactory();
 
     public CurrencyFormat(Currency currency) {
         this(currency, DEFAULT_YEAR);
@@ -30,7 +29,6 @@ public class CurrencyFormat {
         if (currency.equals(Currency.GBP) && year < 1971) {
             return new £sdFormat().format(input);
         }
-        NumberFormat currencyFormat = new CurrencyFormatFactory(currency).getFormat();
-        return currencyFormat.format(input);
+        return formatFactory.getFormat(currency).format(input);
     }
 }

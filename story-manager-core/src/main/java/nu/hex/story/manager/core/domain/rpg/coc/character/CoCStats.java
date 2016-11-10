@@ -1,8 +1,6 @@
 package nu.hex.story.manager.core.domain.rpg.coc.character;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -15,7 +13,6 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import nu.hex.story.manager.core.domain.rpg.character.AbilityScore;
 import nu.hex.story.manager.core.domain.rpg.character.Stats;
-import nu.hex.story.manager.core.domain.rpg.coc.character.CoCSkillScore.Skill;
 
 /**
  * Created 2016-okt-22
@@ -29,6 +26,8 @@ public class CoCStats implements Stats {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column
+    private Integer startingAge;
     @OneToOne(cascade = CascadeType.ALL, targetEntity = CoCAbilityScore.class)
     private AbilityScore strength = new CoCAbilityScore(CoCAbilityScore.Ability.STR, 0);
     @OneToOne(cascade = CascadeType.ALL, targetEntity = CoCAbilityScore.class)
@@ -58,7 +57,15 @@ public class CoCStats implements Stats {
     @Column
     private Integer currentSanityPoints;
     @OneToMany(cascade = CascadeType.ALL, targetEntity = CoCSkillScore.class)
-    private Set<CoCSkillScore> skills = null;
+    private Set<CoCSkillScore> skills = new HashSet<>();
+
+    public CoCStats() {
+        this(25);
+    }
+
+    public CoCStats(Integer startingAge) {
+        this.startingAge = startingAge;
+    }
 
     @Override
     public Long getId() {
@@ -73,6 +80,14 @@ public class CoCStats implements Stats {
     @Override
     public String getName() {
         return "DnD Stats";
+    }
+
+    public Integer getStartingAge() {
+        return startingAge;
+    }
+
+    public void setStartingAge(Integer startingAge) {
+        this.startingAge = startingAge;
     }
 
     public Integer getStrength() {
@@ -286,44 +301,44 @@ public class CoCStats implements Stats {
         this.currentSanityPoints = currentSanityPoints;
     }
 
-    public Integer getMaximumSanityPoints() {
-        return 99 - getSkillValue(CoCSkillScore.Skill.CTHULHU_MYTHOS);
-    }
-
-    public List<CoCSkillScore> getSkills() {
-        if (skills == null) {
-            initSkills();
-        }
-        return new ArrayList<>(skills);
-    }
-
-    public void addSkill(CoCSkillScore skill) {
-        skills.add(skill);
-    }
-
-    private void initSkills() {
-        skills = new HashSet<>();
-        for (Skill skill : CoCSkillScore.Skill.values()) {
-            skills.add(new CoCSkillScore(skill, skill.getInitialValue()));
-        }
-    }
-
-    public Integer getSkillValue(CoCSkillScore.Skill skill) {
-        for (CoCSkillScore skillScore : getSkills()) {
-            if (skillScore.getSkill().equals(skill)) {
-                return skillScore.getValue();
-            }
-        }
-        return 0;
-    }
-
-    public void increaseSkillValue(CoCSkillScore.Skill skill, Integer increment) {
-        setSkillValue(skill, getSkillValue(skill) + increment);
-    }
-
-    public void setSkillValue(CoCSkillScore.Skill skill, Integer value) {
-        getSkills().stream().filter((skillScore) -> (skillScore.getSkill().equals(skill))).forEach((skillScore) -> {
-            skillScore.setValue(value);
-        });
-    }
+//    public Integer getMaximumSanityPoints() {
+//        return 99 - getSkillValue(CoCSkillScore.Skill.CTHULHU_MYTHOS);
+//    }
+//
+//    public List<CoCSkillScore> getSkills() {
+//        if (skills == null) {
+//            initSkills();
+//        }
+//        return new ArrayList<>(skills);
+//    }
+//
+//    public void addSkill(CoCSkillScore skill) {
+//        skills.add(skill);
+//    }
+//
+//    private void initSkills() {
+//        skills = new HashSet<>();
+//        for (Skill skill : CoCSkillScore.Skill.values()) {
+//            skills.add(new CoCSkillScore(skill, skill.getInitialValue()));
+//        }
+//    }
+//
+//    public Integer getSkillValue(CoCSkillScore.Skill skill) {
+//        for (CoCSkillScore skillScore : getSkills()) {
+//            if (skillScore.getSkill().equals(skill)) {
+//                return skillScore.getValue();
+//            }
+//        }
+//        return 0;
+//    }
+//
+//    public void increaseSkillValue(CoCSkillScore.Skill skill, Integer increment) {
+//        setSkillValue(skill, getSkillValue(skill) + increment);
+//    }
+//
+//    public void setSkillValue(CoCSkillScore.Skill skill, Integer value) {
+//        getSkills().stream().filter((skillScore) -> (skillScore.getSkill().equals(skill))).forEach((skillScore) -> {
+//            skillScore.setValue(value);
+//        });
+//    }
 }

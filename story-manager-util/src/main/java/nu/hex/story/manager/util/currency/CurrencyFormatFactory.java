@@ -12,13 +12,7 @@ import java.util.Locale;
  */
 class CurrencyFormatFactory {
 
-    private final Currency currency;
-
-    CurrencyFormatFactory(Currency currency) {
-        this.currency = currency;
-    }
-
-    NumberFormat getFormat() {
+    NumberFormat getFormat(Currency currency) {
         DecimalFormatSymbols symbols = new DecimalFormatSymbols(Locale.ENGLISH);
         String format = "#,###,##0.00";
         switch (currency) {

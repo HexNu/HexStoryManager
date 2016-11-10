@@ -9,16 +9,16 @@ class Pence {
 
     private Integer pence = 0;
 
-    public Pence(String input) {
-        for (String p : input.toLowerCase().split("\\.")) {
-            if (p.startsWith("£")) {
-                pence += poundsToPence(getInteger(p));
-            } else if (p.endsWith("s")) {
-                pence += shillingsToPence(getInteger(p));
-            } else if (p.endsWith("d")) {
-                pence += getInteger(p);
+    Pence(String input) {
+        for (String part : input.toLowerCase().split("\\.")) {
+            if (part.startsWith("£")) {
+                pence += poundsToPence(getInteger(part));
+            } else if (part.endsWith("s")) {
+                pence += shillingsToPence(getInteger(part));
+            } else if (part.endsWith("d")) {
+                pence += getInteger(part);
             } else {
-                pence = getInteger(p);
+                pence = getInteger(part);
             }
         }
     }

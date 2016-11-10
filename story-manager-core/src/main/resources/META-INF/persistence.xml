@@ -18,7 +18,9 @@
     <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCEducation</class>
     <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCIncomeAndSavings</class>
     <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCMentalDisorder</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCOccupation</class>
     <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCPlayingCharacter</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCSkill</class>
     <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCSkillScore</class>
     <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCStats</class>
     <class>nu.hex.story.manager.core.domain.rpg.player.impl.DefaultPlayer</class>

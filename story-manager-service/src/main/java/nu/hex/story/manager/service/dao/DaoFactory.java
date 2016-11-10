@@ -50,4 +50,12 @@ public class DaoFactory {
     public PlayingCharacterDao getPlayingCharacterDao() {
         return new PlayingCharacterDao(em);
     }
+
+    public CoCSkillDao getCoCSkillDao() {
+        return new CoCSkillDao(em);
+    }
+
+    public CoCOccupationDao getCoCOccupationDao() {
+        return new CoCOccupationDao(em);
+    }
 }

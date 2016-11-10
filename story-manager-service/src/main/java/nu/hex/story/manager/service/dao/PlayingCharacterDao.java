@@ -16,7 +16,7 @@ public class PlayingCharacterDao extends GenericDao<Character, Long> {
     public PlayingCharacterDao(EntityManager entityManager) {
         super(AbstractPlayingCharacter.class, entityManager);
     }
-
+    
     public CoCPlayingCharacter getCoCCharacter(Long id) {
         Character character = findByPrimaryKey(id);
         if (character instanceof CoCPlayingCharacter) {

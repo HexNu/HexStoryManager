@@ -11,7 +11,7 @@ public enum Currency {
     ATS("Austrian schilling", "öS"),
     BEF("Belgian franc", "fr"),
     CAD("Canadian dollar", "C$"),
-    CHF("Swiss franc", "SFr."),
+    CHF("Swiss franc", "SFr"),
     CNY("Chinese yuan", "¥"),
     DEM("German mark", "DM"),
     DKR("Danish krone", "kr"),

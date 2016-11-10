@@ -1,8 +1,10 @@
 package nu.hex.story.manager.util.currency.convert;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -15,7 +17,7 @@ import java.util.Map;
  */
 public abstract class AbstractDollarConverter implements DollarConverter {
 
-    private static final NumberFormat FORMAT = new DecimalFormat("#,##0.0000");
+    private static final NumberFormat FORMAT = new DecimalFormat("##########0.0000", new DecimalFormatSymbols(Locale.ENGLISH));
     protected static final Map<Integer, Double> RATIO_MAP = new HashMap<>();
     protected final Integer year;
     protected Integer min = 1873;
@@ -56,6 +58,6 @@ public abstract class AbstractDollarConverter implements DollarConverter {
     }
 
     private Double getDoubleWithUpToFourDecimalDigits(Double input) {
-        return Double.valueOf(FORMAT.format(input).replaceAll(",", ".").replaceAll("\u00A0", ""));
+        return Double.valueOf(FORMAT.format(input));
     }
 }

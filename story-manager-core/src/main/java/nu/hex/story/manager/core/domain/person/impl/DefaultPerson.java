@@ -111,7 +111,11 @@ public class DefaultPerson implements Person {
 
     @Override
     public String getName() {
-        return givenName + " " + familyName;
+        String name = givenName != null ? givenName : "";
+        if (familyName != null) {
+            name += " " + familyName;
+        }
+        return name.trim().isEmpty() ? "NN" : name.trim();
     }
 
     @Override
@@ -279,6 +283,9 @@ public class DefaultPerson implements Person {
 
     @Override
     public String toString() {
-        return getName() + " " + getDateOfDeath().format(DateTimeFormatter.ISO_DATE);
+        if (getDateOfBirth() != null) {
+            return getName() + " " + getDateOfDeath().format(DateTimeFormatter.ISO_DATE);
+        }
+        return getName();
     }
 }

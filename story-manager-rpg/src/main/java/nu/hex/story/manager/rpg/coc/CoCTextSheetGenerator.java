@@ -11,7 +11,6 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import nu.hex.story.manager.core.domain.person.Person;
-import nu.hex.story.manager.core.domain.rpg.coc.character.CoCSkillScore;
 import nu.hex.story.manager.util.rpg.Die;
 
 /**
@@ -58,9 +57,9 @@ public class CoCTextSheetGenerator {
             rowIndex++;
         }
         rows.add("Skills:");
-        for (CoCSkillScore.Skill skill : CoCSkillScore.Skill.values()) {
-            rows.add(skill.toString() + ": ");
-        }
+//        for (CoCSkillScore.Skill skill : CoCSkillScore.Skill.values()) {
+//            rows.add(skill.toString() + ": ");
+//        }
         Files.write(file.toPath(), rows);
     }
 

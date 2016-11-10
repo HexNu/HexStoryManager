@@ -8,6 +8,7 @@
     <modules>
         <module>../story-manager-util</module>
         <module>../story-manager-dto</module>
+        <module>../hex-calendar-core</module>
         <module>../story-manager-core</module>
         <module>../story-manager-rpg</module>
         <module>../story-manager-service</module>
