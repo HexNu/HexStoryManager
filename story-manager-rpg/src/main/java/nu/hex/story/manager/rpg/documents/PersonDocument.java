@@ -252,6 +252,13 @@ public class PersonDocument implements Person {
         }
         this.children.add(child);
     }
+    
+    public void addChild(String givenName, String familyName) {
+        PersonDocument child = new PersonDocument();
+        child.setGivenName(givenName);
+        child.setFamilyName(familyName);
+        addChild(child);
+    }
 
     @Override
     public List<Person> getSiblings() {

@@ -19,9 +19,6 @@ public class MapXmlWriter extends AbstractWriter<AtlasMap, XmlNode>{
     @Override
     public XmlNode write() {
         XmlNode map = NodeFactory.createNode("map");
-        if (doc.getId()!= null) {
-            map.addAttribute("id", doc.getId().toString());
-        }
         if (doc.getTitle() != null) {
             map.addAttribute("title", doc.getTitle());
         }

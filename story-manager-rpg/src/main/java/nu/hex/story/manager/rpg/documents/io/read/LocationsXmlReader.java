@@ -67,6 +67,9 @@ public class LocationsXmlReader extends AbstractXmlReader<List<LocationDocument>
         if (n.hasChildNamed("notes")) {
             result.setNotes(n.getChild("notes").getText());
         }
+        if (n.hasChildNamed("map")) {
+            result.setMap(new MapXmlReader(n.getChild("map")).read());
+        }
         return result;
     }
 }

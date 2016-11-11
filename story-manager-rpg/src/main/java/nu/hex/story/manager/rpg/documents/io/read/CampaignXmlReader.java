@@ -35,6 +35,9 @@ public class CampaignXmlReader extends AbstractXmlReader<CampaignDocument> {
         if (node.hasChildNamed("locations")) {
             result.setLocations(new LocationsXmlReader(node.getChild("locations")).read());
         }
+        if (node.hasChildNamed("persons")) {
+            result.setPersons(new PersonsXmlReader(node.getChild("persons")).read());
+        }
         return result;
     }
 

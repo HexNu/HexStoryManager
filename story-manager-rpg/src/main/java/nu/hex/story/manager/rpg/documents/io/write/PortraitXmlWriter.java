@@ -20,14 +20,8 @@ public class PortraitXmlWriter extends AbstractWriter<PortraitDocument, XmlNode>
     @Override
     public XmlNode write() {
         XmlNode portrait = NodeFactory.createNode("portrait");
-        if (doc.getId()!= null) {
-            portrait.addAttribute("id", doc.getId().toString());
-        }
         if (doc.getLabel()!= null) {
             portrait.addAttribute("label", doc.getLabel());
-        }
-        if (doc.getDescription() != null) {
-            portrait.addAttribute("description", doc.getDescription());
         }
         if (doc.getDate()!= null) {
             portrait.addAttribute("date", doc.getDate().format(DateTimeFormatter.ISO_DATE));

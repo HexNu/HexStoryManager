@@ -25,18 +25,10 @@ public class SmrxXmlReader extends AbstractXmlReader<List<CampaignDocument>> {
     @Override
     public List<CampaignDocument> read() {
         List<CampaignDocument> result = new ArrayList<>();
-        if (node.getName().equals("campaign")) {
-            result.add(parseCampaignNode(node));
-        } else {
-            node.getChildren("campaign").stream().forEach((n) -> {
-                result.add(parseCampaignNode(n));
-            });
-        }
+        node.getChild("campaigns").getChildren("campaign").stream().forEach((campaignNode)->{
+            result.add(new CampaignXmlReader(campaignNode).read());
+        });
         return result;
-    }
-
-    private CampaignDocument parseCampaignNode(XmlNode campaignNode) {
-        return new CampaignXmlReader(campaignNode).read();
     }
 
 }

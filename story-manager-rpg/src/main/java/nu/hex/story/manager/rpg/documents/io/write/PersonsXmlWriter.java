@@ -36,10 +36,24 @@ public class PersonsXmlWriter extends AbstractWriter<List<PersonDocument>, XmlNo
                 personNode.addAttribute("given-name", person.getGivenName());
             }
             if (person.getMother() != null) {
-                personNode.addAttribute("mother", person.getMother().getName());
+                XmlNode motherNode = NodeFactory.createNode("mother");
+                if (person.getMother().getGivenName() != null) {
+                    motherNode.addAttribute("given-name", person.getMother().getGivenName());
+                }
+                if (person.getMother().getFamilyName() != null) {
+                    motherNode.addAttribute("family-name", person.getMother().getFamilyName());
+                }
+                personNode.addChild(motherNode);
             }
             if (person.getFather() != null) {
-                personNode.addAttribute("father", person.getFather().getName());
+                XmlNode fatherNode = NodeFactory.createNode("father");
+                if (person.getFather().getGivenName() != null) {
+                    fatherNode.addAttribute("given-name", person.getFather().getGivenName());
+                }
+                if (person.getFather().getFamilyName() != null) {
+                    fatherNode.addAttribute("family-name", person.getFather().getFamilyName());
+                }
+                personNode.addChild(fatherNode);
             }
             if (person.getSex() != null) {
                 personNode.addAttribute("sex", person.getSex().getLabel());
@@ -65,17 +79,22 @@ public class PersonsXmlWriter extends AbstractWriter<List<PersonDocument>, XmlNo
             if (person.getCauseOfDeath() != null) {
                 personNode.addAttribute("cause-of-death", person.getCauseOfDeath());
             }
+            if (person.getResidence() != null) {
+                personNode.addAttribute("residence", person.getResidence());
+            }
             if (person.getChildren().size() > 0) {
                 XmlNode childrenNode = NodeFactory.createNode("children");
                 personNode.addChild(childrenNode);
                 person.getChildren().stream().forEach((child) -> {
                     XmlNode childNode = NodeFactory.createNode("child");
-                    childNode.addAttribute("name", child.getName());
+                    if (child.getGivenName() != null) {
+                        childNode.addAttribute("given-name", child.getGivenName());
+                    }
+                    if (child.getFamilyName() != null) {
+                        childNode.addAttribute("family-name", child.getFamilyName());
+                    }
                     childrenNode.addChild(childNode);
                 });
-            }
-            if (person.getResidence() != null) {
-                personNode.addAttribute("residence", person.getResidence());
             }
             XmlNode descriptionNode = NodeFactory.createNode("description");
             personNode.addChild(descriptionNode);
@@ -106,7 +125,6 @@ public class PersonsXmlWriter extends AbstractWriter<List<PersonDocument>, XmlNo
             if (person.getPortrait() != null) {
                 personNode.addChild(new PortraitXmlWriter((PortraitDocument) person.getPortrait()).write());
             }
-            
         }
         return personsNode;
     }
