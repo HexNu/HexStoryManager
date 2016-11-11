@@ -1,8 +1,9 @@
-package nu.hex.story.manager.rpg.documents.io;
+package nu.hex.story.manager.rpg.documents.io.write;
 
 import java.util.Arrays;
 import java.util.List;
-import nu.hex.story.manager.rpg.documents.Book;
+import nu.hex.story.manager.rpg.documents.BookDocument;
+import nu.hex.story.manager.rpg.documents.io.AbstractWriter;
 import se.digitman.lightxml.NodeFactory;
 import se.digitman.lightxml.XmlNode;
 
@@ -11,13 +12,13 @@ import se.digitman.lightxml.XmlNode;
  *
  * @author hl
  */
-public class BooksHtmlWriter extends AbstractWriter<List<Book>> {
+public class BooksHtmlWriter extends AbstractWriter<List<BookDocument>, String> {
 
-    public BooksHtmlWriter(List<Book> doc) {
+    public BooksHtmlWriter(List<BookDocument> doc) {
         super(doc);
     }
 
-    public BooksHtmlWriter(Book book) {
+    public BooksHtmlWriter(BookDocument book) {
         super(Arrays.asList(book));
     }
 
@@ -29,7 +30,7 @@ public class BooksHtmlWriter extends AbstractWriter<List<Book>> {
         XmlNode listNode = NodeFactory.createNode("div");
         listNode.addAttribute("id", "book-list");
         docNode.getChild("body").addChild(listNode);
-        for (Book book : doc) {
+        for (BookDocument book : doc) {
             XmlNode entry = NodeFactory.createNode("div");
             entry.addAttribute("class", "book-entry");
             listNode.addChild(entry);
@@ -83,19 +84,19 @@ public class BooksHtmlWriter extends AbstractWriter<List<Book>> {
         return row;
     }
 
-    private void writeId(Book book, XmlNode entryNode) {
+    private void writeId(BookDocument book, XmlNode entryNode) {
         if (book.getId() != null) {
             entryNode.addChild(addRow("ID", book.getId()));
         }
     }
 
-    private void writeTitle(Book book, XmlNode entryNode) {
+    private void writeTitle(BookDocument book, XmlNode entryNode) {
         for (String title : book.getTitle().split("\n")) {
             entryNode.addChild(addRow("Title", title));
         }
     }
 
-    private void writeAuthors(Book book, XmlNode entryNode) {
+    private void writeAuthors(BookDocument book, XmlNode entryNode) {
         if (!book.getAuthors().isEmpty()) {
             book.getAuthors().stream().forEach((author) -> {
                 entryNode.addChild(addRow("Author", author.getName()));
@@ -103,13 +104,13 @@ public class BooksHtmlWriter extends AbstractWriter<List<Book>> {
         }
     }
 
-    private void writeNumberOfVolumes(Book book, XmlNode entryNode) {
+    private void writeNumberOfVolumes(BookDocument book, XmlNode entryNode) {
         if (book.getNumberOfVolumes() > 1) {
             entryNode.addChild(addRow("# of Volumes", book.getNumberOfVolumes()));
         }
     }
 
-    private void writePublished(Book book, XmlNode entryNode) {
+    private void writePublished(BookDocument book, XmlNode entryNode) {
         StringBuilder published = new StringBuilder();
         if (book.getPlaceOfPublication() != null) {
             published.append(book.getPlaceOfPublication());
@@ -131,13 +132,13 @@ public class BooksHtmlWriter extends AbstractWriter<List<Book>> {
         }
     }
 
-    private void writeLanguage(Book book, XmlNode entryNode) {
+    private void writeLanguage(BookDocument book, XmlNode entryNode) {
         if (book.getLanguage() != null) {
             entryNode.addChild(addRow("Language", book.getLanguage()));
         }
     }
 
-    private void writeSubjects(Book book, XmlNode entryNode) {
+    private void writeSubjects(BookDocument book, XmlNode entryNode) {
         if (book.getSubject() != null) {
             for (String subjects : book.getSubject().split("\n")) {
                 entryNode.addChild(addRow("Subject", subjects));
@@ -145,7 +146,7 @@ public class BooksHtmlWriter extends AbstractWriter<List<Book>> {
         }
     }
 
-    private void writeDescription(Book book, XmlNode entryNode) {
+    private void writeDescription(BookDocument book, XmlNode entryNode) {
         if (book.getDescription() != null) {
             XmlNode row = addRow("Description", book.getDescription().split("\n"));
             row.addAttribute("class", "row multiline");
@@ -153,7 +154,7 @@ public class BooksHtmlWriter extends AbstractWriter<List<Book>> {
         }
     }
 
-    private void writeNotes(Book book, XmlNode entryNode) {
+    private void writeNotes(BookDocument book, XmlNode entryNode) {
         if (book.getNotes() != null) {
             XmlNode row = addRow("Notes", book.getNotes().split("\n"));
             row.addAttribute("class", "row multiline");

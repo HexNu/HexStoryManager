@@ -16,5 +16,7 @@ public class DocumentFileChooser extends JFileChooser {
         super.setAcceptAllFileFilterUsed(false);
         super.addChoosableFileFilter(new FileNameExtensionFilter("Location text file", "srl"));
         super.addChoosableFileFilter(new FileNameExtensionFilter("Book text file", "srb"));
+        super.addChoosableFileFilter(new FileNameExtensionFilter("Campaign XML file", "smrx"));
+        super.setFileFilter(new FileNameExtensionFilter("All StoryManager RPG Files", "smrx", "srl", "srb"));
     }
 }

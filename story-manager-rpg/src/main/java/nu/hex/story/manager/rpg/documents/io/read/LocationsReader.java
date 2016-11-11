@@ -1,4 +1,4 @@
-package nu.hex.story.manager.rpg.documents.io;
+package nu.hex.story.manager.rpg.documents.io.read;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import nu.hex.mediatype.CommonMediaType;
 import nu.hex.story.manager.rpg.documents.LocationDocument;
+import nu.hex.story.manager.rpg.documents.io.AbstractReader;
 
 public class LocationsReader extends AbstractReader<List<LocationDocument>> {
 

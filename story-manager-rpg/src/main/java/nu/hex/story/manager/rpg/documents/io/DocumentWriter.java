@@ -5,8 +5,9 @@ package nu.hex.story.manager.rpg.documents.io;
  *
  * @author hl
  * @param <T>
+ * @param <R>
  */
-public interface DocumentWriter<T> {
+public interface DocumentWriter<T, R> {
 
-    String write();
+    R write();
 }

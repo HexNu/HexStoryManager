@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<story-manager-rpg>
+    <campaign title="Northern Lights">
+        <description>In Northern Lights the characters will explore everything that is happening in the northern countries, Aglium and Edra.
+            In Stare, formerly Oclos, an aristocratic villain has just been twarted while in Ægis, an order of quasi scientific monks are trying to summon Doohlach, a demon that will wreak havoc over the world.</description>
+        <books>
+            <book-entry id="1" number-of-volumes="5" language="Seomakian">
+                <titles>
+                    <title>The Books of Sytar</title>
+                </titles>
+                <authors>
+                    <author>Anluan</author>
+                </authors>
+                <published>
+                    <year>378</year>
+                </published>
+                <subjects>
+                    <subject>Religion</subject>
+                </subjects>
+            </book-entry>
+            <book-entry id="2" number-of-volumes="2" language="Seomakian">
+                <titles>
+                    <title>The Codex of the Sisterhood</title>
+                </titles>
+                <authors>
+                    <author>Condesendia Fortunatus</author>
+                    <author>Consentia Fortunatus</author>
+                </authors>
+                <published>
+                    <location>Æsis</location>
+                    <year>4</year>
+                </published>
+                <subjects>
+                    <subject>Religion</subject>
+                    <subject>Occult</subject>
+                </subjects>
+            </book-entry>
+            <book-entry id="3" language="Seomakian">
+                <titles>
+                    <title>Astronomy</title>
+                    <title>A New View of the Stars</title>
+                </titles>
+                <published>
+                    <location>Oclus</location>
+                    <year>929</year>
+                    <publisher>SU Press</publisher>
+                </published>
+                <subjects>
+                    <subject>Astronomy</subject>
+                    <subject>Astrology</subject>
+                </subjects>
+            </book-entry>
+            <book-entry id="4" number-of-volumes="4" language="Seomakian">
+                <titles>
+                    <title>The Visions of Ylene</title>
+                </titles>
+                <subjects>
+                    <subject>Religion</subject>
+                </subjects>
+            </book-entry>
+            <book-entry id="5">
+                <titles>
+                    <title>The Origin of the Calendar</title>
+                </titles>
+                <subjects>
+                    <subject>History</subject>
+                </subjects>
+            </book-entry>
+            <book-entry id="6" language="Seomakian">
+                <titles>
+                    <title>The Ostean Calendar</title>
+                </titles>
+                <subjects>
+                    <subject>History (ostean)</subject>
+                </subjects>
+                <description>This quarto is leather bound with metal clasps.
+                    It's content is divided into three books, all in the same volume.
+                    The first book describes the way the Occian astronomers viewed the stars, and how it differed from the Seomakian view.
+                    The seccond book relates the observations made by the Occian astronomers concerning the movements of the heavenly bodies, with focus on the Sun and the Moon.
+                    The third book is a detailed mathematical essay on how to calculate special dates.</description>
+                <notes>Reading and fully understanding this book gives the reader an advanced mathematical skill of 2.
+                    It also enhances the readers ability to perform rituals pertaining to the stars, sun and moon, making the task one step easier.</notes>
+            </book-entry>
+        </books>
+        <locations>
+            <location id="1" name="City of Æsis" country="Aglium" currency="GSC" language="Common" latitude="11.32" longitude="56.14">
+                <description>Æsis is more or less in ruins today. The city is partly submerged and a few islands remain. Around the lake thus formed is currently buildings in extreme disrepair, mostly overgrown.
+                    The City has some few inhabitants, and is also a place where the forrest gnomes living just outside finds &quot;thingies&quot;.</description>
+                <notes>Currently a ritual is in progress in the city, aming at summoning Adramalech (as &quot;Doohlach&quot;).</notes>
+            </location>
+            <location id="2" name="Gnome Village" country="Aglium" currency="GSC" language="Common" longitude="55.8"/>
+        </locations>
+    </campaign>
+</story-manager-rpg>

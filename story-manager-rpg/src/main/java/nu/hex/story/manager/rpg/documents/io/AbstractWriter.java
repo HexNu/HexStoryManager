@@ -5,8 +5,9 @@ package nu.hex.story.manager.rpg.documents.io;
  *
  * @author hl
  * @param <T>
+ * @param <U>
  */
-public abstract class AbstractWriter<T> implements DocumentWriter<T> {
+public abstract class AbstractWriter<T, U> implements DocumentWriter<T, U> {
 
     protected final T doc;
 

@@ -4,21 +4,24 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Arrays;
+import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
+import nu.hex.mediatype.HexMediaType;
+import nu.hex.mediatype.MediaTypeIdentifier;
 import nu.hex.story.manager.rpg.documents.gui.properties.TextEditorProperties;
 
 /**
  *
  * @author hl
  */
-public class TextEditor extends javax.swing.JFrame {
+public class CampaignEditor extends javax.swing.JFrame {
 
     private String filePath;
     private final TextEditorProperties properties = new TextEditorProperties();
 
-    public TextEditor() {
+    public CampaignEditor() {
         initComponents();
     }
 
@@ -31,8 +34,10 @@ public class TextEditor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        editorTextArea = new javax.swing.JTextArea();
+        desktopPane = new javax.swing.JDesktopPane();
+        mainTabbedPane = new javax.swing.JTabbedPane();
+        infoPanel = new javax.swing.JPanel();
+        statusPanel = new javax.swing.JPanel();
         filePathInfoLabel = new javax.swing.JLabel();
         filePathLabel = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
@@ -47,18 +52,62 @@ public class TextEditor extends javax.swing.JFrame {
         pasteMenuItem = new javax.swing.JMenuItem();
         deleteMenuItem = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
-        contentsMenuItem = new javax.swing.JMenuItem();
+        contentMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        editorTextArea.setColumns(20);
-        editorTextArea.setLineWrap(true);
-        editorTextArea.setRows(5);
-        editorTextArea.setWrapStyleWord(true);
-        jScrollPane1.setViewportView(editorTextArea);
+        desktopPane.setLayer(mainTabbedPane, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        javax.swing.GroupLayout desktopPaneLayout = new javax.swing.GroupLayout(desktopPane);
+        desktopPane.setLayout(desktopPaneLayout);
+        desktopPaneLayout.setHorizontalGroup(
+            desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desktopPaneLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(mainTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1341, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        desktopPaneLayout.setVerticalGroup(
+            desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desktopPaneLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(mainTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout infoPanelLayout = new javax.swing.GroupLayout(infoPanel);
+        infoPanel.setLayout(infoPanelLayout);
+        infoPanelLayout.setHorizontalGroup(
+            infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 271, Short.MAX_VALUE)
+        );
+        infoPanelLayout.setVerticalGroup(
+            infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 747, Short.MAX_VALUE)
+        );
+
+        filePathInfoLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         filePathInfoLabel.setText("Select file to edit");
+
+        javax.swing.GroupLayout statusPanelLayout = new javax.swing.GroupLayout(statusPanel);
+        statusPanel.setLayout(statusPanelLayout);
+        statusPanelLayout.setHorizontalGroup(
+            statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPanelLayout.createSequentialGroup()
+                .addComponent(filePathInfoLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(filePathLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 610, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        statusPanelLayout.setVerticalGroup(
+            statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusPanelLayout.createSequentialGroup()
+                .addContainerGap(33, Short.MAX_VALUE)
+                .addGroup(statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(filePathLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(filePathInfoLabel))
+                .addContainerGap())
+        );
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("File");
@@ -126,9 +175,9 @@ public class TextEditor extends javax.swing.JFrame {
         helpMenu.setMnemonic('h');
         helpMenu.setText("Help");
 
-        contentsMenuItem.setMnemonic('c');
-        contentsMenuItem.setText("Contents");
-        helpMenu.add(contentsMenuItem);
+        contentMenuItem.setMnemonic('c');
+        contentMenuItem.setText("Contents");
+        helpMenu.add(contentMenuItem);
 
         aboutMenuItem.setMnemonic('a');
         aboutMenuItem.setText("About");
@@ -142,25 +191,25 @@ public class TextEditor extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 668, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(filePathInfoLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(filePathLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addContainerGap()
+                        .addComponent(statusPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(infoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(filePathInfoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(filePathLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(infoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statusPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -176,16 +225,13 @@ public class TextEditor extends javax.swing.JFrame {
     }//GEN-LAST:event_openMenuItemActionPerformed
 
     private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuItemActionPerformed
-        saveFile();
+        // TODO add your handling code here:
     }//GEN-LAST:event_saveMenuItemActionPerformed
 
     private void saveAsMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveAsMenuItemActionPerformed
-        saveFileAs();
+        // TODO add your handling code here:
     }//GEN-LAST:event_saveAsMenuItemActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -199,42 +245,38 @@ public class TextEditor extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TextEditor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TextEditor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TextEditor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TextEditor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(CampaignEditor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        //</editor-fold>
         java.awt.EventQueue.invokeLater(() -> {
-            new TextEditor().setVisible(true);
+            new CampaignEditor().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
-    private javax.swing.JMenuItem contentsMenuItem;
+    private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JMenuItem cutMenuItem;
     private javax.swing.JMenuItem deleteMenuItem;
+    private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
-    private javax.swing.JTextArea editorTextArea;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JLabel filePathInfoLabel;
     private javax.swing.JLabel filePathLabel;
     private javax.swing.JMenu helpMenu;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel infoPanel;
+    private javax.swing.JTabbedPane mainTabbedPane;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
     private javax.swing.JMenuItem saveAsMenuItem;
     private javax.swing.JMenuItem saveMenuItem;
+    private javax.swing.JPanel statusPanel;
     // End of variables declaration//GEN-END:variables
 
     private void updateFileLabel() {
@@ -256,15 +298,25 @@ public class TextEditor extends javax.swing.JFrame {
     }
 
     private void populateEditor(File selectedFile) {
-        StringBuilder builder = new StringBuilder();
-        try {
-            for (String line : Files.readAllLines(selectedFile.toPath())) {
-                builder.append(line).append("\n");
-            }
-            editorTextArea.setText(builder.toString());
-        } catch (IOException ex) {
-            Logger.getLogger(TextEditor.class.getName()).log(Level.SEVERE, null, ex);
+        String mediaType = getMediaType(selectedFile);
+        switch (mediaType) {
+            case HexMediaType.APPLICATION_VND_NU_HEX_CAMPAIGN_FORMAT_SMRX_XML:
+                createCampaignEditor(selectedFile);
+                break;
+            case HexMediaType.APPLICATION_VND_NU_HEX_LOCATION_FORMAT_SRB:
+                break;
+            case HexMediaType.APPLICATION_VND_NU_HEX_LOCATION_FORMAT_SRL:
+                break;
         }
+//        StringBuilder builder = new StringBuilder();
+//        try {
+//            for (String line : Files.readAllLines(selectedFile.toPath())) {
+//                builder.append(line).append("\n");
+//            }
+//            editorTextArea.setText(builder.toString());
+//        } catch (IOException ex) {
+//            Logger.getLogger(TextEditor.class.getName()).log(Level.SEVERE, null, ex);
+//        }
     }
 
     private void saveFile() {
@@ -276,15 +328,15 @@ public class TextEditor extends javax.swing.JFrame {
                 updateFileLabel();
             }
         }
-        if (filePath != null) {
-            try {
-                File selectedFile = new File(filePath);
-                Files.write(selectedFile.toPath(), Arrays.asList(editorTextArea.getText().split("\n")));
-                populateEditor(selectedFile);
-            } catch (IOException ex) {
-                Logger.getLogger(TextEditor.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
+//        if (filePath != null) {
+//            try {
+//                File selectedFile = new File(filePath);
+//                Files.write(selectedFile.toPath(), Arrays.asList(editorTextArea.getText().split("\n")));
+//                populateEditor(selectedFile);
+//            } catch (IOException ex) {
+//                Logger.getLogger(TextEditor.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
     }
 
     private void saveFileAs() {
@@ -294,14 +346,28 @@ public class TextEditor extends javax.swing.JFrame {
         if (fileChooser.getSelectedFile() != null) {
             File selectedFile = fileChooser.getSelectedFile();
             filePath = selectedFile.getAbsolutePath();
-            try {
-                Files.write(selectedFile.toPath(), Arrays.asList(editorTextArea.getText().split("\n")));
-                updateFileLabel();
-                populateEditor(selectedFile);
-            } catch (IOException ex) {
-                Logger.getLogger(TextEditor.class.getName()).log(Level.SEVERE, null, ex);
-            }
+//            try {
+//                Files.write(selectedFile.toPath(), Arrays.asList(editorTextArea.getText().split("\n")));
+//                updateFileLabel();
+//                populateEditor(selectedFile);
+//            } catch (IOException ex) {
+//                Logger.getLogger(TextEditor.class.getName()).log(Level.SEVERE, null, ex);
+//            }
         }
     }
 
+    private String getMediaType(File file) {
+        try {
+            Set<String> mediaTypeByFileSuffix = new MediaTypeIdentifier().getMediaTypeByFileSuffix(file.getAbsolutePath());
+            for (String suffix : mediaTypeByFileSuffix) {
+                return suffix;
+            }
+        } catch (NullPointerException e) {
+        }
+        return null;
+    }
+
+    private void createCampaignEditor(File selectedFile) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

@@ -1,16 +1,16 @@
-package nu.hex.story.manager.rpg.documents.io;
+package nu.hex.story.manager.rpg.documents.io.write;
 
 import java.util.Arrays;
 import java.util.List;
-import nu.hex.story.manager.rpg.documents.Book;
 import nu.hex.story.manager.rpg.documents.LocationDocument;
+import nu.hex.story.manager.rpg.documents.io.AbstractWriter;
 
 /**
  * Created 2016-nov-10
  *
  * @author hl
  */
-public class LocationsWriter extends AbstractWriter<List<LocationDocument>> {
+public class LocationsWriter extends AbstractWriter<List<LocationDocument>, String> {
 
     public LocationsWriter(List<LocationDocument> doc) {
         super(doc);

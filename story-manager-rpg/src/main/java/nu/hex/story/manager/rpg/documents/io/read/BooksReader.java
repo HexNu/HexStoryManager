@@ -1,12 +1,15 @@
-package nu.hex.story.manager.rpg.documents.io;
+package nu.hex.story.manager.rpg.documents.io.read;
 
+import nu.hex.story.manager.rpg.documents.io.write.BooksHtmlWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import nu.hex.story.manager.rpg.documents.Book;
+import nu.hex.story.manager.rpg.documents.BookDocument;
+import nu.hex.story.manager.rpg.documents.io.AbstractReader;
+import nu.hex.story.manager.rpg.documents.io.FileWriter;
 
-public class BooksReader extends AbstractReader<List<Book>> {
+public class BooksReader extends AbstractReader<List<BookDocument>> {
 
     public BooksReader(String path) throws IOException {
         super(path);
@@ -17,9 +20,9 @@ public class BooksReader extends AbstractReader<List<Book>> {
     }
 
     @Override
-    public List<Book> read() {
-        List<Book> result = new ArrayList<>();
-        Book book = new Book();
+    public List<BookDocument> read() {
+        List<BookDocument> result = new ArrayList<>();
+        BookDocument book = new BookDocument();
         result.add(book);
         String field = "";
         for (String line : lines) {
@@ -27,7 +30,7 @@ public class BooksReader extends AbstractReader<List<Book>> {
                 if (line.contains(":")) {
                     field = getField(line);
                 } else if (line.isEmpty()) {
-                    book = new Book();
+                    book = new BookDocument();
                     result.add(book);
                 }
                 switch (field) {
@@ -120,8 +123,8 @@ public class BooksReader extends AbstractReader<List<Book>> {
                 }
             }
         }
-        for (Iterator<Book> it = result.iterator(); it.hasNext();) {
-            Book b = it.next();
+        for (Iterator<BookDocument> it = result.iterator(); it.hasNext();) {
+            BookDocument b = it.next();
             if (b.getTitle() == null || b.getTitle().isEmpty()) {
                 it.remove();
             }
@@ -130,7 +133,7 @@ public class BooksReader extends AbstractReader<List<Book>> {
     }
 
     public static void main(String[] args) throws IOException {
-        List<Book> books = new BooksReader("/home/hl/Dokument/RPG/Angelina Blight/docs/Books.srb").read();
+        List<BookDocument> books = new BooksReader("/home/hl/Dokument/RPG/Angelina Blight/docs/Books.srb").read();
 //        new FileWriter(new BooksWriter(books).write(), "/home/hl/Dokument/RPG/Angelina Blight/docs/Books.srb").write();
         new FileWriter(new BooksHtmlWriter(books).write(), "/home/hl/Dokument/RPG/Angelina Blight/docs/Books.hsrb").write();
     }

@@ -11,17 +11,17 @@ import nu.hex.story.manager.util.RomanNumerals;
  *
  * @author hl
  */
-public class Book implements Document {
+public class BookDocument implements Document {
 
     private Long id;
     private String title;
-    private final List<Book> volumes = new ArrayList<>();
+    private final List<BookDocument> volumes = new ArrayList<>();
     private final List<Person> authors = new ArrayList<>();
     private String placeOfPublication;
     private Integer yearOfPublication;
+    private String publisher;
     private String language;
     private String subject;
-    private String publisher;
     private String description;
     private String notes;
 
@@ -45,24 +45,24 @@ public class Book implements Document {
         }
     }
 
-    public List<Book> getVolumes() {
+    public List<BookDocument> getVolumes() {
         return volumes;
     }
 
-    public void setVolumes(List<Book> volumes) {
+    public void setVolumes(List<BookDocument> volumes) {
         this.volumes.clear();
         this.volumes.addAll(volumes);
     }
 
     public void setVolumes(Integer numberOfVolumes) {
         for (int i = 1; i <= numberOfVolumes; i++) {
-            Book volume = new Book();
+            BookDocument volume = new BookDocument();
             volume.appendTitle("Volume " + new RomanNumerals(i).getRoman());
             addVolume(volume);
         }
     }
 
-    public void addVolume(Book volume) {
+    public void addVolume(BookDocument volume) {
         this.volumes.add(volume);
     }
 

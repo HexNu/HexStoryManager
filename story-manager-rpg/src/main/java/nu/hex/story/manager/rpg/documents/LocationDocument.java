@@ -146,6 +146,10 @@ public class LocationDocument implements Document, Location {
         return notes;
     }
 
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
     public void appendNotes(String notes) {
         if (this.notes == null) {
             this.notes = notes;
