@@ -107,7 +107,7 @@ public class MediaTypeIdentifier {
     }
 
     public static void main(String[] args) {
-        String[] suffices = {"mpeg", "mpg", "mp3", "mp4", "bk4", "sk3", "ogg", "ogv", "oga", "txt", "csv", "abc", "box", "boxf", "tga"};
+        String[] suffices = {"mpeg", "mpg", "mp3", "mp4", "ogg", "ogv", "oga", "txt", "csv", "abc", "tga", "srb", "srl", "box"};
         MediaTypeIdentifier identifier = new MediaTypeIdentifier();
         for (String suffix : suffices) {
             System.out.println("\nSuffix: " + suffix.toUpperCase());

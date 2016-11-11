@@ -16,6 +16,17 @@ package nu.hex.mediatype;
 public interface HexMediaType {
 
     /**
+     * Kapmanj-format<br>
+     *
+     * XML-format för RPG-kampanjdata.<br>
+     *
+     * <br>
+     * MediaType: <i>application/vnd.nu.hex.campaign-format.smrx+xml</i>
+     * <br>
+     * FileSuffix: <i>.smrx</i>
+     */
+    public static final String APPLICATION_VND_NU_HEX_CAMPAIGN_FORMAT_SMRX_XML = "application/vnd.nu.hex.campaign-format.smrx+xml";
+    /**
      * Bokdokument-format<br>
      *
      * Standardiserat text format för att beskriva böcker.<br>
