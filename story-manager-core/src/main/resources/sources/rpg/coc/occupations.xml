@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<occupations>
+    <occupation name="Antiquarian" lovecraftian="true">
+        <skills>
+            <skill>Art</skill>
+            <skill>Bargain</skill>
+            <skill>Craft</skill>
+            <skill>History</skill>
+            <skill>Library Use</skill>
+            <skill>Other Language</skill>
+            <skill>Spot Hidden</skill>
+            <select number-to-select="*"/>
+        </skills>
+    </occupation>
+    <occupation name="Artist">
+        <skills>
+            <skill>Art</skill>
+            <skill>Craft</skill>
+            <skill>Fast Talk</skill>
+            <skill>History</skill>
+            <skill>Photography</skill>
+            <skill>Psychology</skill>
+            <skill>Spot Hidden</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Athlete">
+        <skills>
+            <skill>Climb</skill>
+            <skill>Dodge</skill>
+            <skill>Jump Martial Arts</skill>
+            <skill>Ride</skill>
+            <skill>Swim</skill>
+            <skill>Throw</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Author" lovecraftian="true">
+        <skills>
+            <skill>History</skill>
+            <skill>Library Use</skill>
+            <skill>Occult</skill>
+            <skill>Other Language</skill>
+            <skill>Own Language</skill>
+            <skill>Persuade</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Clergyman">
+        <skills>
+            <skill>Accounting</skill>
+            <skill>History</skill>
+            <skill>Library Use</skill>
+            <skill>Listen</skill>
+            <skill>Other Language</skill>
+            <skill>Persuade</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Criminal">
+        <skills>
+            <skill>Bargain</skill>
+            <skill>Disguise</skill>
+            <skill>Fast Talk</skill>
+            <skill>Handgun</skill>
+            <skill>Locksmith</skill>
+            <skill>Sneak</skill>
+            <skill>Spot Hidden</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Dilettante" lovecraftian="true">
+        <skills>
+            <skill>Art</skill>
+            <skill>Craft</skill>
+            <skill>Credit Rating</skill>
+            <skill>Other Language</skill>
+            <skill>Ride</skill>
+            <skill>Shotgun</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Doctor of Medicine" lovecraftian="true">
+        <skills>
+            <skill>Biology</skill>
+            <skill>Credit Rating</skill>
+            <skill>First Aid</skill>
+            <skill>Latin</skill>
+            <skill>Medicine</skill>
+            <skill>Pharmacy</skill>
+            <skill>Psychoanalysis</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Drifter">
+        <skills>
+            <skill>Bargain</skill>
+            <skill>Fast Talk</skill>
+            <skill>Hide</skill>
+            <skill>Listen</skill>
+            <skill>Natural History</skill>
+            <skill>Psychology</skill>
+            <skill>Sneak</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Engineer">
+        <skills>
+            <skill>Chemistry</skill>
+            <skill>Electrical Repair</skill>
+            <skill>Geology</skill>
+            <skill>Library Use</skill>
+            <skill>Mechanical Repair</skill>
+            <skill>Operate Heavy Machine</skill>
+            <skill>Physics</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Entertainer">
+        <skills>
+            <skill>Art</skill>
+            <skill>Credit Rating</skill>
+            <skill>Disguise</skill>
+            <skill>Dodge</skill>
+            <skill>Fast Talk</skill>
+            <skill>Listen</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Farmer / Forester">
+        <skills>
+            <skill>Craft</skill>
+            <skill>Electrical Repair</skill>
+            <skill>First Aid</skill>
+            <skill>Mechanical Repair</skill>
+            <skill>Natural History</skill>
+            <skill>Operate Heavy Machine</skill>
+            <skill>Track</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Hacker / Consultant">
+        <skills>
+            <skill>Computer Use</skill>
+            <skill>Electrical Repair</skill>
+            <skill>Electronics</skill>
+            <skill>Fast Talk</skill>
+            <skill>Library Use</skill>
+            <skill>Other language</skill>
+            <skill>Physics</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Journalist" lovecraftian="true">
+        <skills>
+            <skill>Fast Talk</skill>
+            <skill>History</skill>
+            <skill>Library Use</skill>
+            <skill>Own Language</skill>
+            <skill>Persuade</skill>
+            <skill>Photography</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Lawyer">
+        <skills>
+            <skill>Bargain</skill>
+            <skill>Credit Rating</skill>
+            <skill>Fast Talk</skill>
+            <skill>Law</skill>
+            <skill>Library Use</skill>
+            <skill>Persuade</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Military Officer">
+        <skills>
+            <skill>Accounting</skill>
+            <skill>Bargain</skill>
+            <skill>Credit Rating</skill>
+            <skill>Law</skill>
+            <skill>Navigate</skill>
+            <skill>Persuade</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Missionary">
+        <skills>
+            <skill>Art</skill>
+            <skill>Craft</skill>
+            <skill>First Aid</skill>
+            <skill>Mechanical Repair</skill>
+            <skill>Medicine</skill>
+            <skill>Natural History</skill>
+            <skill>Persuade</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Musician">
+        <skills>
+            <skill>Art</skill>
+            <skill>Bargain</skill>
+            <skill>Craft</skill>
+            <skill>Fast Talk</skill>
+            <skill>Listen</skill>
+            <skill>Persuade</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Parapsychologist">
+        <skills>
+            <skill>Anthropology</skill>
+            <skill>History</skill>
+            <skill>Library Use</skill>
+            <skill>Occult</skill>
+            <skill>Other Language</skill>
+            <skill>Photography</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Pilot">
+        <skills>
+            <skill>Astronomy</skill>
+            <skill>Electrical Repair</skill>
+            <skill>Mechanical Repair</skill>
+            <skill>Navigate</skill>
+            <skill>Operate Heavy Machine</skill>
+            <skill>Physics</skill>
+            <skill>Pilot</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Police Detective" lovecraftian="true">
+        <skills>
+            <skill>Bargain</skill>
+            <skill>Fast Talk</skill>
+            <skill>Law</skill>
+            <skill>Listen</skill>
+            <skill>Persuade</skill>
+            <skill>Psychology</skill>
+            <skill>Spot Hidden</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Policeman">
+        <skills>
+            <skill>Dodge</skill>
+            <skill>Fast Talk</skill>
+            <skill>First Aid</skill>
+            <skill>Grapple</skill>
+            <skill>Law</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="2">
+                <skill>Bargain</skill>
+                <skill>Drive Automobile</skill>
+                <skill>Martial Arts</skill>
+                <skill>Ride or Spot Hidden</skill>
+            </select>
+        </skills>
+    </occupation>
+    <occupation name="Private Investigator">
+        <skills>
+            <skill>Bargain</skill>
+            <skill>Fast Talk</skill>
+            <skill>Law</skill>
+            <skill>Library Use</skill>
+            <skill>Locksmith</skill>
+            <skill>Photography</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Professor" lovecraftian="true">
+        <skills>
+            <skill>Bargain</skill>
+            <skill>Credit Rating</skill>
+            <skill>Library Use</skill>
+            <skill>Other Language</skill>
+            <skill>Persuade</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="2">
+                <skill>Anthropology</skill>
+                <skill>Archaeology</skill>
+                <skill>Astronomy</skill>
+                <skill>Biology</skill>
+                <skill>Chemistry</skill>
+                <skill>Electronics</skill>
+                <skill>Geology</skill>
+                <skill>History</skill>
+                <skill>Law</skill>
+                <skill>Medicine</skill>
+                <skill>Natural History or Physics</skill>
+            </select>
+        </skills>
+    </occupation>
+    <occupation name="Soldier">
+        <skills>
+            <skill>Dodge</skill>
+            <skill>First Aid</skill>
+            <skill>Hide</skill>
+            <skill>Listen</skill>
+            <skill>Mechanical Repair</skill>
+            <skill>Rifle</skill>
+            <skill>Sneak</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Spokesperson">
+        <skills>
+            <skill>Credit Rating</skill>
+            <skill>Disguise</skill>
+            <skill>Dodge</skill>
+            <skill>Fast Talk</skill>
+            <skill>Persuade</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Tribal Member">
+        <skills>
+            <skill>Bargain</skill>
+            <skill>Listen</skill>
+            <skill>Natural History</skill>
+            <skill>Occult</skill>
+            <skill>Spot Hidden</skill>
+            <skill>Swim</skill>
+            <skill>Throw</skill>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+    <occupation name="Zealot">
+        <skills>
+            <skill>Conceal</skill>
+            <skill>Hide</skill>
+            <skill>Library Use</skill>
+            <skill>Persuade</skill>
+            <skill>Psychology</skill>
+            <select number-to-select="*">
+                <skill>Chemistry</skill>
+                <skill>Electrical Repair</skill>
+                <skill>Law</skill>
+                <skill>Pharmacy</skill>
+                <skill>Rifle</skill>
+            </select>
+            <select number-to-select="1"/>
+        </skills>
+    </occupation>
+</occupations>

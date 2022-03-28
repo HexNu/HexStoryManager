@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-  <persistence-unit name="eventsPU" transaction-type="RESOURCE_LOCAL">
+  <persistence-unit name="story-managerPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>nu.hex.story.manager.core.domain.atlas.impl.DefaultAtlas</class>
+    <class>nu.hex.story.manager.core.domain.atlas.impl.DefaultMap</class>
+    <class>nu.hex.story.manager.core.domain.image.impl.DefaultCover</class>
+    <class>nu.hex.story.manager.core.domain.image.impl.DefaultIllustration</class>
+    <class>nu.hex.story.manager.core.domain.image.impl.DefaultImage</class>
+    <class>nu.hex.story.manager.core.domain.image.impl.DefaultPortrait</class>
+    <class>nu.hex.story.manager.core.domain.person.impl.DefaultPersonalEvent</class>
+    <class>nu.hex.story.manager.core.domain.person.impl.DefaultPerson</class>
+    <class>nu.hex.story.manager.core.domain.rpg.character.AbstractPlayingCharacter</class>
+    <class>nu.hex.story.manager.core.domain.rpg.dnd.character.DnDAbilityScore</class>
+    <class>nu.hex.story.manager.core.domain.rpg.dnd.character.DnDPlayingCharacter</class>
+    <class>nu.hex.story.manager.core.domain.rpg.dnd.character.DnDStats</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCAbilityScore</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCEducation</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCIncomeAndSavings</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCMentalDisorder</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCOccupation</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCPlayingCharacter</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCSkill</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCSkillScore</class>
+    <class>nu.hex.story.manager.core.domain.rpg.coc.character.CoCStats</class>
+    <class>nu.hex.story.manager.core.domain.rpg.player.impl.DefaultPlayer</class>
+    <class>nu.hex.story.manager.core.domain.story.impl.DefaultChapter</class>
+    <class>nu.hex.story.manager.core.domain.story.impl.DefaultFootnote</class>
+    <class>nu.hex.story.manager.core.domain.story.impl.DefaultStory</class>
+    <class>nu.hex.story.manager.core.domain.story.impl.DefaultPlot</class>
+    <class>nu.hex.story.manager.core.domain.story.impl.DefaultPlotItem</class>
     <properties>
       <property name="hibernate.connection.username" value="venus"/>
       <property name="hibernate.connection.password" value="venus"/>

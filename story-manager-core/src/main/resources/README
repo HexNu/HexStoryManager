@@ -1,0 +1,34 @@
+Formats for texts
+
+Illustrations:
+    Text about something.
+    [I:1]
+    More text...
+
+Portraits:
+    Text about something.
+    [P:1]
+    More text...
+
+Maps:
+    Text about something.
+    [M:1]
+    More text...
+
+MarginBoxes:
+    Text about something.
+    [B:1]
+    More text...
+
+Footnotes:
+    Text about something. [F:Footnote text about the something.] More text...
+
+MasterNotes (RPG):
+    Text about something. [MN:MasterNote text about the something.] More text...
+
+Handout (RPG):
+    Text about something.
+    [HO:1]
+    More text...
+
+

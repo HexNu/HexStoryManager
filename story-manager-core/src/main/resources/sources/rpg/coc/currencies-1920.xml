@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<currencies>
+    <currency country="Sweden" code="SE" format="2:20">
+        <unit name="Krona" code="SEK" symbol="Kr">
+            <unit name="Öre" ratio="100:1"/>
+        </unit>
+    </currency>
+    <currency country="United Kingdom" code="UK" end-date="1971-02-15" format="£1.4s.3d">
+        <unit name="Pound" code="GBP" ratio="2:1" symbol="£">
+            <unit name="Guinea" ratio="1:2"/>
+            <unit name="Crown" ratio="4:1">
+                <unit name="Half Crown" ratio="2:1"/>
+            </unit>
+            <unit name="Florin" ratio="10:1"/>
+            <unit name="Shilling" ratio="20:1" symbol="s">
+                <unit name="Penny" ratio="12:1" symbol="d">
+                    <unit name="Sixpence" ratio="1:6"/>
+                    <unit name="Thrupence" ratio="1:3"/>
+                    <unit name="Tupence" ratio="1:22"/>
+                    <unit name="Ha'penny" ratio="2:1"/>
+                    <unit name="Farthing" ratio="4:1" end-date="1961-01-01"/>
+                </unit>
+            </unit>
+        </unit>
+    </currency>
+    <currency country="United Kingdom" code="UK" start-date="1971-02-16" format="£1.05">
+        <unit name="Pound" code="GBP" ratio="2:1" symbol="£">
+            <unit name="Penny" ratio="100:1" symbol="p"/>
+        </unit>
+    </currency>
+</currencies>
